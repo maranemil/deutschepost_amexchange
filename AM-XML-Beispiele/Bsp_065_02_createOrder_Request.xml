@@ -1,0 +1,1895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 065_02
+Beschreibung: Neuanlage einer Teileinlieferung für Dialogpost.
+Mit dieser Datei wird die erste Teileinlieferung inklusive Versandplan und Paletteninformationen angekündigt.
+Dadurch wird die zuvor angekündigte Gesamteinlieferung zu einer Teileinlieferungsgruppe.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6000000121</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>TE</OrderType>
+			<State>DM</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>T</SubmissionType>
+			<SubmissionID>1</SubmissionID>
+			<CustOrderID>
+				<CustID>6000000121</CustID>
+				<SystemID>163113A06500200</SystemID>
+			</CustOrderID>
+			<RefOrder>
+				<CustOrderID>
+					<CustID>6000000121</CustID>
+					<SystemID>16312A06500100</SystemID>
+				</CustOrderID>
+			</RefOrder>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<PostCardID>60000001212501001</PostCardID>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>0</ShipmentID>
+				<Qty>16266</Qty>
+				<TotalQty>20266</TotalQty>
+				<IndividualWeight value="625" unit="g"/>
+				<Format>G</Format>
+				<Length value="29.7" unit="cm"/>
+				<Width value="21.0" unit="cm"/>
+				<Thickness value="25.0" unit="mm"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="20095" qty="1" precP="1" precT="2"/>
+					<Dst zip="20457" qty="1" precP="1" precT="2"/>
+					<Dst zip="21035" qty="1" precP="1" precT="2"/>
+					<Dst zip="21435" qty="1" precP="1" precT="2"/>
+					<Dst zip="21698" qty="1" precP="1" precT="2"/>
+					<Dst zip="22083" qty="1" precP="1" precT="2"/>
+					<Dst zip="22525" qty="1" precP="1" precT="2"/>
+					<Dst zip="22765" qty="1" precP="1" precT="2"/>
+					<Dst zip="22844" qty="6" precP="1" precT="5"/>
+					<Dst zip="22846" qty="2" precP="1" precT="2"/>
+					<Dst zip="22848" qty="10" precP="1" precT="5"/>
+					<Dst zip="22850" qty="1" precP="1" precT="2"/>
+					<Dst zip="22851" qty="5" precP="1" precT="5"/>
+					<Dst zip="22880" qty="1" precP="1" precT="2"/>
+					<Dst zip="23508" qty="1" precP="1" precT="2"/>
+					<Dst zip="23552" qty="6" precP="1" precT="5"/>
+					<Dst zip="23554" qty="4" precP="1" precT="5"/>
+					<Dst zip="23556" qty="5" precP="1" precT="5"/>
+					<Dst zip="23558" qty="2" precP="1" precT="2"/>
+					<Dst zip="23560" qty="2" precP="1" precT="2"/>
+					<Dst zip="23562" qty="1" precP="1" precT="2"/>
+					<Dst zip="23566" qty="4" precP="1" precT="5"/>
+					<Dst zip="23568" qty="3" precP="1" precT="5"/>
+					<Dst zip="23570" qty="1" precP="1" precT="2"/>
+					<Dst zip="23611" qty="3" precP="1" precT="5"/>
+					<Dst zip="23669" qty="2" precP="1" precT="2"/>
+					<Dst zip="23701" qty="3" precP="1" precT="5"/>
+					<Dst zip="23730" qty="4" precP="1" precT="5"/>
+					<Dst zip="23743" qty="1" precP="1" precT="2"/>
+					<Dst zip="23758" qty="1" precP="1" precT="2"/>
+					<Dst zip="23769" qty="1" precP="1" precT="2"/>
+					<Dst zip="23774" qty="2" precP="1" precT="2"/>
+					<Dst zip="23775" qty="1" precP="1" precT="2"/>
+					<Dst zip="23795" qty="1" precP="1" precT="2"/>
+					<Dst zip="23812" qty="2" precP="1" precT="2"/>
+					<Dst zip="23826" qty="1" precP="1" precT="2"/>
+					<Dst zip="23829" qty="1" precP="1" precT="2"/>
+					<Dst zip="23923" qty="1" precP="1" precT="2"/>
+					<Dst zip="23966" qty="2" precP="1" precT="2"/>
+					<Dst zip="23970" qty="3" precP="1" precT="5"/>
+					<Dst zip="23992" qty="1" precP="1" precT="2"/>
+					<Dst zip="24103" qty="12" precP="1" precT="5"/>
+					<Dst zip="24105" qty="4" precP="1" precT="5"/>
+					<Dst zip="24106" qty="4" precP="1" precT="5"/>
+					<Dst zip="24109" qty="2" precP="1" precT="2"/>
+					<Dst zip="24113" qty="5" precP="1" precT="5"/>
+					<Dst zip="24114" qty="1" precP="1" precT="2"/>
+					<Dst zip="24116" qty="3" precP="1" precT="5"/>
+					<Dst zip="24143" qty="1" precP="1" precT="2"/>
+					<Dst zip="24145" qty="1" precP="1" precT="2"/>
+					<Dst zip="24148" qty="2" precP="1" precT="2"/>
+					<Dst zip="24149" qty="1" precP="1" precT="2"/>
+					<Dst zip="24159" qty="1" precP="1" precT="2"/>
+					<Dst zip="24161" qty="1" precP="1" precT="2"/>
+					<Dst zip="24211" qty="2" precP="1" precT="2"/>
+					<Dst zip="24223" qty="1" precP="1" precT="2"/>
+					<Dst zip="24229" qty="1" precP="1" precT="2"/>
+					<Dst zip="24321" qty="2" precP="1" precT="2"/>
+					<Dst zip="24360" qty="1" precP="1" precT="2"/>
+					<Dst zip="24534" qty="5" precP="1" precT="5"/>
+					<Dst zip="24536" qty="1" precP="1" precT="2"/>
+					<Dst zip="24537" qty="2" precP="1" precT="2"/>
+					<Dst zip="24539" qty="5" precP="1" precT="5"/>
+					<Dst zip="24558" qty="5" precP="1" precT="5"/>
+					<Dst zip="24568" qty="2" precP="1" precT="2"/>
+					<Dst zip="24582" qty="1" precP="1" precT="2"/>
+					<Dst zip="24583" qty="1" precP="1" precT="2"/>
+					<Dst zip="24589" qty="1" precP="1" precT="2"/>
+					<Dst zip="24594" qty="2" precP="1" precT="2"/>
+					<Dst zip="24616" qty="1" precP="1" precT="2"/>
+					<Dst zip="24619" qty="1" precP="1" precT="2"/>
+					<Dst zip="24623" qty="1" precP="1" precT="2"/>
+					<Dst zip="24631" qty="1" precP="1" precT="2"/>
+					<Dst zip="24641" qty="1" precP="1" precT="2"/>
+					<Dst zip="24647" qty="3" precP="1" precT="5"/>
+					<Dst zip="24768" qty="4" precP="1" precT="5"/>
+					<Dst zip="24791" qty="1" precP="1" precT="2"/>
+					<Dst zip="24802" qty="2" precP="1" precT="2"/>
+					<Dst zip="24813" qty="1" precP="1" precT="2"/>
+					<Dst zip="24837" qty="1" precP="1" precT="2"/>
+					<Dst zip="24848" qty="1" precP="1" precT="2"/>
+					<Dst zip="24893" qty="1" precP="1" precT="2"/>
+					<Dst zip="24937" qty="2" precP="1" precT="2"/>
+					<Dst zip="24939" qty="4" precP="1" precT="5"/>
+					<Dst zip="24941" qty="7" precP="1" precT="5"/>
+					<Dst zip="24955" qty="2" precP="1" precT="2"/>
+					<Dst zip="24960" qty="2" precP="1" precT="2"/>
+					<Dst zip="25336" qty="1" precP="1" precT="2"/>
+					<Dst zip="25348" qty="4" precP="1" precT="5"/>
+					<Dst zip="25361" qty="1" precP="1" precT="2"/>
+					<Dst zip="25377" qty="1" precP="1" precT="2"/>
+					<Dst zip="25482" qty="1" precP="1" precT="2"/>
+					<Dst zip="25486" qty="1" precP="1" precT="2"/>
+					<Dst zip="25524" qty="6" precP="1" precT="5"/>
+					<Dst zip="25541" qty="2" precP="1" precT="2"/>
+					<Dst zip="25554" qty="1" precP="1" precT="2"/>
+					<Dst zip="25582" qty="1" precP="1" precT="2"/>
+					<Dst zip="25709" qty="1" precP="1" precT="2"/>
+					<Dst zip="25746" qty="1" precP="1" precT="2"/>
+					<Dst zip="25782" qty="1" precP="1" precT="2"/>
+					<Dst zip="25799" qty="1" precP="1" precT="2"/>
+					<Dst zip="25813" qty="4" precP="1" precT="5"/>
+					<Dst zip="25821" qty="2" precP="1" precT="2"/>
+					<Dst zip="25832" qty="1" precP="1" precT="2"/>
+					<Dst zip="25840" qty="1" precP="1" precT="2"/>
+					<Dst zip="25842" qty="1" precP="1" precT="2"/>
+					<Dst zip="25870" qty="2" precP="1" precT="2"/>
+					<Dst zip="25899" qty="3" precP="1" precT="5"/>
+					<Dst zip="25917" qty="1" precP="1" precT="2"/>
+					<Dst zip="25920" qty="1" precP="1" precT="2"/>
+					<Dst zip="25946" qty="1" precP="1" precT="2"/>
+					<Dst zip="25980" qty="6" precP="1" precT="5"/>
+					<Dst zip="25996" qty="1" precP="1" precT="2"/>
+					<Dst zip="26032" qty="1" precP="1" precT="2"/>
+					<Dst zip="26038" qty="1" precP="1" precT="2"/>
+					<Dst zip="26039" qty="2" precP="1" precT="2"/>
+					<Dst zip="26360" qty="1" precP="1" precT="2"/>
+					<Dst zip="26364" qty="1" precP="1" precT="2"/>
+					<Dst zip="26382" qty="1" precP="1" precT="2"/>
+					<Dst zip="26384" qty="1" precP="1" precT="2"/>
+					<Dst zip="26389" qty="5" precP="1" precT="5"/>
+					<Dst zip="26906" qty="1" precP="1" precT="2"/>
+					<Dst zip="27211" qty="62" precP="1" precT="5"/>
+					<Dst zip="27223" qty="1" precP="1" precT="2"/>
+					<Dst zip="27224" qty="1" precP="1" precT="2"/>
+					<Dst zip="27232" qty="59" precP="1" precT="5"/>
+					<Dst zip="27234" qty="1" precP="1" precT="2"/>
+					<Dst zip="27239" qty="54" precP="1" precT="5"/>
+					<Dst zip="27243" qty="1" precP="1" precT="2"/>
+					<Dst zip="27245" qty="22" precP="1" precT="5"/>
+					<Dst zip="27246" qty="4" precP="1" precT="5"/>
+					<Dst zip="27248" qty="4" precP="1" precT="5"/>
+					<Dst zip="27249" qty="6" precP="1" precT="5"/>
+					<Dst zip="27251" qty="5" precP="1" precT="5"/>
+					<Dst zip="27252" qty="8" precP="1" precT="5"/>
+					<Dst zip="27254" qty="21" precP="1" precT="5"/>
+					<Dst zip="27257" qty="12" precP="1" precT="5"/>
+					<Dst zip="27259" qty="12" precP="1" precT="5"/>
+					<Dst zip="27263" qty="1" precP="1" precT="2"/>
+					<Dst zip="27265" qty="1" precP="1" precT="2"/>
+					<Dst zip="27267" qty="1" precP="1" precT="2"/>
+					<Dst zip="27283" qty="231" precP="1" precT="5"/>
+					<Dst zip="27299" qty="62" precP="1" precT="5"/>
+					<Dst zip="27305" qty="55" precP="1" precT="5"/>
+					<Dst zip="27308" qty="53" precP="1" precT="5"/>
+					<Dst zip="27313" qty="54" precP="1" precT="5"/>
+					<Dst zip="27316" qty="3" precP="1" precT="5"/>
+					<Dst zip="27318" qty="30" precP="1" precT="5"/>
+					<Dst zip="27319" qty="1" precP="1" precT="2"/>
+					<Dst zip="27321" qty="45" precP="1" precT="5"/>
+					<Dst zip="27324" qty="29" precP="1" precT="5"/>
+					<Dst zip="27327" qty="30" precP="1" precT="5"/>
+					<Dst zip="27330" qty="20" precP="1" precT="5"/>
+					<Dst zip="27333" qty="21" precP="1" precT="5"/>
+					<Dst zip="27337" qty="20" precP="1" precT="5"/>
+					<Dst zip="27339" qty="9" precP="1" precT="5"/>
+					<Dst zip="27341" qty="1" precP="1" precT="2"/>
+					<Dst zip="27344" qty="1" precP="1" precT="2"/>
+					<Dst zip="27356" qty="44" precP="1" precT="5"/>
+					<Dst zip="27367" qty="19" precP="1" precT="5"/>
+					<Dst zip="27374" qty="20" precP="1" precT="5"/>
+					<Dst zip="27383" qty="9" precP="1" precT="5"/>
+					<Dst zip="27386" qty="8" precP="1" precT="5"/>
+					<Dst zip="27389" qty="2" precP="1" precT="2"/>
+					<Dst zip="27391" qty="1" precP="1" precT="2"/>
+					<Dst zip="27393" qty="1" precP="1" precT="2"/>
+					<Dst zip="27395" qty="1" precP="1" precT="2"/>
+					<Dst zip="27404" qty="40" precP="1" precT="5"/>
+					<Dst zip="27412" qty="7" precP="1" precT="5"/>
+					<Dst zip="27419" qty="31" precP="1" precT="5"/>
+					<Dst zip="27432" qty="1" precP="1" precT="2"/>
+					<Dst zip="27442" qty="6" precP="1" precT="5"/>
+					<Dst zip="27446" qty="10" precP="1" precT="5"/>
+					<Dst zip="27498" qty="1" precP="1" precT="2"/>
+					<Dst zip="27501" qty="1" precP="1" precT="2"/>
+					<Dst zip="27534" qty="1" precP="1" precT="2"/>
+					<Dst zip="27540" qty="1" precP="1" precT="2"/>
+					<Dst zip="27568" qty="18" precP="1" precT="5"/>
+					<Dst zip="27570" qty="12" precP="1" precT="5"/>
+					<Dst zip="27572" qty="14" precP="1" precT="5"/>
+					<Dst zip="27574" qty="7" precP="1" precT="5"/>
+					<Dst zip="27576" qty="6" precP="1" precT="5"/>
+					<Dst zip="27578" qty="9" precP="1" precT="5"/>
+					<Dst zip="27580" qty="6" precP="1" precT="5"/>
+					<Dst zip="27711" qty="20" precP="1" precT="5"/>
+					<Dst zip="27721" qty="9" precP="1" precT="5"/>
+					<Dst zip="27726" qty="2" precP="1" precT="2"/>
+					<Dst zip="27729" qty="3" precP="1" precT="5"/>
+					<Dst zip="28074" qty="1" precP="1" precT="2"/>
+					<Dst zip="28092" qty="1" precP="1" precT="2"/>
+					<Dst zip="28195" qty="82" precP="1" precT="5"/>
+					<Dst zip="28197" qty="38" precP="1" precT="5"/>
+					<Dst zip="28199" qty="54" precP="1" precT="5"/>
+					<Dst zip="28201" qty="9" precP="1" precT="5"/>
+					<Dst zip="28203" qty="19" precP="1" precT="5"/>
+					<Dst zip="28205" qty="11" precP="1" precT="5"/>
+					<Dst zip="28207" qty="24" precP="1" precT="5"/>
+					<Dst zip="28209" qty="15" precP="1" precT="5"/>
+					<Dst zip="28211" qty="9" precP="1" precT="5"/>
+					<Dst zip="28213" qty="4" precP="1" precT="5"/>
+					<Dst zip="28215" qty="10" precP="1" precT="5"/>
+					<Dst zip="28217" qty="19" precP="1" precT="5"/>
+					<Dst zip="28219" qty="18" precP="1" precT="5"/>
+					<Dst zip="28222" qty="1" precP="1" precT="2"/>
+					<Dst zip="28223" qty="1" precP="1" precT="2"/>
+					<Dst zip="28237" qty="15" precP="1" precT="5"/>
+					<Dst zip="28239" qty="13" precP="1" precT="5"/>
+					<Dst zip="28259" qty="18" precP="1" precT="5"/>
+					<Dst zip="28262" qty="1" precP="1" precT="2"/>
+					<Dst zip="28277" qty="9" precP="1" precT="5"/>
+					<Dst zip="28279" qty="19" precP="1" precT="5"/>
+					<Dst zip="28285" qty="1" precP="1" precT="2"/>
+					<Dst zip="28307" qty="34" precP="1" precT="5"/>
+					<Dst zip="28309" qty="41" precP="1" precT="5"/>
+					<Dst zip="28325" qty="3" precP="1" precT="5"/>
+					<Dst zip="28327" qty="4" precP="1" precT="5"/>
+					<Dst zip="28329" qty="9" precP="1" precT="5"/>
+					<Dst zip="28331" qty="1" precP="1" precT="2"/>
+					<Dst zip="28339" qty="2" precP="1" precT="2"/>
+					<Dst zip="28355" qty="9" precP="1" precT="5"/>
+					<Dst zip="28357" qty="15" precP="1" precT="5"/>
+					<Dst zip="28359" qty="15" precP="1" precT="5"/>
+					<Dst zip="28717" qty="4" precP="1" precT="5"/>
+					<Dst zip="28719" qty="11" precP="1" precT="5"/>
+					<Dst zip="28755" qty="8" precP="1" precT="5"/>
+					<Dst zip="28757" qty="6" precP="1" precT="5"/>
+					<Dst zip="28759" qty="5" precP="1" precT="5"/>
+					<Dst zip="28777" qty="5" precP="1" precT="5"/>
+					<Dst zip="28779" qty="6" precP="1" precT="5"/>
+					<Dst zip="28790" qty="11" precP="1" precT="5"/>
+					<Dst zip="28802" qty="1" precP="1" precT="2"/>
+					<Dst zip="28809" qty="1" precP="1" precT="2"/>
+					<Dst zip="28816" qty="126" precP="1" precT="5"/>
+					<Dst zip="28832" qty="157" precP="1" precT="5"/>
+					<Dst zip="28833" qty="1" precP="1" precT="2"/>
+					<Dst zip="28844" qty="79" precP="1" precT="5"/>
+					<Dst zip="28852" qty="1" precP="1" precT="2"/>
+					<Dst zip="28857" qty="96" precP="1" precT="5"/>
+					<Dst zip="28865" qty="15" precP="1" precT="5"/>
+					<Dst zip="28870" qty="72" precP="1" precT="5"/>
+					<Dst zip="28876" qty="80" precP="1" precT="5"/>
+					<Dst zip="28879" qty="4" precP="1" precT="5"/>
+					<Dst zip="29221" qty="2" precP="1" precT="2"/>
+					<Dst zip="29468" qty="1" precP="1" precT="2"/>
+					<Dst zip="29640" qty="1" precP="1" precT="2"/>
+					<Dst zip="29699" qty="1" precP="1" precT="2"/>
+					<Dst zip="30001" qty="1" precP="1" precT="2"/>
+					<Dst zip="30002" qty="1" precP="1" precT="2"/>
+					<Dst zip="30004" qty="1" precP="1" precT="2"/>
+					<Dst zip="30006" qty="1" precP="1" precT="2"/>
+					<Dst zip="30007" qty="1" precP="1" precT="2"/>
+					<Dst zip="30016" qty="1" precP="1" precT="2"/>
+					<Dst zip="30025" qty="1" precP="1" precT="2"/>
+					<Dst zip="30030" qty="1" precP="1" precT="2"/>
+					<Dst zip="30033" qty="3" precP="1" precT="5"/>
+					<Dst zip="30037" qty="1" precP="1" precT="2"/>
+					<Dst zip="30042" qty="1" precP="1" precT="2"/>
+					<Dst zip="30055" qty="2" precP="1" precT="2"/>
+					<Dst zip="30057" qty="1" precP="1" precT="2"/>
+					<Dst zip="30064" qty="1" precP="1" precT="2"/>
+					<Dst zip="30065" qty="1" precP="1" precT="2"/>
+					<Dst zip="30099" qty="1" precP="1" precT="2"/>
+					<Dst zip="30103" qty="1" precP="1" precT="2"/>
+					<Dst zip="30159" qty="176" precP="1" precT="5"/>
+					<Dst zip="30161" qty="100" precP="1" precT="5"/>
+					<Dst zip="30163" qty="45" precP="1" precT="5"/>
+					<Dst zip="30165" qty="69" precP="1" precT="5"/>
+					<Dst zip="30167" qty="40" precP="1" precT="5"/>
+					<Dst zip="30169" qty="61" precP="1" precT="5"/>
+					<Dst zip="30171" qty="44" precP="1" precT="5"/>
+					<Dst zip="30173" qty="58" precP="1" precT="5"/>
+					<Dst zip="30175" qty="81" precP="1" precT="5"/>
+					<Dst zip="30177" qty="62" precP="1" precT="5"/>
+					<Dst zip="30179" qty="54" precP="1" precT="5"/>
+					<Dst zip="30419" qty="77" precP="1" precT="5"/>
+					<Dst zip="30449" qty="35" precP="1" precT="5"/>
+					<Dst zip="30451" qty="31" precP="1" precT="5"/>
+					<Dst zip="30453" qty="71" precP="1" precT="5"/>
+					<Dst zip="30455" qty="39" precP="1" precT="5"/>
+					<Dst zip="30457" qty="25" precP="1" precT="5"/>
+					<Dst zip="30459" qty="35" precP="1" precT="5"/>
+					<Dst zip="30519" qty="100" precP="1" precT="5"/>
+					<Dst zip="30521" qty="2" precP="1" precT="2"/>
+					<Dst zip="30539" qty="43" precP="1" precT="5"/>
+					<Dst zip="30550" qty="1" precP="1" precT="2"/>
+					<Dst zip="30559" qty="84" precP="1" precT="5"/>
+					<Dst zip="30601" qty="2" precP="1" precT="2"/>
+					<Dst zip="30609" qty="1" precP="1" precT="2"/>
+					<Dst zip="30625" qty="64" precP="1" precT="5"/>
+					<Dst zip="30627" qty="14" precP="1" precT="5"/>
+					<Dst zip="30629" qty="32" precP="1" precT="5"/>
+					<Dst zip="30655" qty="32" precP="1" precT="5"/>
+					<Dst zip="30657" qty="26" precP="1" precT="5"/>
+					<Dst zip="30659" qty="41" precP="1" precT="5"/>
+					<Dst zip="30662" qty="3" precP="1" precT="5"/>
+					<Dst zip="30823" qty="47" precP="1" precT="5"/>
+					<Dst zip="30826" qty="45" precP="1" precT="5"/>
+					<Dst zip="30827" qty="66" precP="1" precT="5"/>
+					<Dst zip="30835" qty="1" precP="1" precT="2"/>
+					<Dst zip="30836" qty="2" precP="1" precT="2"/>
+					<Dst zip="30851" qty="39" precP="1" precT="5"/>
+					<Dst zip="30853" qty="74" precP="1" precT="5"/>
+					<Dst zip="30855" qty="74" precP="1" precT="5"/>
+					<Dst zip="30859" qty="1" precP="1" precT="2"/>
+					<Dst zip="30880" qty="144" precP="1" precT="5"/>
+					<Dst zip="30890" qty="100" precP="1" precT="5"/>
+					<Dst zip="30900" qty="52" precP="1" precT="5"/>
+					<Dst zip="30916" qty="105" precP="1" precT="5"/>
+					<Dst zip="30926" qty="76" precP="1" precT="5"/>
+					<Dst zip="30927" qty="2" precP="1" precT="2"/>
+					<Dst zip="30929" qty="4" precP="1" precT="5"/>
+					<Dst zip="30938" qty="55" precP="1" precT="5"/>
+					<Dst zip="30952" qty="72" precP="1" precT="5"/>
+					<Dst zip="30966" qty="71" precP="1" precT="5"/>
+					<Dst zip="30974" qty="45" precP="1" precT="5"/>
+					<Dst zip="30982" qty="50" precP="1" precT="5"/>
+					<Dst zip="30989" qty="49" precP="1" precT="5"/>
+					<Dst zip="31008" qty="25" precP="1" precT="5"/>
+					<Dst zip="31020" qty="5" precP="1" precT="5"/>
+					<Dst zip="31028" qty="20" precP="1" precT="5"/>
+					<Dst zip="31029" qty="7" precP="1" precT="5"/>
+					<Dst zip="31032" qty="1" precP="1" precT="2"/>
+					<Dst zip="31033" qty="2" precP="1" precT="2"/>
+					<Dst zip="31035" qty="2" precP="1" precT="2"/>
+					<Dst zip="31036" qty="8" precP="1" precT="5"/>
+					<Dst zip="31039" qty="4" precP="1" precT="5"/>
+					<Dst zip="31041" qty="1" precP="1" precT="2"/>
+					<Dst zip="31042" qty="1" precP="1" precT="2"/>
+					<Dst zip="31046" qty="1" precP="1" precT="2"/>
+					<Dst zip="31061" qty="99" precP="1" precT="5"/>
+					<Dst zip="31073" qty="25" precP="1" precT="5"/>
+					<Dst zip="31077" qty="1" precP="1" precT="2"/>
+					<Dst zip="31079" qty="16" precP="1" precT="5"/>
+					<Dst zip="31084" qty="13" precP="1" precT="5"/>
+					<Dst zip="31087" qty="1" precP="1" precT="2"/>
+					<Dst zip="31088" qty="4" precP="1" precT="5"/>
+					<Dst zip="31089" qty="5" precP="1" precT="5"/>
+					<Dst zip="31091" qty="2" precP="1" precT="2"/>
+					<Dst zip="31093" qty="1" precP="1" precT="2"/>
+					<Dst zip="31094" qty="2" precP="1" precT="2"/>
+					<Dst zip="31097" qty="7" precP="1" precT="5"/>
+					<Dst zip="31099" qty="3" precP="1" precT="5"/>
+					<Dst zip="31104" qty="1" precP="1" precT="2"/>
+					<Dst zip="31106" qty="1" precP="1" precT="2"/>
+					<Dst zip="31108" qty="2" precP="1" precT="2"/>
+					<Dst zip="31110" qty="1" precP="1" precT="2"/>
+					<Dst zip="31134" qty="163" precP="1" precT="5"/>
+					<Dst zip="31135" qty="138" precP="1" precT="5"/>
+					<Dst zip="31137" qty="172" precP="1" precT="5"/>
+					<Dst zip="31139" qty="77" precP="1" precT="5"/>
+					<Dst zip="31141" qty="50" precP="1" precT="5"/>
+					<Dst zip="31157" qty="70" precP="1" precT="5"/>
+					<Dst zip="31162" qty="75" precP="1" precT="5"/>
+					<Dst zip="31167" qty="53" precP="1" precT="5"/>
+					<Dst zip="31171" qty="44" precP="1" precT="5"/>
+					<Dst zip="31174" qty="42" precP="1" precT="5"/>
+					<Dst zip="31177" qty="51" precP="1" precT="5"/>
+					<Dst zip="31180" qty="52" precP="1" precT="5"/>
+					<Dst zip="31185" qty="41" precP="1" precT="5"/>
+					<Dst zip="31188" qty="31" precP="1" precT="5"/>
+					<Dst zip="31191" qty="24" precP="1" precT="5"/>
+					<Dst zip="31195" qty="20" precP="1" precT="5"/>
+					<Dst zip="31196" qty="3" precP="1" precT="5"/>
+					<Dst zip="31199" qty="30" precP="1" precT="5"/>
+					<Dst zip="31224" qty="120" precP="1" precT="5"/>
+					<Dst zip="31226" qty="54" precP="1" precT="5"/>
+					<Dst zip="31228" qty="67" precP="1" precT="5"/>
+					<Dst zip="31234" qty="36" precP="1" precT="5"/>
+					<Dst zip="31235" qty="1" precP="1" precT="2"/>
+					<Dst zip="31241" qty="53" precP="1" precT="5"/>
+					<Dst zip="31246" qty="46" precP="1" precT="5"/>
+					<Dst zip="31249" qty="48" precP="1" precT="5"/>
+					<Dst zip="31255" qty="2" precP="1" precT="2"/>
+					<Dst zip="31262" qty="2" precP="1" precT="2"/>
+					<Dst zip="31275" qty="91" precP="1" precT="5"/>
+					<Dst zip="31286" qty="1" precP="1" precT="2"/>
+					<Dst zip="31289" qty="2" precP="1" precT="2"/>
+					<Dst zip="31291" qty="3" precP="1" precT="5"/>
+					<Dst zip="31303" qty="38" precP="1" precT="5"/>
+					<Dst zip="31311" qty="33" precP="1" precT="5"/>
+					<Dst zip="31319" qty="51" precP="1" precT="5"/>
+					<Dst zip="31502" qty="1" precP="1" precT="2"/>
+					<Dst zip="31515" qty="87" precP="1" precT="5"/>
+					<Dst zip="31522" qty="1" precP="1" precT="2"/>
+					<Dst zip="31535" qty="89" precP="1" precT="5"/>
+					<Dst zip="31542" qty="19" precP="1" precT="5"/>
+					<Dst zip="31547" qty="40" precP="1" precT="5"/>
+					<Dst zip="31552" qty="13" precP="1" precT="5"/>
+					<Dst zip="31553" qty="3" precP="1" precT="5"/>
+					<Dst zip="31556" qty="2" precP="1" precT="2"/>
+					<Dst zip="31558" qty="4" precP="1" precT="5"/>
+					<Dst zip="31559" qty="4" precP="1" precT="5"/>
+					<Dst zip="31562" qty="1" precP="1" precT="2"/>
+					<Dst zip="31582" qty="114" precP="1" precT="5"/>
+					<Dst zip="31592" qty="22" precP="1" precT="5"/>
+					<Dst zip="31595" qty="16" precP="1" precT="5"/>
+					<Dst zip="31600" qty="27" precP="1" precT="5"/>
+					<Dst zip="31603" qty="13" precP="1" precT="5"/>
+					<Dst zip="31604" qty="5" precP="1" precT="5"/>
+					<Dst zip="31606" qty="14" precP="1" precT="5"/>
+					<Dst zip="31608" qty="17" precP="1" precT="5"/>
+					<Dst zip="31609" qty="2" precP="1" precT="2"/>
+					<Dst zip="31613" qty="11" precP="1" precT="5"/>
+					<Dst zip="31618" qty="24" precP="1" precT="5"/>
+					<Dst zip="31619" qty="3" precP="1" precT="5"/>
+					<Dst zip="31621" qty="7" precP="1" precT="5"/>
+					<Dst zip="31622" qty="4" precP="1" precT="5"/>
+					<Dst zip="31623" qty="6" precP="1" precT="5"/>
+					<Dst zip="31626" qty="2" precP="1" precT="2"/>
+					<Dst zip="31627" qty="3" precP="1" precT="5"/>
+					<Dst zip="31628" qty="9" precP="1" precT="5"/>
+					<Dst zip="31629" qty="5" precP="1" precT="5"/>
+					<Dst zip="31632" qty="4" precP="1" precT="5"/>
+					<Dst zip="31633" qty="8" precP="1" precT="5"/>
+					<Dst zip="31634" qty="4" precP="1" precT="5"/>
+					<Dst zip="31636" qty="2" precP="1" precT="2"/>
+					<Dst zip="31637" qty="3" precP="1" precT="5"/>
+					<Dst zip="31638" qty="4" precP="1" precT="5"/>
+					<Dst zip="31641" qty="1" precP="1" precT="2"/>
+					<Dst zip="31655" qty="20" precP="1" precT="5"/>
+					<Dst zip="31675" qty="9" precP="1" precT="5"/>
+					<Dst zip="31683" qty="6" precP="1" precT="5"/>
+					<Dst zip="31688" qty="2" precP="1" precT="2"/>
+					<Dst zip="31691" qty="2" precP="1" precT="2"/>
+					<Dst zip="31693" qty="2" precP="1" precT="2"/>
+					<Dst zip="31698" qty="3" precP="1" precT="5"/>
+					<Dst zip="31700" qty="1" precP="1" precT="2"/>
+					<Dst zip="31708" qty="2" precP="1" precT="2"/>
+					<Dst zip="31710" qty="2" precP="1" precT="2"/>
+					<Dst zip="31711" qty="1" precP="1" precT="2"/>
+					<Dst zip="31714" qty="1" precP="1" precT="2"/>
+					<Dst zip="31717" qty="1" precP="1" precT="2"/>
+					<Dst zip="31725" qty="1" precP="1" precT="2"/>
+					<Dst zip="31730" qty="1" precP="1" precT="2"/>
+					<Dst zip="31737" qty="9" precP="1" precT="5"/>
+					<Dst zip="31749" qty="2" precP="1" precT="2"/>
+					<Dst zip="31754" qty="1" precP="1" precT="2"/>
+					<Dst zip="31785" qty="26" precP="1" precT="5"/>
+					<Dst zip="31787" qty="3" precP="1" precT="5"/>
+					<Dst zip="31789" qty="14" precP="1" precT="5"/>
+					<Dst zip="31812" qty="12" precP="1" precT="5"/>
+					<Dst zip="31815" qty="1" precP="1" precT="2"/>
+					<Dst zip="31832" qty="59" precP="1" precT="5"/>
+					<Dst zip="31840" qty="11" precP="1" precT="5"/>
+					<Dst zip="31848" qty="20" precP="1" precT="5"/>
+					<Dst zip="31855" qty="1" precP="1" precT="2"/>
+					<Dst zip="31860" qty="5" precP="1" precT="5"/>
+					<Dst zip="31863" qty="8" precP="1" precT="5"/>
+					<Dst zip="31867" qty="10" precP="1" precT="5"/>
+					<Dst zip="37073" qty="75" precP="1" precT="5"/>
+					<Dst zip="37075" qty="27" precP="1" precT="5"/>
+					<Dst zip="37077" qty="23" precP="1" precT="5"/>
+					<Dst zip="37079" qty="94" precP="1" precT="5"/>
+					<Dst zip="37081" qty="63" precP="1" precT="5"/>
+					<Dst zip="37083" qty="36" precP="1" precT="5"/>
+					<Dst zip="37085" qty="29" precP="1" precT="5"/>
+					<Dst zip="37115" qty="52" precP="1" precT="5"/>
+					<Dst zip="37120" qty="36" precP="1" precT="5"/>
+					<Dst zip="37124" qty="51" precP="1" precT="5"/>
+					<Dst zip="37127" qty="20" precP="1" precT="5"/>
+					<Dst zip="37130" qty="9" precP="1" precT="5"/>
+					<Dst zip="37133" qty="19" precP="1" precT="5"/>
+					<Dst zip="37136" qty="17" precP="1" precT="5"/>
+					<Dst zip="37139" qty="20" precP="1" precT="5"/>
+					<Dst zip="37141" qty="1" precP="1" precT="2"/>
+					<Dst zip="37144" qty="1" precP="1" precT="2"/>
+					<Dst zip="37146" qty="1" precP="1" precT="2"/>
+					<Dst zip="37154" qty="144" precP="1" precT="5"/>
+					<Dst zip="37162" qty="1" precP="1" precT="2"/>
+					<Dst zip="37170" qty="50" precP="1" precT="5"/>
+					<Dst zip="37176" qty="28" precP="1" precT="5"/>
+					<Dst zip="37181" qty="19" precP="1" precT="5"/>
+					<Dst zip="37186" qty="17" precP="1" precT="5"/>
+					<Dst zip="37191" qty="34" precP="1" precT="5"/>
+					<Dst zip="37194" qty="11" precP="1" precT="5"/>
+					<Dst zip="37197" qty="23" precP="1" precT="5"/>
+					<Dst zip="37199" qty="13" precP="1" precT="5"/>
+					<Dst zip="37213" qty="5" precP="1" precT="5"/>
+					<Dst zip="37217" qty="2" precP="1" precT="2"/>
+					<Dst zip="37242" qty="2" precP="1" precT="2"/>
+					<Dst zip="37247" qty="1" precP="1" precT="2"/>
+					<Dst zip="37249" qty="2" precP="1" precT="2"/>
+					<Dst zip="37253" qty="1" precP="1" precT="2"/>
+					<Dst zip="37269" qty="8" precP="1" precT="5"/>
+					<Dst zip="37287" qty="1" precP="1" precT="2"/>
+					<Dst zip="37296" qty="1" precP="1" precT="2"/>
+					<Dst zip="37308" qty="18" precP="1" precT="5"/>
+					<Dst zip="37318" qty="9" precP="1" precT="5"/>
+					<Dst zip="37327" qty="22" precP="1" precT="5"/>
+					<Dst zip="37334" qty="1" precP="1" precT="2"/>
+					<Dst zip="37339" qty="18" precP="1" precT="5"/>
+					<Dst zip="37345" qty="6" precP="1" precT="5"/>
+					<Dst zip="37351" qty="8" precP="1" precT="5"/>
+					<Dst zip="37355" qty="4" precP="1" precT="5"/>
+					<Dst zip="37359" qty="3" precP="1" precT="5"/>
+					<Dst zip="37412" qty="85" precP="1" precT="5"/>
+					<Dst zip="37431" qty="60" precP="1" precT="5"/>
+					<Dst zip="37434" qty="30" precP="1" precT="5"/>
+					<Dst zip="37437" qty="1" precP="1" precT="2"/>
+					<Dst zip="37441" qty="36" precP="1" precT="5"/>
+					<Dst zip="37444" qty="13" precP="1" precT="5"/>
+					<Dst zip="37445" qty="13" precP="1" precT="5"/>
+					<Dst zip="37447" qty="8" precP="1" precT="5"/>
+					<Dst zip="37449" qty="2" precP="1" precT="2"/>
+					<Dst zip="37502" qty="1" precP="1" precT="2"/>
+					<Dst zip="37520" qty="123" precP="1" precT="5"/>
+					<Dst zip="37534" qty="24" precP="1" precT="5"/>
+					<Dst zip="37539" qty="12" precP="1" precT="5"/>
+					<Dst zip="37545" qty="1" precP="1" precT="2"/>
+					<Dst zip="37547" qty="42" precP="1" precT="5"/>
+					<Dst zip="37552" qty="1" precP="1" precT="2"/>
+					<Dst zip="37554" qty="1" precP="1" precT="2"/>
+					<Dst zip="37557" qty="1" precP="1" precT="2"/>
+					<Dst zip="37559" qty="1" precP="1" precT="2"/>
+					<Dst zip="37574" qty="78" precP="1" precT="5"/>
+					<Dst zip="37581" qty="80" precP="1" precT="5"/>
+					<Dst zip="37586" qty="13" precP="1" precT="5"/>
+					<Dst zip="37589" qty="32" precP="1" precT="5"/>
+					<Dst zip="37603" qty="17" precP="1" precT="5"/>
+					<Dst zip="37619" qty="3" precP="1" precT="5"/>
+					<Dst zip="37627" qty="3" precP="1" precT="5"/>
+					<Dst zip="37632" qty="4" precP="1" precT="5"/>
+					<Dst zip="37639" qty="1" precP="1" precT="2"/>
+					<Dst zip="37647" qty="1" precP="1" precT="2"/>
+					<Dst zip="37671" qty="9" precP="1" precT="5"/>
+					<Dst zip="37676" qty="1" precP="1" precT="2"/>
+					<Dst zip="37688" qty="2" precP="1" precT="2"/>
+					<Dst zip="37691" qty="1" precP="1" precT="2"/>
+					<Dst zip="37696" qty="1" precP="1" precT="2"/>
+					<Dst zip="37697" qty="4" precP="1" precT="5"/>
+					<Dst zip="38003" qty="1" precP="1" precT="2"/>
+					<Dst zip="38004" qty="1" precP="1" precT="2"/>
+					<Dst zip="38005" qty="1" precP="1" precT="2"/>
+					<Dst zip="38010" qty="1" precP="1" precT="2"/>
+					<Dst zip="38022" qty="1" precP="1" precT="2"/>
+					<Dst zip="38023" qty="1" precP="1" precT="2"/>
+					<Dst zip="38025" qty="1" precP="1" precT="2"/>
+					<Dst zip="38028" qty="1" precP="1" precT="2"/>
+					<Dst zip="38049" qty="1" precP="1" precT="2"/>
+					<Dst zip="38058" qty="1" precP="1" precT="2"/>
+					<Dst zip="38100" qty="236" precP="1" precT="5"/>
+					<Dst zip="38102" qty="111" precP="1" precT="5"/>
+					<Dst zip="38104" qty="84" precP="1" precT="5"/>
+					<Dst zip="38106" qty="97" precP="1" precT="5"/>
+					<Dst zip="38108" qty="93" precP="1" precT="5"/>
+					<Dst zip="38110" qty="52" precP="1" precT="5"/>
+					<Dst zip="38112" qty="194" precP="1" precT="5"/>
+					<Dst zip="38114" qty="104" precP="1" precT="5"/>
+					<Dst zip="38116" qty="47" precP="1" precT="5"/>
+					<Dst zip="38118" qty="94" precP="1" precT="5"/>
+					<Dst zip="38120" qty="49" precP="1" precT="5"/>
+					<Dst zip="38122" qty="100" precP="1" precT="5"/>
+					<Dst zip="38124" qty="54" precP="1" precT="5"/>
+					<Dst zip="38126" qty="55" precP="1" precT="5"/>
+					<Dst zip="38130" qty="1" precP="1" precT="2"/>
+					<Dst zip="38154" qty="21" precP="1" precT="5"/>
+					<Dst zip="38156" qty="1" precP="1" precT="2"/>
+					<Dst zip="38159" qty="60" precP="1" precT="5"/>
+					<Dst zip="38162" qty="49" precP="1" precT="5"/>
+					<Dst zip="38165" qty="36" precP="1" precT="5"/>
+					<Dst zip="38170" qty="60" precP="1" precT="5"/>
+					<Dst zip="38171" qty="1" precP="1" precT="2"/>
+					<Dst zip="38173" qty="54" precP="1" precT="5"/>
+					<Dst zip="38176" qty="61" precP="1" precT="5"/>
+					<Dst zip="38203" qty="1" precP="1" precT="2"/>
+					<Dst zip="38208" qty="1" precP="1" precT="2"/>
+					<Dst zip="38213" qty="1" precP="1" precT="2"/>
+					<Dst zip="38226" qty="116" precP="1" precT="5"/>
+					<Dst zip="38228" qty="40" precP="1" precT="5"/>
+					<Dst zip="38229" qty="81" precP="1" precT="5"/>
+					<Dst zip="38239" qty="89" precP="1" precT="5"/>
+					<Dst zip="38242" qty="2" precP="1" precT="2"/>
+					<Dst zip="38243" qty="1" precP="1" precT="2"/>
+					<Dst zip="38245" qty="2" precP="1" precT="2"/>
+					<Dst zip="38246" qty="2" precP="1" precT="2"/>
+					<Dst zip="38251" qty="1" precP="1" precT="2"/>
+					<Dst zip="38259" qty="114" precP="1" precT="5"/>
+					<Dst zip="38268" qty="58" precP="1" precT="5"/>
+					<Dst zip="38271" qty="21" precP="1" precT="5"/>
+					<Dst zip="38272" qty="7" precP="1" precT="5"/>
+					<Dst zip="38274" qty="4" precP="1" precT="5"/>
+					<Dst zip="38275" qty="7" precP="1" precT="5"/>
+					<Dst zip="38277" qty="5" precP="1" precT="5"/>
+					<Dst zip="38279" qty="3" precP="1" precT="5"/>
+					<Dst zip="38281" qty="3" precP="1" precT="5"/>
+					<Dst zip="38285" qty="2" precP="1" precT="2"/>
+					<Dst zip="38286" qty="1" precP="1" precT="2"/>
+					<Dst zip="38289" qty="1" precP="1" precT="2"/>
+					<Dst zip="38300" qty="119" precP="1" precT="5"/>
+					<Dst zip="38302" qty="75" precP="1" precT="5"/>
+					<Dst zip="38304" qty="118" precP="1" precT="5"/>
+					<Dst zip="38312" qty="29" precP="1" precT="5"/>
+					<Dst zip="38313" qty="1" precP="1" precT="2"/>
+					<Dst zip="38315" qty="31" precP="1" precT="5"/>
+					<Dst zip="38316" qty="1" precP="1" precT="2"/>
+					<Dst zip="38319" qty="7" precP="1" precT="5"/>
+					<Dst zip="38321" qty="15" precP="1" precT="5"/>
+					<Dst zip="38322" qty="2" precP="1" precT="2"/>
+					<Dst zip="38324" qty="15" precP="1" precT="5"/>
+					<Dst zip="38325" qty="2" precP="1" precT="2"/>
+					<Dst zip="38329" qty="3" precP="1" precT="5"/>
+					<Dst zip="38332" qty="1" precP="1" precT="2"/>
+					<Dst zip="38350" qty="41" precP="1" precT="5"/>
+					<Dst zip="38364" qty="16" precP="1" precT="5"/>
+					<Dst zip="38368" qty="4" precP="1" precT="5"/>
+					<Dst zip="38372" qty="2" precP="1" precT="2"/>
+					<Dst zip="38373" qty="1" precP="1" precT="2"/>
+					<Dst zip="38376" qty="1" precP="1" precT="2"/>
+					<Dst zip="38378" qty="1" precP="1" precT="2"/>
+					<Dst zip="38381" qty="1" precP="1" precT="2"/>
+					<Dst zip="38385" qty="1" precP="1" precT="2"/>
+					<Dst zip="38387" qty="4" precP="1" precT="5"/>
+					<Dst zip="38388" qty="1" precP="1" precT="2"/>
+					<Dst zip="38440" qty="2" precP="1" precT="2"/>
+					<Dst zip="38444" qty="1" precP="1" precT="2"/>
+					<Dst zip="38448" qty="6" precP="1" precT="5"/>
+					<Dst zip="38458" qty="3" precP="1" precT="5"/>
+					<Dst zip="38461" qty="2" precP="1" precT="2"/>
+					<Dst zip="38462" qty="1" precP="1" precT="2"/>
+					<Dst zip="38464" qty="5" precP="1" precT="5"/>
+					<Dst zip="38530" qty="6" precP="1" precT="5"/>
+					<Dst zip="38603" qty="1" precP="1" precT="2"/>
+					<Dst zip="38610" qty="1" precP="1" precT="2"/>
+					<Dst zip="38616" qty="1" precP="1" precT="2"/>
+					<Dst zip="38640" qty="167" precP="1" precT="5"/>
+					<Dst zip="38642" qty="48" precP="1" precT="5"/>
+					<Dst zip="38644" qty="136" precP="1" precT="5"/>
+					<Dst zip="38656" qty="2" precP="1" precT="2"/>
+					<Dst zip="38657" qty="1" precP="1" precT="2"/>
+					<Dst zip="38661" qty="1" precP="1" precT="2"/>
+					<Dst zip="38667" qty="141" precP="1" precT="5"/>
+					<Dst zip="38668" qty="1" precP="1" precT="2"/>
+					<Dst zip="38678" qty="51" precP="1" precT="5"/>
+					<Dst zip="38679" qty="3" precP="1" precT="5"/>
+					<Dst zip="38685" qty="74" precP="1" precT="5"/>
+					<Dst zip="38690" qty="69" precP="1" precT="5"/>
+					<Dst zip="38693" qty="1" precP="1" precT="2"/>
+					<Dst zip="38700" qty="36" precP="1" precT="5"/>
+					<Dst zip="38704" qty="36" precP="1" precT="5"/>
+					<Dst zip="38707" qty="15" precP="1" precT="5"/>
+					<Dst zip="38709" qty="7" precP="1" precT="5"/>
+					<Dst zip="38713" qty="1" precP="1" precT="2"/>
+					<Dst zip="38714" qty="1" precP="1" precT="2"/>
+					<Dst zip="38723" qty="113" precP="1" precT="5"/>
+					<Dst zip="38729" qty="21" precP="1" precT="5"/>
+					<Dst zip="38820" qty="26" precP="1" precT="5"/>
+					<Dst zip="38822" qty="1" precP="1" precT="2"/>
+					<Dst zip="38829" qty="1" precP="1" precT="2"/>
+					<Dst zip="38835" qty="14" precP="1" precT="5"/>
+					<Dst zip="38836" qty="9" precP="1" precT="5"/>
+					<Dst zip="38838" qty="1" precP="1" precT="2"/>
+					<Dst zip="38855" qty="33" precP="1" precT="5"/>
+					<Dst zip="38871" qty="22" precP="1" precT="5"/>
+					<Dst zip="38875" qty="5" precP="1" precT="5"/>
+					<Dst zip="38877" qty="3" precP="1" precT="5"/>
+					<Dst zip="38879" qty="1" precP="1" precT="2"/>
+					<Dst zip="38889" qty="11" precP="1" precT="5"/>
+					<Dst zip="38895" qty="1" precP="1" precT="2"/>
+					<Dst zip="38899" qty="4" precP="1" precT="5"/>
+					<Dst zip="40002" qty="1" precP="1" precT="2"/>
+					<Dst zip="40003" qty="1" precP="1" precT="2"/>
+					<Dst zip="40010" qty="1" precP="1" precT="2"/>
+					<Dst zip="40011" qty="1" precP="1" precT="2"/>
+					<Dst zip="40019" qty="2" precP="1" precT="2"/>
+					<Dst zip="40029" qty="1" precP="1" precT="2"/>
+					<Dst zip="40037" qty="2" precP="1" precT="2"/>
+					<Dst zip="40045" qty="1" precP="1" precT="2"/>
+					<Dst zip="40046" qty="1" precP="1" precT="2"/>
+					<Dst zip="40082" qty="2" precP="1" precT="2"/>
+					<Dst zip="40210" qty="5" precP="1" precT="5"/>
+					<Dst zip="40211" qty="4" precP="1" precT="5"/>
+					<Dst zip="40212" qty="6" precP="1" precT="5"/>
+					<Dst zip="40213" qty="15" precP="1" precT="5"/>
+					<Dst zip="40215" qty="3" precP="1" precT="5"/>
+					<Dst zip="40217" qty="10" precP="1" precT="5"/>
+					<Dst zip="40219" qty="1" precP="1" precT="2"/>
+					<Dst zip="40221" qty="2" precP="1" precT="2"/>
+					<Dst zip="40223" qty="15" precP="1" precT="5"/>
+					<Dst zip="40225" qty="2" precP="1" precT="2"/>
+					<Dst zip="40227" qty="11" precP="1" precT="5"/>
+					<Dst zip="40233" qty="15" precP="1" precT="5"/>
+					<Dst zip="40235" qty="5" precP="1" precT="5"/>
+					<Dst zip="40237" qty="17" precP="1" precT="5"/>
+					<Dst zip="40407" qty="1" precP="1" precT="2"/>
+					<Dst zip="40417" qty="1" precP="1" precT="2"/>
+					<Dst zip="40426" qty="1" precP="1" precT="2"/>
+					<Dst zip="40468" qty="3" precP="1" precT="5"/>
+					<Dst zip="40470" qty="1" precP="1" precT="2"/>
+					<Dst zip="40472" qty="6" precP="1" precT="5"/>
+					<Dst zip="40474" qty="1" precP="1" precT="2"/>
+					<Dst zip="40476" qty="5" precP="1" precT="5"/>
+					<Dst zip="40477" qty="8" precP="1" precT="5"/>
+					<Dst zip="40489" qty="3" precP="1" precT="5"/>
+					<Dst zip="40507" qty="1" precP="1" precT="2"/>
+					<Dst zip="40510" qty="1" precP="1" precT="2"/>
+					<Dst zip="40545" qty="2" precP="1" precT="2"/>
+					<Dst zip="40547" qty="15" precP="1" precT="5"/>
+					<Dst zip="40549" qty="7" precP="1" precT="5"/>
+					<Dst zip="40552" qty="2" precP="1" precT="2"/>
+					<Dst zip="40553" qty="2" precP="1" precT="2"/>
+					<Dst zip="40589" qty="1" precP="1" precT="2"/>
+					<Dst zip="40593" qty="5" precP="1" precT="5"/>
+					<Dst zip="40597" qty="9" precP="1" precT="5"/>
+					<Dst zip="40610" qty="1" precP="1" precT="2"/>
+					<Dst zip="40625" qty="3" precP="1" precT="5"/>
+					<Dst zip="40627" qty="2" precP="1" precT="2"/>
+					<Dst zip="40629" qty="1" precP="1" precT="2"/>
+					<Dst zip="40641" qty="1" precP="1" precT="2"/>
+					<Dst zip="40667" qty="8" precP="1" precT="5"/>
+					<Dst zip="40668" qty="2" precP="1" precT="2"/>
+					<Dst zip="40673" qty="1" precP="1" precT="2"/>
+					<Dst zip="40699" qty="5" precP="1" precT="5"/>
+					<Dst zip="40721" qty="3" precP="1" precT="5"/>
+					<Dst zip="40723" qty="8" precP="1" precT="5"/>
+					<Dst zip="40764" qty="4" precP="1" precT="5"/>
+					<Dst zip="40767" qty="1" precP="1" precT="2"/>
+					<Dst zip="40789" qty="6" precP="1" precT="5"/>
+					<Dst zip="40803" qty="1" precP="1" precT="2"/>
+					<Dst zip="40822" qty="4" precP="1" precT="5"/>
+					<Dst zip="40878" qty="2" precP="1" precT="2"/>
+					<Dst zip="40880" qty="2" precP="1" precT="2"/>
+					<Dst zip="40882" qty="3" precP="1" precT="5"/>
+					<Dst zip="40883" qty="5" precP="1" precT="5"/>
+					<Dst zip="41003" qty="3" precP="1" precT="5"/>
+					<Dst zip="41007" qty="1" precP="1" precT="2"/>
+					<Dst zip="41008" qty="1" precP="1" precT="2"/>
+					<Dst zip="41017" qty="1" precP="1" precT="2"/>
+					<Dst zip="41061" qty="2" precP="1" precT="2"/>
+					<Dst zip="41063" qty="16" precP="1" precT="5"/>
+					<Dst zip="41065" qty="1" precP="1" precT="2"/>
+					<Dst zip="41066" qty="2" precP="1" precT="2"/>
+					<Dst zip="41181" qty="1" precP="1" precT="2"/>
+					<Dst zip="41199" qty="1" precP="1" precT="2"/>
+					<Dst zip="41203" qty="1" precP="1" precT="2"/>
+					<Dst zip="41236" qty="1" precP="1" precT="2"/>
+					<Dst zip="41238" qty="3" precP="1" precT="5"/>
+					<Dst zip="41337" qty="2" precP="1" precT="2"/>
+					<Dst zip="41363" qty="10" precP="1" precT="5"/>
+					<Dst zip="41373" qty="1" precP="1" precT="2"/>
+					<Dst zip="41460" qty="3" precP="1" precT="5"/>
+					<Dst zip="41462" qty="1" precP="1" precT="2"/>
+					<Dst zip="41464" qty="1" precP="1" precT="2"/>
+					<Dst zip="41468" qty="3" precP="1" precT="5"/>
+					<Dst zip="41469" qty="2" precP="1" precT="2"/>
+					<Dst zip="41515" qty="1" precP="1" precT="2"/>
+					<Dst zip="41517" qty="2" precP="1" precT="2"/>
+					<Dst zip="41539" qty="1" precP="1" precT="2"/>
+					<Dst zip="41540" qty="2" precP="1" precT="2"/>
+					<Dst zip="41542" qty="1" precP="1" precT="2"/>
+					<Dst zip="41564" qty="2" precP="1" precT="2"/>
+					<Dst zip="41704" qty="1" precP="1" precT="2"/>
+					<Dst zip="41705" qty="1" precP="1" precT="2"/>
+					<Dst zip="41727" qty="1" precP="1" precT="2"/>
+					<Dst zip="41747" qty="13" precP="1" precT="5"/>
+					<Dst zip="41751" qty="2" precP="1" precT="2"/>
+					<Dst zip="41812" qty="2" precP="1" precT="2"/>
+					<Dst zip="41837" qty="1" precP="1" precT="2"/>
+					<Dst zip="42002" qty="1" precP="1" precT="2"/>
+					<Dst zip="42032" qty="1" precP="1" precT="2"/>
+					<Dst zip="42047" qty="1" precP="1" precT="2"/>
+					<Dst zip="42103" qty="8" precP="1" precT="5"/>
+					<Dst zip="42107" qty="7" precP="1" precT="5"/>
+					<Dst zip="42113" qty="2" precP="1" precT="2"/>
+					<Dst zip="42115" qty="2" precP="1" precT="2"/>
+					<Dst zip="42117" qty="13" precP="1" precT="5"/>
+					<Dst zip="42201" qty="2" precP="1" precT="2"/>
+					<Dst zip="42203" qty="1" precP="1" precT="2"/>
+					<Dst zip="42217" qty="1" precP="1" precT="2"/>
+					<Dst zip="42218" qty="1" precP="1" precT="2"/>
+					<Dst zip="42219" qty="1" precP="1" precT="2"/>
+					<Dst zip="42231" qty="1" precP="1" precT="2"/>
+					<Dst zip="42232" qty="2" precP="1" precT="2"/>
+					<Dst zip="42234" qty="1" precP="1" precT="2"/>
+					<Dst zip="42237" qty="3" precP="1" precT="5"/>
+					<Dst zip="42239" qty="1" precP="1" precT="2"/>
+					<Dst zip="42240" qty="3" precP="1" precT="5"/>
+					<Dst zip="42243" qty="1" precP="1" precT="2"/>
+					<Dst zip="42275" qty="1" precP="1" precT="2"/>
+					<Dst zip="42277" qty="31" precP="1" precT="5"/>
+					<Dst zip="42279" qty="2" precP="1" precT="2"/>
+					<Dst zip="42283" qty="14" precP="1" precT="5"/>
+					<Dst zip="42285" qty="3" precP="1" precT="5"/>
+					<Dst zip="42287" qty="7" precP="1" precT="5"/>
+					<Dst zip="42289" qty="1" precP="1" precT="2"/>
+					<Dst zip="42301" qty="1" precP="1" precT="2"/>
+					<Dst zip="42302" qty="2" precP="1" precT="2"/>
+					<Dst zip="42303" qty="2" precP="1" precT="2"/>
+					<Dst zip="42313" qty="1" precP="1" precT="2"/>
+					<Dst zip="42327" qty="32" precP="1" precT="5"/>
+					<Dst zip="42329" qty="16" precP="1" precT="5"/>
+					<Dst zip="42331" qty="2" precP="1" precT="2"/>
+					<Dst zip="42332" qty="1" precP="1" precT="2"/>
+					<Dst zip="42334" qty="2" precP="1" precT="2"/>
+					<Dst zip="42335" qty="2" precP="1" precT="2"/>
+					<Dst zip="42339" qty="1" precP="1" precT="2"/>
+					<Dst zip="42342" qty="1" precP="1" precT="2"/>
+					<Dst zip="42349" qty="51" precP="1" precT="5"/>
+					<Dst zip="42351" qty="1" precP="1" precT="2"/>
+					<Dst zip="42352" qty="2" precP="1" precT="2"/>
+					<Dst zip="42353" qty="1" precP="1" precT="2"/>
+					<Dst zip="42354" qty="1" precP="1" precT="2"/>
+					<Dst zip="42369" qty="33" precP="1" precT="5"/>
+					<Dst zip="42371" qty="4" precP="1" precT="5"/>
+					<Dst zip="42373" qty="2" precP="1" precT="2"/>
+					<Dst zip="42389" qty="23" precP="1" precT="5"/>
+					<Dst zip="42391" qty="1" precP="1" precT="2"/>
+					<Dst zip="42399" qty="1" precP="1" precT="2"/>
+					<Dst zip="42460" qty="4" precP="1" precT="5"/>
+					<Dst zip="42461" qty="1" precP="1" precT="2"/>
+					<Dst zip="42464" qty="1" precP="1" precT="2"/>
+					<Dst zip="42465" qty="3" precP="1" precT="5"/>
+					<Dst zip="42469" qty="1" precP="1" precT="2"/>
+					<Dst zip="42477" qty="38" precP="1" precT="5"/>
+					<Dst zip="42489" qty="1" precP="1" precT="2"/>
+					<Dst zip="42493" qty="1" precP="1" precT="2"/>
+					<Dst zip="42503" qty="3" precP="1" precT="5"/>
+					<Dst zip="42507" qty="4" precP="1" precT="5"/>
+					<Dst zip="42513" qty="2" precP="1" precT="2"/>
+					<Dst zip="42520" qty="2" precP="1" precT="2"/>
+					<Dst zip="42521" qty="2" precP="1" precT="2"/>
+					<Dst zip="42522" qty="1" precP="1" precT="2"/>
+					<Dst zip="42526" qty="3" precP="1" precT="5"/>
+					<Dst zip="42527" qty="2" precP="1" precT="2"/>
+					<Dst zip="42551" qty="2" precP="1" precT="2"/>
+					<Dst zip="42553" qty="19" precP="1" precT="5"/>
+					<Dst zip="42555" qty="1" precP="1" precT="2"/>
+					<Dst zip="42567" qty="2" precP="1" precT="2"/>
+					<Dst zip="42603" qty="1" precP="1" precT="2"/>
+					<Dst zip="42604" qty="1" precP="1" precT="2"/>
+					<Dst zip="42605" qty="1" precP="1" precT="2"/>
+					<Dst zip="42607" qty="1" precP="1" precT="2"/>
+					<Dst zip="42621" qty="3" precP="1" precT="5"/>
+					<Dst zip="42623" qty="4" precP="1" precT="5"/>
+					<Dst zip="42626" qty="1" precP="1" precT="2"/>
+					<Dst zip="42630" qty="1" precP="1" precT="2"/>
+					<Dst zip="42631" qty="1" precP="1" precT="2"/>
+					<Dst zip="42651" qty="1" precP="1" precT="2"/>
+					<Dst zip="42653" qty="36" precP="1" precT="5"/>
+					<Dst zip="42657" qty="28" precP="1" precT="5"/>
+					<Dst zip="42659" qty="1" precP="1" precT="2"/>
+					<Dst zip="42661" qty="1" precP="1" precT="2"/>
+					<Dst zip="42670" qty="1" precP="1" precT="2"/>
+					<Dst zip="42677" qty="4" precP="1" precT="5"/>
+					<Dst zip="42697" qty="33" precP="1" precT="5"/>
+					<Dst zip="42703" qty="2" precP="1" precT="2"/>
+					<Dst zip="42719" qty="2" precP="1" precT="2"/>
+					<Dst zip="42781" qty="3" precP="1" precT="5"/>
+					<Dst zip="42799" qty="2" precP="1" precT="2"/>
+					<Dst zip="42801" qty="1" precP="1" precT="2"/>
+					<Dst zip="42804" qty="1" precP="1" precT="2"/>
+					<Dst zip="42806" qty="1" precP="1" precT="2"/>
+					<Dst zip="42807" qty="1" precP="1" precT="2"/>
+					<Dst zip="42818" qty="1" precP="1" precT="2"/>
+					<Dst zip="42819" qty="1" precP="1" precT="2"/>
+					<Dst zip="42822" qty="1" precP="1" precT="2"/>
+					<Dst zip="42823" qty="1" precP="1" precT="2"/>
+					<Dst zip="42825" qty="1" precP="1" precT="2"/>
+					<Dst zip="42826" qty="1" precP="1" precT="2"/>
+					<Dst zip="42853" qty="18" precP="1" precT="5"/>
+					<Dst zip="42855" qty="2" precP="1" precT="2"/>
+					<Dst zip="42857" qty="38" precP="1" precT="5"/>
+					<Dst zip="42859" qty="1" precP="1" precT="2"/>
+					<Dst zip="42862" qty="1" precP="1" precT="2"/>
+					<Dst zip="42873" qty="3" precP="1" precT="5"/>
+					<Dst zip="42897" qty="23" precP="1" precT="5"/>
+					<Dst zip="42929" qty="2" precP="1" precT="2"/>
+					<Dst zip="44009" qty="1" precP="1" precT="2"/>
+					<Dst zip="44026" qty="1" precP="1" precT="2"/>
+					<Dst zip="44032" qty="1" precP="1" precT="2"/>
+					<Dst zip="44047" qty="2" precP="1" precT="2"/>
+					<Dst zip="44057" qty="1" precP="1" precT="2"/>
+					<Dst zip="44058" qty="1" precP="1" precT="2"/>
+					<Dst zip="44135" qty="1" precP="1" precT="2"/>
+					<Dst zip="44137" qty="13" precP="1" precT="5"/>
+					<Dst zip="44139" qty="5" precP="1" precT="5"/>
+					<Dst zip="44141" qty="5" precP="1" precT="5"/>
+					<Dst zip="44143" qty="28" precP="1" precT="5"/>
+					<Dst zip="44145" qty="6" precP="1" precT="5"/>
+					<Dst zip="44147" qty="21" precP="1" precT="5"/>
+					<Dst zip="44149" qty="7" precP="1" precT="5"/>
+					<Dst zip="44225" qty="1" precP="1" precT="2"/>
+					<Dst zip="44227" qty="20" precP="1" precT="5"/>
+					<Dst zip="44229" qty="1" precP="1" precT="2"/>
+					<Dst zip="44243" qty="1" precP="1" precT="2"/>
+					<Dst zip="44263" qty="8" precP="1" precT="5"/>
+					<Dst zip="44267" qty="6" precP="1" precT="5"/>
+					<Dst zip="44269" qty="1" precP="1" precT="2"/>
+					<Dst zip="44271" qty="1" precP="1" precT="2"/>
+					<Dst zip="44287" qty="13" precP="1" precT="5"/>
+					<Dst zip="44293" qty="1" precP="1" precT="2"/>
+					<Dst zip="44309" qty="3" precP="1" precT="5"/>
+					<Dst zip="44313" qty="1" precP="1" precT="2"/>
+					<Dst zip="44319" qty="2" precP="1" precT="2"/>
+					<Dst zip="44339" qty="1" precP="1" precT="2"/>
+					<Dst zip="44357" qty="4" precP="1" precT="5"/>
+					<Dst zip="44359" qty="1" precP="1" precT="2"/>
+					<Dst zip="44369" qty="1" precP="1" precT="2"/>
+					<Dst zip="44379" qty="1" precP="1" precT="2"/>
+					<Dst zip="44383" qty="1" precP="1" precT="2"/>
+					<Dst zip="44388" qty="2" precP="1" precT="2"/>
+					<Dst zip="44517" qty="1" precP="1" precT="2"/>
+					<Dst zip="44536" qty="1" precP="1" precT="2"/>
+					<Dst zip="44575" qty="2" precP="1" precT="2"/>
+					<Dst zip="44577" qty="8" precP="1" precT="5"/>
+					<Dst zip="44579" qty="1" precP="1" precT="2"/>
+					<Dst zip="44581" qty="1" precP="1" precT="2"/>
+					<Dst zip="44623" qty="9" precP="1" precT="5"/>
+					<Dst zip="44625" qty="2" precP="1" precT="2"/>
+					<Dst zip="44627" qty="1" precP="1" precT="2"/>
+					<Dst zip="44628" qty="2" precP="1" precT="2"/>
+					<Dst zip="44629" qty="1" precP="1" precT="2"/>
+					<Dst zip="44652" qty="2" precP="1" precT="2"/>
+					<Dst zip="44653" qty="9" precP="1" precT="5"/>
+					<Dst zip="44703" qty="1" precP="1" precT="2"/>
+					<Dst zip="44710" qty="1" precP="1" precT="2"/>
+					<Dst zip="44713" qty="1" precP="1" precT="2"/>
+					<Dst zip="44737" qty="1" precP="1" precT="2"/>
+					<Dst zip="44787" qty="8" precP="1" precT="5"/>
+					<Dst zip="44789" qty="2" precP="1" precT="2"/>
+					<Dst zip="44791" qty="2" precP="1" precT="2"/>
+					<Dst zip="44793" qty="8" precP="1" precT="5"/>
+					<Dst zip="44797" qty="3" precP="1" precT="5"/>
+					<Dst zip="44803" qty="6" precP="1" precT="5"/>
+					<Dst zip="44805" qty="3" precP="1" precT="5"/>
+					<Dst zip="44807" qty="15" precP="1" precT="5"/>
+					<Dst zip="44809" qty="3" precP="1" precT="5"/>
+					<Dst zip="44841" qty="1" precP="1" precT="2"/>
+					<Dst zip="44843" qty="2" precP="1" precT="2"/>
+					<Dst zip="44867" qty="17" precP="1" precT="5"/>
+					<Dst zip="44879" qty="1" precP="1" precT="2"/>
+					<Dst zip="44894" qty="2" precP="1" precT="2"/>
+					<Dst zip="45023" qty="1" precP="1" precT="2"/>
+					<Dst zip="45026" qty="1" precP="1" precT="2"/>
+					<Dst zip="45028" qty="1" precP="1" precT="2"/>
+					<Dst zip="45030" qty="1" precP="1" precT="2"/>
+					<Dst zip="45070" qty="1" precP="1" precT="2"/>
+					<Dst zip="45127" qty="21" precP="1" precT="5"/>
+					<Dst zip="45128" qty="7" precP="1" precT="5"/>
+					<Dst zip="45130" qty="4" precP="1" precT="5"/>
+					<Dst zip="45131" qty="1" precP="1" precT="2"/>
+					<Dst zip="45133" qty="9" precP="1" precT="5"/>
+					<Dst zip="45134" qty="1" precP="1" precT="2"/>
+					<Dst zip="45136" qty="2" precP="1" precT="2"/>
+					<Dst zip="45138" qty="2" precP="1" precT="2"/>
+					<Dst zip="45139" qty="3" precP="1" precT="5"/>
+					<Dst zip="45141" qty="7" precP="1" precT="5"/>
+					<Dst zip="45143" qty="14" precP="1" precT="5"/>
+					<Dst zip="45147" qty="2" precP="1" precT="2"/>
+					<Dst zip="45239" qty="1" precP="1" precT="2"/>
+					<Dst zip="45241" qty="1" precP="1" precT="2"/>
+					<Dst zip="45257" qty="11" precP="1" precT="5"/>
+					<Dst zip="45277" qty="4" precP="1" precT="5"/>
+					<Dst zip="45293" qty="1" precP="1" precT="2"/>
+					<Dst zip="45294" qty="1" precP="1" precT="2"/>
+					<Dst zip="45307" qty="18" precP="1" precT="5"/>
+					<Dst zip="45326" qty="2" precP="1" precT="2"/>
+					<Dst zip="45327" qty="4" precP="1" precT="5"/>
+					<Dst zip="45357" qty="2" precP="1" precT="2"/>
+					<Dst zip="45359" qty="2" precP="1" precT="2"/>
+					<Dst zip="45407" qty="1" precP="1" precT="2"/>
+					<Dst zip="45468" qty="2" precP="1" precT="2"/>
+					<Dst zip="45473" qty="12" precP="1" precT="5"/>
+					<Dst zip="45478" qty="2" precP="1" precT="2"/>
+					<Dst zip="45479" qty="1" precP="1" precT="2"/>
+					<Dst zip="45481" qty="1" precP="1" precT="2"/>
+					<Dst zip="45503" qty="1" precP="1" precT="2"/>
+					<Dst zip="45505" qty="1" precP="1" precT="2"/>
+					<Dst zip="45525" qty="2" precP="1" precT="2"/>
+					<Dst zip="45527" qty="5" precP="1" precT="5"/>
+					<Dst zip="45529" qty="1" precP="1" precT="2"/>
+					<Dst zip="45657" qty="10" precP="1" precT="5"/>
+					<Dst zip="45663" qty="5" precP="1" precT="5"/>
+					<Dst zip="45665" qty="1" precP="1" precT="2"/>
+					<Dst zip="45677" qty="1" precP="1" precT="2"/>
+					<Dst zip="45699" qty="2" precP="1" precT="2"/>
+					<Dst zip="45701" qty="1" precP="1" precT="2"/>
+					<Dst zip="45711" qty="2" precP="1" precT="2"/>
+					<Dst zip="45721" qty="2" precP="1" precT="2"/>
+					<Dst zip="45723" qty="1" precP="1" precT="2"/>
+					<Dst zip="45731" qty="4" precP="1" precT="5"/>
+					<Dst zip="45768" qty="1" precP="1" precT="2"/>
+					<Dst zip="45803" qty="1" precP="1" precT="2"/>
+					<Dst zip="45879" qty="2" precP="1" precT="2"/>
+					<Dst zip="45883" qty="6" precP="1" precT="5"/>
+					<Dst zip="45889" qty="1" precP="1" precT="2"/>
+					<Dst zip="45891" qty="3" precP="1" precT="5"/>
+					<Dst zip="45894" qty="3" precP="1" precT="5"/>
+					<Dst zip="45897" qty="5" precP="1" precT="5"/>
+					<Dst zip="45966" qty="1" precP="1" precT="2"/>
+					<Dst zip="46045" qty="2" precP="1" precT="2"/>
+					<Dst zip="46047" qty="7" precP="1" precT="5"/>
+					<Dst zip="46049" qty="1" precP="1" precT="2"/>
+					<Dst zip="46117" qty="8" precP="1" precT="5"/>
+					<Dst zip="46121" qty="1" precP="1" precT="2"/>
+					<Dst zip="46123" qty="1" precP="1" precT="2"/>
+					<Dst zip="46145" qty="2" precP="1" precT="2"/>
+					<Dst zip="46147" qty="6" precP="1" precT="5"/>
+					<Dst zip="46149" qty="2" precP="1" precT="2"/>
+					<Dst zip="46211" qty="1" precP="1" precT="2"/>
+					<Dst zip="46236" qty="4" precP="1" precT="5"/>
+					<Dst zip="46238" qty="1" precP="1" precT="2"/>
+					<Dst zip="46240" qty="1" precP="1" precT="2"/>
+					<Dst zip="46242" qty="1" precP="1" precT="2"/>
+					<Dst zip="46282" qty="3" precP="1" precT="5"/>
+					<Dst zip="46361" qty="1" precP="1" precT="2"/>
+					<Dst zip="46365" qty="1" precP="1" precT="2"/>
+					<Dst zip="46367" qty="1" precP="1" precT="2"/>
+					<Dst zip="46397" qty="9" precP="1" precT="5"/>
+					<Dst zip="46423" qty="1" precP="1" precT="2"/>
+					<Dst zip="46427" qty="1" precP="1" precT="2"/>
+					<Dst zip="46459" qty="1" precP="1" precT="2"/>
+					<Dst zip="46472" qty="1" precP="1" precT="2"/>
+					<Dst zip="46483" qty="16" precP="1" precT="5"/>
+					<Dst zip="46485" qty="1" precP="1" precT="2"/>
+					<Dst zip="46487" qty="2" precP="1" precT="2"/>
+					<Dst zip="46499" qty="2" precP="1" precT="2"/>
+					<Dst zip="46509" qty="1" precP="1" precT="2"/>
+					<Dst zip="46519" qty="1" precP="1" precT="2"/>
+					<Dst zip="46524" qty="1" precP="1" precT="2"/>
+					<Dst zip="46525" qty="1" precP="1" precT="2"/>
+					<Dst zip="46535" qty="1" precP="1" precT="2"/>
+					<Dst zip="46539" qty="2" precP="1" precT="2"/>
+					<Dst zip="46569" qty="2" precP="1" precT="2"/>
+					<Dst zip="47001" qty="1" precP="1" precT="2"/>
+					<Dst zip="47013" qty="1" precP="1" precT="2"/>
+					<Dst zip="47051" qty="7" precP="1" precT="5"/>
+					<Dst zip="47053" qty="15" precP="1" precT="5"/>
+					<Dst zip="47057" qty="16" precP="1" precT="5"/>
+					<Dst zip="47058" qty="1" precP="1" precT="2"/>
+					<Dst zip="47059" qty="4" precP="1" precT="5"/>
+					<Dst zip="47119" qty="2" precP="1" precT="2"/>
+					<Dst zip="47137" qty="5" precP="1" precT="5"/>
+					<Dst zip="47138" qty="1" precP="1" precT="2"/>
+					<Dst zip="47139" qty="2" precP="1" precT="2"/>
+					<Dst zip="47142" qty="1" precP="1" precT="2"/>
+					<Dst zip="47166" qty="2" precP="1" precT="2"/>
+					<Dst zip="47167" qty="11" precP="1" precT="5"/>
+					<Dst zip="47169" qty="1" precP="1" precT="2"/>
+					<Dst zip="47198" qty="1" precP="1" precT="2"/>
+					<Dst zip="47226" qty="1" precP="1" precT="2"/>
+					<Dst zip="47228" qty="1" precP="1" precT="2"/>
+					<Dst zip="47229" qty="1" precP="1" precT="2"/>
+					<Dst zip="47269" qty="3" precP="1" precT="5"/>
+					<Dst zip="47441" qty="4" precP="1" precT="5"/>
+					<Dst zip="47443" qty="8" precP="1" precT="5"/>
+					<Dst zip="47447" qty="8" precP="1" precT="5"/>
+					<Dst zip="47475" qty="3" precP="1" precT="5"/>
+					<Dst zip="47506" qty="2" precP="1" precT="2"/>
+					<Dst zip="47514" qty="1" precP="1" precT="2"/>
+					<Dst zip="47519" qty="2" precP="1" precT="2"/>
+					<Dst zip="47533" qty="31" precP="1" precT="5"/>
+					<Dst zip="47546" qty="1" precP="1" precT="2"/>
+					<Dst zip="47553" qty="1" precP="1" precT="2"/>
+					<Dst zip="47574" qty="2" precP="1" precT="2"/>
+					<Dst zip="47587" qty="5" precP="1" precT="5"/>
+					<Dst zip="47589" qty="1" precP="1" precT="2"/>
+					<Dst zip="47608" qty="2" precP="1" precT="2"/>
+					<Dst zip="47623" qty="14" precP="1" precT="5"/>
+					<Dst zip="47625" qty="1" precP="1" precT="2"/>
+					<Dst zip="47627" qty="3" precP="1" precT="5"/>
+					<Dst zip="47638" qty="1" precP="1" precT="2"/>
+					<Dst zip="47647" qty="5" precP="1" precT="5"/>
+					<Dst zip="47669" qty="1" precP="1" precT="2"/>
+					<Dst zip="47753" qty="1" precP="1" precT="2"/>
+					<Dst zip="47757" qty="1" precP="1" precT="2"/>
+					<Dst zip="47798" qty="2" precP="1" precT="2"/>
+					<Dst zip="47799" qty="1" precP="1" precT="2"/>
+					<Dst zip="47800" qty="1" precP="1" precT="2"/>
+					<Dst zip="47803" qty="27" precP="1" precT="5"/>
+					<Dst zip="47805" qty="2" precP="1" precT="2"/>
+					<Dst zip="47807" qty="19" precP="1" precT="5"/>
+					<Dst zip="47809" qty="1" precP="1" precT="2"/>
+					<Dst zip="47829" qty="1" precP="1" precT="2"/>
+					<Dst zip="47853" qty="1" precP="1" precT="2"/>
+					<Dst zip="47877" qty="40" precP="1" precT="5"/>
+					<Dst zip="47906" qty="2" precP="1" precT="2"/>
+					<Dst zip="47909" qty="1" precP="1" precT="2"/>
+					<Dst zip="47918" qty="1" precP="1" precT="2"/>
+					<Dst zip="47929" qty="3" precP="1" precT="5"/>
+					<Dst zip="48001" qty="1" precP="1" precT="2"/>
+					<Dst zip="48008" qty="1" precP="1" precT="2"/>
+					<Dst zip="48037" qty="1" precP="1" precT="2"/>
+					<Dst zip="48143" qty="7" precP="1" precT="5"/>
+					<Dst zip="48147" qty="6" precP="1" precT="5"/>
+					<Dst zip="48153" qty="14" precP="1" precT="5"/>
+					<Dst zip="48157" qty="13" precP="1" precT="5"/>
+					<Dst zip="48163" qty="12" precP="1" precT="5"/>
+					<Dst zip="48167" qty="2" precP="1" precT="2"/>
+					<Dst zip="48233" qty="1" precP="1" precT="2"/>
+					<Dst zip="48237" qty="1" precP="1" precT="2"/>
+					<Dst zip="48293" qty="1" precP="1" precT="2"/>
+					<Dst zip="48317" qty="6" precP="1" precT="5"/>
+					<Dst zip="48336" qty="1" precP="1" precT="2"/>
+					<Dst zip="48367" qty="1" precP="1" precT="2"/>
+					<Dst zip="48457" qty="1" precP="1" precT="2"/>
+					<Dst zip="48467" qty="1" precP="1" precT="2"/>
+					<Dst zip="48472" qty="1" precP="1" precT="2"/>
+					<Dst zip="48477" qty="12" precP="1" precT="5"/>
+					<Dst zip="48493" qty="4" precP="1" precT="5"/>
+					<Dst zip="48527" qty="8" precP="1" precT="5"/>
+					<Dst zip="48607" qty="13" precP="1" precT="5"/>
+					<Dst zip="48653" qty="18" precP="1" precT="5"/>
+					<Dst zip="48661" qty="1" precP="1" precT="2"/>
+					<Dst zip="48683" qty="27" precP="1" precT="5"/>
+					<Dst zip="48692" qty="1" precP="1" precT="2"/>
+					<Dst zip="48694" qty="1" precP="1" precT="2"/>
+					<Dst zip="48703" qty="17" precP="1" precT="5"/>
+					<Dst zip="48727" qty="5" precP="1" precT="5"/>
+					<Dst zip="49013" qty="1" precP="1" precT="2"/>
+					<Dst zip="49074" qty="2" precP="1" precT="2"/>
+					<Dst zip="49113" qty="1" precP="1" precT="2"/>
+					<Dst zip="49135" qty="1" precP="1" precT="2"/>
+					<Dst zip="49138" qty="1" precP="1" precT="2"/>
+					<Dst zip="49143" qty="4" precP="1" precT="5"/>
+					<Dst zip="49154" qty="1" precP="1" precT="2"/>
+					<Dst zip="49163" qty="7" precP="1" precT="5"/>
+					<Dst zip="49177" qty="1" precP="1" precT="2"/>
+					<Dst zip="49193" qty="1" precP="1" precT="2"/>
+					<Dst zip="49197" qty="1" precP="1" precT="2"/>
+					<Dst zip="49201" qty="1" precP="1" precT="2"/>
+					<Dst zip="49207" qty="1" precP="1" precT="2"/>
+					<Dst zip="49313" qty="1" precP="1" precT="2"/>
+					<Dst zip="49343" qty="1" precP="1" precT="2"/>
+					<Dst zip="49356" qty="63" precP="1" precT="5"/>
+					<Dst zip="49377" qty="16" precP="1" precT="5"/>
+					<Dst zip="49393" qty="21" precP="1" precT="5"/>
+					<Dst zip="49406" qty="41" precP="1" precT="5"/>
+					<Dst zip="49413" qty="7" precP="1" precT="5"/>
+					<Dst zip="49419" qty="39" precP="1" precT="5"/>
+					<Dst zip="49424" qty="1" precP="1" precT="2"/>
+					<Dst zip="49448" qty="35" precP="1" precT="5"/>
+					<Dst zip="49453" qty="23" precP="1" precT="5"/>
+					<Dst zip="49457" qty="9" precP="1" precT="5"/>
+					<Dst zip="49459" qty="4" precP="1" precT="5"/>
+					<Dst zip="49462" qty="1" precP="1" precT="2"/>
+					<Dst zip="49463" qty="2" precP="1" precT="2"/>
+					<Dst zip="49477" qty="11" precP="1" precT="5"/>
+					<Dst zip="49492" qty="2" precP="1" precT="2"/>
+					<Dst zip="49497" qty="5" precP="1" precT="5"/>
+					<Dst zip="49546" qty="1" precP="1" precT="2"/>
+					<Dst zip="49553" qty="1" precP="1" precT="2"/>
+					<Dst zip="49577" qty="4" precP="1" precT="5"/>
+					<Dst zip="49593" qty="3" precP="1" precT="5"/>
+					<Dst zip="49661" qty="2" precP="1" precT="2"/>
+					<Dst zip="49703" qty="1" precP="1" precT="2"/>
+					<Dst zip="49724" qty="1" precP="1" precT="2"/>
+					<Dst zip="49733" qty="7" precP="1" precT="5"/>
+					<Dst zip="49757" qty="4" precP="1" precT="5"/>
+					<Dst zip="49764" qty="1" precP="1" precT="2"/>
+					<Dst zip="49767" qty="1" precP="1" precT="2"/>
+					<Dst zip="49840" qty="1" precP="1" precT="2"/>
+					<Dst zip="49843" qty="1" precP="1" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Dialogpost Groß -->
+					<ProductNumber>250300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>748</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Entgeltermäßigung Bd./Beh.Leitregion Dialogpost Groß -->
+					<ProductNumber>1000526</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>15516</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Entgeltermäßigung Bd./Beh.PLZ Dialogpost Groß -->
+					<ProductNumber>1000527</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>62</SlotQty>
+			<Type>PAL</Type>
+			<Qty>62</Qty>
+			<Package packageID="1" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="222.650" unit="kg"/>
+				<NWM value="133.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>214</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="253.275" unit="kg"/>
+				<NWM value="164.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>263</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="3" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="271.400" unit="kg"/>
+				<NWM value="182.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>292</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="4" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="253.900" unit="kg"/>
+				<NWM value="165.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>264</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="5" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="248.275" unit="kg"/>
+				<NWM value="159.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>255</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="6" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="253.900" unit="kg"/>
+				<NWM value="165.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>264</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="7" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="240.150" unit="kg"/>
+				<NWM value="151.250" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>242</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="8" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="240.775" unit="kg"/>
+				<NWM value="151.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>243</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="9" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="267.025" unit="kg"/>
+				<NWM value="178.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>285</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="10" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="254.525" unit="kg"/>
+				<NWM value="165.625" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>265</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="11" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="2">
+				<GWM value="151.550" unit="kg"/>
+				<NWM value="88.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>142</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="12" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="263.275" unit="kg"/>
+				<NWM value="174.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>279</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="13" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="263.900" unit="kg"/>
+				<NWM value="175.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>280</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="14" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="265.775" unit="kg"/>
+				<NWM value="176.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>283</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="15" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="262.650" unit="kg"/>
+				<NWM value="173.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>278</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="16" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="262.025" unit="kg"/>
+				<NWM value="173.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>277</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="17" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="260.775" unit="kg"/>
+				<NWM value="171.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>275</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="18" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="264.525" unit="kg"/>
+				<NWM value="175.625" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>281</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="19" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="265.150" unit="kg"/>
+				<NWM value="176.250" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>282</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="20" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="266.400" unit="kg"/>
+				<NWM value="177.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>284</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="21" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="253.275" unit="kg"/>
+				<NWM value="164.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>263</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="22" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="257.650" unit="kg"/>
+				<NWM value="168.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>270</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="23" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="268.275" unit="kg"/>
+				<NWM value="179.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>287</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="24" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="267.025" unit="kg"/>
+				<NWM value="178.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>285</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="25" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="263.275" unit="kg"/>
+				<NWM value="174.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>279</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="26" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="257.650" unit="kg"/>
+				<NWM value="168.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>270</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="27" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="260.775" unit="kg"/>
+				<NWM value="171.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>275</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="28" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="260.775" unit="kg"/>
+				<NWM value="171.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>275</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="29" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="259.525" unit="kg"/>
+				<NWM value="170.625" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>273</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="30" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="250.775" unit="kg"/>
+				<NWM value="161.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>259</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="31" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="232.025" unit="kg"/>
+				<NWM value="143.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>229</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="32" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="257.025" unit="kg"/>
+				<NWM value="168.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>269</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="33" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="255.775" unit="kg"/>
+				<NWM value="166.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>267</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="34" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="258.900" unit="kg"/>
+				<NWM value="170.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>272</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="35" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="240.775" unit="kg"/>
+				<NWM value="151.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>243</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="36" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="252.650" unit="kg"/>
+				<NWM value="163.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>262</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="37" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="263.275" unit="kg"/>
+				<NWM value="174.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>279</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="38" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="253.275" unit="kg"/>
+				<NWM value="164.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>263</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="39" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="270.775" unit="kg"/>
+				<NWM value="181.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>291</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="40" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="266.400" unit="kg"/>
+				<NWM value="177.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>284</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="41" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="270.775" unit="kg"/>
+				<NWM value="181.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>291</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="42" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="265.775" unit="kg"/>
+				<NWM value="176.875" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>283</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="43" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="265.150" unit="kg"/>
+				<NWM value="176.250" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>282</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="44" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="266.400" unit="kg"/>
+				<NWM value="177.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>284</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="45" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="268.275" unit="kg"/>
+				<NWM value="179.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>287</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="46" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="258.275" unit="kg"/>
+				<NWM value="169.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>271</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="47" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="259.525" unit="kg"/>
+				<NWM value="170.625" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>273</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="48" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="254.525" unit="kg"/>
+				<NWM value="165.625" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>265</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="49" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="268.900" unit="kg"/>
+				<NWM value="180.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>288</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="50" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="257.650" unit="kg"/>
+				<NWM value="168.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>270</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="51" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="256.400" unit="kg"/>
+				<NWM value="167.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>268</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="52" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="3">
+				<GWM value="232.675" unit="kg"/>
+				<NWM value="148.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>237</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="53" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="212.650" unit="kg"/>
+				<NWM value="123.750" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>198</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="54" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="230.150" unit="kg"/>
+				<NWM value="141.250" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>226</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="55" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="238.900" unit="kg"/>
+				<NWM value="150.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>240</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="56" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="247.025" unit="kg"/>
+				<NWM value="158.125" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>253</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="57" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="221.400" unit="kg"/>
+				<NWM value="132.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>212</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="58" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="216.400" unit="kg"/>
+				<NWM value="127.500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>204</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="59" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="248.900" unit="kg"/>
+				<NWM value="160.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>256</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="60" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="258.900" unit="kg"/>
+				<NWM value="170.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>272</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="61" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="248.275" unit="kg"/>
+				<NWM value="159.375" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>255</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="62" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="4">
+				<GWM value="205.850" unit="kg"/>
+				<NWM value="130.000" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>208</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

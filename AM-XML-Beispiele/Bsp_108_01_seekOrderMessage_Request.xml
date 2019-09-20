@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 13.03.2009
+Beispiel: 108_01
+Beschreibung: Abfrage aller noch nicht gelesenen Meldungen, die im fest vorgegebenen Zeitraum (letzte zehn Tage) für die vorgegebene ZKZ erzeugt wurden.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderMessageRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderMessageRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/seekOrderMessageRequest.xsd">
+	<seekOrderMessageRequest codeTableVersion="1.0" version="1.0" testcase="true" maxResult="25">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<Parties>
+			<Payer>
+				<Contract>
+					<ContractID>10002</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<OmMessageParameters>
+			<MsgDateTimeFrom>2010-11-01T10:00:00</MsgDateTimeFrom>
+			<MsgDateTimeTo>2010-11-12T10:00:00</MsgDateTimeTo>
+			<AlreadyRead>false</AlreadyRead>
+			<SortOrder>DSC</SortOrder>
+		</OmMessageParameters>
+	</seekOrderMessageRequest>
+</n:Request>

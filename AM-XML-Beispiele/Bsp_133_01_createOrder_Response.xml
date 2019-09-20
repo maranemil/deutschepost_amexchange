@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>WARNING</ReturnCode>
+      <ErrMsg>
+        <ErrDateTime>2011-05-10T15:38:47</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514168</ErrCode>
+        <ErrDesc>Der EA mit der Auftragsnummer 00000004158568 enthält eine Abholdienstleistung, jedoch sind nicht alle Pflichtfelder für die Übermittlung an StELN gefüllt. Die leeren Pflichtfelder sind: [Geplante Gebinde]</ErrDesc>
+      </ErrMsg>
+      <ErrMsg>
+        <ErrDateTime>2011-05-10T15:38:47</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>513067</ErrCode>
+        <ErrDesc>Für den gemeldeten Datenstand bzw. zur Auftragsversion fehlen folgende Pflichtfelder: [Anzahl Gebinde, Gebindeart, Gebindeziele, Versandplan]. Wir würden uns freuen, wenn Sie diese bis zum 11.05.2011 10:00 Uhr ergänzen.</ErrDesc>
+      </ErrMsg>
+      <ErrMsg>
+        <ErrDateTime>2011-05-10T15:38:47</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514168</ErrCode>
+        <ErrDesc>Der EA mit der Auftragsnummer 00000004158568 enthält eine Abholdienstleistung, jedoch sind nicht alle Pflichtfelder für die Übermittlung an StELN gefüllt. Die leeren Pflichtfelder sind: [Gebindeart]</ErrDesc>
+      </ErrMsg>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110510153846</ODOCID>
+      <CreationDateTime>2011-05-10T15:38:48</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2011-05-10T15:38:46</ChangedAt>
+      <State>AU</State>
+      <AchievedDataQuality>NO</AchievedDataQuality>
+      <OrderID>00000004158568</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>110512A13300100</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+</n:Response>

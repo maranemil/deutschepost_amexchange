@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 22.12.2006
+Beispiel: 014_02
+Beschreibung: Neuanlage einer Teileinlieferungsgruppe für DV-freigemachte Briefe. Da es sich um eine ungeplante Teileinlieferung handelt, wird der Versandplan bereits mit dem Anlegen der Teileinlieferungsgruppe übermittelt und beim Anlegen der einzelnen Teileinlieferungen unterhalb der Teileinlieferungsgruppe partiell übernommen.
+Bei dieser Datei handelt es sich um die Aufteilung der Gesamteinlieferung in Teileinlieferungen. Dies ist die erste Teileinlieferung.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>TE</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>T</SubmissionType>
+			<SubmissionID>1</SubmissionID>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A01400200</SystemID>
+			</CustOrderID>
+			<RefOrder>
+				<CustOrderID>
+					<CustID>6002000131</CustID>
+					<SystemID>151112A01400100</SystemID>
+				</CustOrderID>
+			</RefOrder>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>38000</Qty>
+				<TotalQty>65000</TotalQty>
+				<Format>S</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<RefDst>
+					<Range from="1" to="38000"/>
+				</RefDst>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Standardbrief -->
+					<ProductNumber>102100001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>33000</Qty>
+				<TotalQty>52000</TotalQty>
+				<Format>K</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<RefDst>
+					<Range from="1" to="8000"/>
+				</RefDst>
+			</Shipment>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Brief Kompakt -->
+					<ProductNumber>102200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Entgelterm垩gung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

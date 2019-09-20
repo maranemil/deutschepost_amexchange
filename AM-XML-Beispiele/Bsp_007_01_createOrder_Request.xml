@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Andreas Thielmann
+Version: 1.0
+Erstellung: 18.12.2006
+Beispiel: 007_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für DV freigemachte Büchersendungen für verschiedene Formate.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A00700100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>3</Qty>
+				<Format>G</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="5">
+					<!-- Keine Vorsortierung bei den Formaten Groß und Maxi. -->
+					<!-- Dafür aber PLZ-genaue Angabe des Sendungsziels. -->
+					<Dst from="2091" to="2092" zip="19987" precT="0"/>
+					<Dst from="2093" to="2093" zip="12564" precT="0"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Büchersendung Groß -->
+					<ProductNumber>103500001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>2</Qty>
+				<Format>M</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="5">
+					<!-- Keine Vorsortierung bei den Formaten Groß und Maxi. -->
+					<!-- Dafür aber PLZ-genaue Angabe des Sendungsziels. -->
+					<Dst from="2094" to="2094" zip="62241" precT="5"/>
+					<Dst from="2095" to="2095" zip="42187" precT="5"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Büchersendung Maxi -->
+					<ProductNumber>103600001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

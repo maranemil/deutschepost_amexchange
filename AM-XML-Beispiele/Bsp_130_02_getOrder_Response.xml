@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.2/getOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.2/common">
+  <getOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110511143507</ODOCID>
+      <CreationDateTime>2011-05-11T14:35:08</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader includesDestinations="true" includesPackaging="true" >
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2011-05-11T14:19:25</ChangedAt>
+      <OrderType>EA</OrderType>
+      <State>DM</State>
+      <Released>true</Released>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderLabel>AM-XML Beispiel 130</OrderLabel>
+      <CreationDate>2011-04-26</CreationDate>
+      <SubmissionType>G</SubmissionType>
+      <SubmissionID>1</SubmissionID>
+      <OrderCategory>IP_EINZEL</OrderCategory>
+      <OrderCategoryGroup>IP</OrderCategoryGroup>
+      <OrderID>00000004114573</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>110512A13000100</SystemID>
+      </CustOrderID>
+      <TotalAmount value="36370.63" currency="EUR" />
+    </OrderHeader>
+    <Parties>
+      <Originator>
+        <CustID>6000000121</CustID>
+        <Name>Max Muster 001</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+      </Originator>
+      <Submitter>
+        <CustID>6002000131</CustID>
+        <Name>Schnelltransport GmbH</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+      </Submitter>
+      <Payer>
+        <CustID>6000000121</CustID>
+        <Name>Max Muster 001</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+        <PaymentMeans>
+          <PostCardID>60000001212501001</PostCardID>
+        </PaymentMeans>
+      </Payer>
+    </Parties>
+    <Induction>
+      <TransitDirectionCode>E</TransitDirectionCode>
+      <ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+      <EarliestDateTime>2015-05-14T10:00:00</EarliestDateTime>
+      <LatestDateTime>2011-05-14T10:00:00</LatestDateTime>
+    </Induction>
+    <ShipmentItem>
+      <Shipment>
+        <ShipmentID>0</ShipmentID>
+        <Desc>Infopost-Aussendung</Desc>
+        <Type>EIZ</Type>
+        <Qty>48710</Qty>
+        <AdditionalQty>0</AdditionalQty>
+        <MachineProcessable>true</MachineProcessable>
+        <MachineReadable>true</MachineReadable>
+        <Addressed>A</Addressed>
+        <IndividualWeight value="498" unit="g" />
+        <Format>G</Format>
+        <Length value="297" unit="mm" />
+        <Width value="210" unit="mm" />
+        <Thickness value="15" unit="mm" />
+        <Postage>
+          <Type>FV</Type>
+          <FrankingIdEncoding>DEC</FrankingIdEncoding>
+        </Postage>
+      </Shipment>
+      <Item>
+        <ItemID>2</ItemID>
+        <TotalAmount value="-8.51" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>346</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>001140301</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>5</ItemID>
+        <TotalAmount value="-1566.76" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>47767</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>001140304</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>3</ItemID>
+        <TotalAmount value="-1982.92" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>48364</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>001140302</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>1</ItemID>
+        <TotalAmount value="39942.2" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>48710</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>140300001</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>4</ItemID>
+        <TotalAmount value="-13.38" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>816</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>001140303</ProductNumber>
+        </LineItem>
+      </Item>
+    </ShipmentItem>
+    <Packaging>
+      <Type>PAL</Type>
+      <Qty>75</Qty>
+      <Package packageID="00340217773300001835" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71691" zipTo="71701">
+        <GWM value="412.688" unit="kg" />
+        <NWM value="326.688" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>656</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002351" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="DE" zipFrom="01099" zipTo="50827">
+        <GWM value="143.182" unit="kg" />
+        <NWM value="54.282" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>109</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002368" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="DE" zipFrom="51069" zipTo="59494">
+        <GWM value="48.564" unit="kg" />
+        <NWM value="8.964" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>18</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001996" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74078" zipTo="74078">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001903" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74072" zipTo="74072">
+        <GWM value="443.476" unit="kg" />
+        <NWM value="354.576" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>712</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002337" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74214" zipTo="74082">
+        <GWM value="280.792" unit="kg" />
+        <NWM value="213.642" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>429</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002283" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74196" zipTo="74199">
+        <GWM value="443.476" unit="kg" />
+        <NWM value="354.576" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>712</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002023" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74078" zipTo="74078">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001699" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="70" zipFrom="70734" zipTo="70806">
+        <GWM value="425.05" unit="kg" />
+        <NWM value="336.15" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>675</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002238" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74189" zipTo="74189">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002047" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74080" zipTo="74080">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002092" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74081" zipTo="74081">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001705" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="70" zipFrom="70806" zipTo="70825">
+        <GWM value="403.314" unit="kg" />
+        <NWM value="320.214" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>643</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001859" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71711" zipTo="71720">
+        <GWM value="424.242" unit="kg" />
+        <NWM value="338.142" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>679</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001644" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="69" zipFrom="69412" zipTo="69437">
+        <GWM value="299.628" unit="kg" />
+        <NWM value="229.578" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>461</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002108" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74081" zipTo="74081">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002306" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74206" zipTo="74211">
+        <GWM value="440.488" unit="kg" />
+        <NWM value="351.588" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>706</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002245" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74189" zipTo="74193">
+        <GWM value="442.978" unit="kg" />
+        <NWM value="354.078" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>711</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001880" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74072" zipTo="74072">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002313" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74211" zipTo="74211">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001729" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71277" zipTo="71384">
+        <GWM value="395.258" unit="kg" />
+        <NWM value="309.258" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>621</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001743" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71522" zipTo="71543">
+        <GWM value="418.664" unit="kg" />
+        <NWM value="332.664" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>668</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002269" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74193" zipTo="74196">
+        <GWM value="440.488" unit="kg" />
+        <NWM value="351.588" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>706</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002115" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74081" zipTo="74172">
+        <GWM value="437.5" unit="kg" />
+        <NWM value="348.6" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>700</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002214" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74182" zipTo="74182">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002016" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74078" zipTo="74078">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002139" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74172" zipTo="74172">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002221" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74182" zipTo="74189">
+        <GWM value="443.974" unit="kg" />
+        <NWM value="355.074" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>713</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002252" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74193" zipTo="74193">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002078" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74080" zipTo="74080">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001804" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71640" zipTo="71642">
+        <GWM value="413.684" unit="kg" />
+        <NWM value="327.684" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>658</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001781" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71634" zipTo="71636">
+        <GWM value="424.242" unit="kg" />
+        <NWM value="338.142" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>679</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001668" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="70" zipFrom="70174" zipTo="70374">
+        <GWM value="363.796" unit="kg" />
+        <NWM value="274.896" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>552</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001811" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71642" zipTo="71672">
+        <GWM value="417.17" unit="kg" />
+        <NWM value="331.17" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>665</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002290" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74199" zipTo="74206">
+        <GWM value="440.986" unit="kg" />
+        <NWM value="352.086" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>707</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002146" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74172" zipTo="74172">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002276" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74196" zipTo="74196">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001927" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74074" zipTo="74074">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002320" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74211" zipTo="74214">
+        <GWM value="303.656" unit="kg" />
+        <NWM value="235.056" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>472</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002061" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74080" zipTo="74080">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001873" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71726" zipTo="71157">
+        <GWM value="388.33" unit="kg" />
+        <NWM value="303.78" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>610</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001828" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71672" zipTo="71686">
+        <GWM value="411.194" unit="kg" />
+        <NWM value="325.194" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>653</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002054" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74080" zipTo="74080">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001736" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71384" zipTo="71522">
+        <GWM value="401.234" unit="kg" />
+        <NWM value="315.234" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>633</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002184" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74177" zipTo="74177">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002153" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74172" zipTo="74172">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002085" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74080" zipTo="74081">
+        <GWM value="441.982" unit="kg" />
+        <NWM value="353.082" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>709</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001675" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="70" zipFrom="70374" zipTo="70439">
+        <GWM value="419.074" unit="kg" />
+        <NWM value="330.174" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>663</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002160" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74172" zipTo="74177">
+        <GWM value="437.002" unit="kg" />
+        <NWM value="348.102" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>699</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001842" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71701" zipTo="71711">
+        <GWM value="417.17" unit="kg" />
+        <NWM value="331.17" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>665</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001798" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71636" zipTo="71640">
+        <GWM value="420.158" unit="kg" />
+        <NWM value="334.258" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>671</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001934" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74074" zipTo="74074">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001941" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74074" zipTo="74074">
+        <GWM value="439.492" unit="kg" />
+        <NWM value="350.592" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>704</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001712" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71032" zipTo="71277">
+        <GWM value="393.764" unit="kg" />
+        <NWM value="307.764" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>618</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001989" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74076" zipTo="74078">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002009" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74078" zipTo="74078">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001767" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71549" zipTo="71577">
+        <GWM value="393.764" unit="kg" />
+        <NWM value="307.764" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>618</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002191" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74177" zipTo="74177">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001866" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71720" zipTo="71726">
+        <GWM value="405.76" unit="kg" />
+        <NWM value="321.21" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>645</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001620" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="69" zipFrom="69151" zipTo="69234">
+        <GWM value="287.632" unit="kg" />
+        <NWM value="216.132" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>434</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001750" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71543" zipTo="71549">
+        <GWM value="416.174" unit="kg" />
+        <NWM value="330.174" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>663</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002122" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74172" zipTo="74172">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001965" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74076" zipTo="74076">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001897" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74072" zipTo="74072">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002207" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74177" zipTo="74182">
+        <GWM value="443.476" unit="kg" />
+        <NWM value="354.576" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>712</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001958" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74074" zipTo="74076">
+        <GWM value="443.476" unit="kg" />
+        <NWM value="354.576" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>712</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001637" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="69" zipFrom="69234" zipTo="69412">
+        <GWM value="274.23" unit="kg" />
+        <NWM value="204.28" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>410</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001972" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74076" zipTo="74076">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001774" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="71" zipFrom="71579" zipTo="71634">
+        <GWM value="422.648" unit="kg" />
+        <NWM value="336.648" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>676</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002030" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74078" zipTo="74080">
+        <GWM value="441.484" unit="kg" />
+        <NWM value="352.584" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>708</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002344" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="7" zipFrom="70825" zipTo="73779">
+        <GWM value="275.138" unit="kg" />
+        <NWM value="202.188" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>406</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001682" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="70" zipFrom="70439" zipTo="70619">
+        <GWM value="397.66" unit="kg" />
+        <NWM value="308.76" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>620</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001910" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74072" zipTo="74074">
+        <GWM value="443.974" unit="kg" />
+        <NWM value="355.074" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>713</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300001651" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="6" zipFrom="68723" zipTo="69493">
+        <GWM value="282.93" unit="kg" />
+        <NWM value="204.28" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>410</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="00340217773300002177" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" frameQty="0" zipDst="74" zipFrom="74177" zipTo="74177">
+        <GWM value="444.472" unit="kg" />
+        <NWM value="355.572" unit="kg" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>0</RefShipmentID>
+            <Qty>714</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+    </Packaging>
+  </getOrderResponse>
+</n:Response>

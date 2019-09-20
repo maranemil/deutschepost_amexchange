@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>WARNING</ReturnCode>
+      <ErrMsg>
+        <ErrDateTime>2016-05-11T09:50:28</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>513067</ErrCode>
+        <ErrDesc>Für den gemeldeten Datenstand bzw. zur Auftragsversion fehlen folgende Pflichtfelder: [Gebindeziele, Sendungsmenge und ggf. Zahlungsinformationen, Freimachung oder zugehörige Parameter wie z.B. Nummer der Freistempelmaschine oder Startnummer bei ZL-Freimachung oder Entgeltabrechnungsnummer bei DV-Freimachung, Sendungsgewicht, Zahlungsbedingungen (Kundenkartennummer, Kontrakt oder Bankverbindung, im Fall einer Abbuchung vom Konto soweit möglich die Kundenkartennummer), Versandplan]. Wir würden uns freuen, wenn Sie diese bis zum 30.05.2016 13:00 Uhr ergänzen.</ErrDesc>
+      </ErrMsg>
+      <ErrMsg>
+        <ErrDateTime>2016-05-11T09:50:28</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514054</ErrCode>
+        <ErrDesc>Bei dem EA mit der Auftragsnummer 00000008687465 wurde für die Dienstleistung mit der DL-Nummer 2 eine unplausible Gesamtsendungsmenge (&lt;keine Angabe&gt; Stück gem. Summe der Leistungszuordnungen, &lt;keine Angabe&gt; gem. Summe zugeordneter Sendungen der Dienstleistung) festgestellt.</ErrDesc>
+      </ErrMsg>
+      <ErrMsg>
+        <ErrDateTime>2016-05-11T09:50:28</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514027</ErrCode>
+        <ErrDesc>Für den beim EA mit der AM-Nr. 00000008687465 angegebenen Zahlungspflichtigen &lt;keine Angabe&gt; ist kein gültiger Vertrag ermittelbar.</ErrDesc>
+      </ErrMsg>
+      <ErrMsg>
+        <ErrDateTime>2016-05-11T09:50:28</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514054</ErrCode>
+        <ErrDesc>Bei dem EA mit der Auftragsnummer 00000008687465 wurde für die Dienstleistung mit der DL-Nummer 1 eine unplausible Gesamtsendungsmenge (&lt;keine Angabe&gt; Stück gem. Summe der Leistungszuordnungen, &lt;keine Angabe&gt; gem. Summe zugeordneter Sendungen der Dienstleistung) festgestellt.</ErrDesc>
+      </ErrMsg>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20160511095026701</ODOCID>
+      <CreationDateTime>2016-05-11T09:50:28</CreationDateTime>
+      <Receiver>6000000121</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.1</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2016-05-11T09:50:27</ChangedAt>
+      <State>DM</State>
+      <AchievedDataQuality>PM</AchievedDataQuality>
+      <OrderID>00000008687465</OrderID>
+      <CustOrderID>
+        <CustID>6000000121</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>161112A09000100</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+</n:Response>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderResponse" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:om="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common">
+	<changeOrderResponse testcase="false" codeTableVersion="1.0" version="1.0">
+		<Return>
+			<ReturnCode>WARNING</ReturnCode>
+			<ErrMsg>
+				<ErrDateTime>2009-09-23T13:36:14</ErrDateTime>
+				<ErrCat>WARNING</ErrCat>
+				<ErrCode>514266</ErrCode>
+				<ErrDesc>Bei dem EA mit der AM-Nr. 00090921188262 liegt die Sendungsmenge 2.000 außerhalb des zulässigen Bereichs. Zulässig sind Sendungsmengen von 107.100 bis 130.900.</ErrDesc>
+			</ErrMsg>
+			<ErrMsg>
+				<ErrDateTime>2009-09-23T13:36:14</ErrDateTime>
+				<ErrCat>WARNING</ErrCat>
+				<ErrCode>514260</ErrCode>
+				<ErrDesc>Die Summe der Sendungsmengen aller Tarifzonendienstleistungen (1.500) stimmt nicht mit der Summe der Sendungsmengen aller nationalen Beförderungsdienstleistungen (2.000) überein.</ErrDesc>
+			</ErrMsg>
+			<ErrMsg>
+				<ErrDateTime>2009-09-23T13:36:14</ErrDateTime>
+				<ErrCat>WARNING</ErrCat>
+				<ErrCode>518088</ErrCode>
+				<ErrDesc>Der von Ihnen übermittelte Preis 799.80 für die Position 1 entspricht nicht dem von uns berechneten Preis 0.00.</ErrDesc>
+			</ErrMsg>
+			<ErrMsg>
+				<ErrDateTime>2009-09-23T13:36:14</ErrDateTime>
+				<ErrCat>WARNING</ErrCat>
+				<ErrCode>514230</ErrCode>
+				<ErrDesc>Das Erzeugersystem des Auftrags mit AM-Nr. 00090921188262 entspricht nicht dem im PrD-Vertrag mit ZKZ-Nr. 002013 angegebenen Einlieferungsverfahren.</ErrDesc>
+			</ErrMsg>
+			<ErrMsg>
+				<ErrDateTime>2009-09-23T13:36:14</ErrDateTime>
+				<ErrCat>WARNING</ErrCat>
+				<ErrCode>514253</ErrCode>
+				<ErrDesc>Für den EA mit der AM-Nr. 00090921188262 entspricht/entsprechen die Heftfolgenummer(n) (13/2009 / &lt;keine Angabe&gt;/&lt;keine Angabe&gt;) nicht der letzten vergebenen Heftfolgenummer (15/2009) oder ihrem Nachfolger (16/2009).</ErrDesc>
+			</ErrMsg>
+		</Return>
+		<MsgHeader>
+			<MsgID>081205100000A00000001</MsgID>
+			<CreationDateTime>2009-09-23T13:36:27</CreationDateTime>
+			<Receiver>5016516032</Receiver>
+			<Origin>
+				<SystemName>AM</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<ChangedAt>2009-09-23T13:36:12</ChangedAt>
+			<State>AU</State>
+			<AchievedDataQuality>AU</AchievedDataQuality>
+			<OrderID>00090921188262</OrderID>
+			<CustOrderID>
+				<CustID>0000000000</CustID>
+				<SystemName>B2B</SystemName>
+				<SystemID>090923121188262</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+	</changeOrderResponse>
+</n:Response>

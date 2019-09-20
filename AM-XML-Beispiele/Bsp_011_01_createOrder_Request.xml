@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 18.12.2006
+Beispiel: 011_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland mit verschiedenen Kombinationen von Briefzusatzleistungen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>muster01</User>
+			<Password>H4juk9xy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A01100100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>10000</Qty>
+				<Format>S</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="1" to="2000" zip="01" precT="2"/>
+					<Dst from="2001" to="4000" zip="07" precT="2"/>
+					<Dst from="4001" to="6000" zip="13" precT="2"/>
+					<Dst from="6001" to="8000" zip="19" precT="2"/>
+					<Dst from="8001" to="10000" zip="23" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Standard Brief -->
+					<ProductNumber>102100001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<!-- 1500 Einschreiben -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1500</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1013</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<!-- von den 1500 Einschreiben sind nur 750 mit Rückschein -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>750</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- mit Rückschein -->
+					<ProductNumber>1015</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<!-- Nachnahme für 12 der Briefe -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>12</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachnahme -->
+					<ProductNumber>1016</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>10000</Qty>
+				<Format>K</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="10001" to="12000" zip="05" precT="2"/>
+					<Dst from="12001" to="14000" zip="27" precT="2"/>
+					<Dst from="14001" to="16000" zip="43" precT="2"/>
+					<Dst from="16001" to="18000" zip="59" precT="2"/>
+					<Dst from="18001" to="20000" zip="63" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>6</ItemID>
+				<LineItem>
+					<!-- Kompakt Brief -->
+					<ProductNumber>102200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>7</ItemID>
+				<LineItem>
+					<!-- alle 10.000 Kompaktbriefe sind Einschreiben -->
+					<ProductNumber>1013</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>8</ItemID>
+				<!-- von den 10.000 Einschreiben sind 1877 eigenhändig -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>1877</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!--  eigenhändig -->
+					<ProductNumber>1014</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>9</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Qty>3500</Qty>
+				<Format>G</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="20001" to="22000" zip="12" precT="2"/>
+					<Dst from="22001" to="23000" zip="47" precT="2"/>
+					<Dst from="23001" to="23500" zip="56" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>10</ItemID>
+				<LineItem>
+					<!-- Großbrief -->
+					<ProductNumber>102300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>11</ItemID>
+				<LineItem>
+					<!-- alle Sendungen sind Einschreiben -->
+					<ProductNumber>1013</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>12</ItemID>
+				<LineItem>
+					<!-- und alle mit Rückschein -->
+					<ProductNumber>1015</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>13</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

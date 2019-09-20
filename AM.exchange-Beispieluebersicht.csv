@@ -1,0 +1,160 @@
+Produkt;Kurzbeschreibung;Beispiel
+;;
+;;
+Brief;Neuanlage eines Einlieferungsauftrags für AFM freigemachte Briefe in  verschiedenen Formaten;AM-XML-Beispiele\029
+Brief;Neuanlage eines Einlieferungsauftrags für AFM freigemachte Briefe in  allen Formaten mit Anmeldung Infrastrukturrabatt. In diesem Beispiel wird zunächst ein rudimentärer Auftrag angelegt. Nach der Frankierung erfolgt dann die Aktualisierung mit den korrekten Mengen mittels der Service Operation changeOrder.;AM-XML-Beispiele\030
+Dialogpost;Neuanlage eines Einlieferungsauftrags für AFM freigemachte Dialogpost mit Angabe von Paletteninformationen;AM-XML-Beispiele\043
+Dialogpost;Neuanlage eines Dialogpost Einlieferungsauftrags mit Angabe von Paletteninformationen. Es wird der Zuschlag für nichtautomationsfähige Sendungen berechnet;AM-XML-Beispiele\139
+Dialogpost;"Neuanlage eines Dialogpost Einlieferungsauftrags mit Angabe von Paletteninformationen. Die Sendungen werden vom Absender freigestempelt (AFM).
+Die Sendungen beinhalten eine Warenprobe. Somit wird der Variant SACHETS verwendet. Sendungen mit Warenproben sind nicht automationsfähig. 
+Der Auftrag muss daher den Zuschlag ""nicht automationsfähig"" mit einer entsprechenden Produktnummer beinhalten.
+Der Zuschlag soll über die Einlieferungsliste ebenfalls freigestempelt werden.";AM-XML-Beispiele\141
+Brief;"Neuanlage eines Einlieferungsauftrags für AFM freigemachte Briefe in  allen Formaten mit Anmeldung Infrastrukturrabatt. Zusätzlich ist für den Auftrag Premiumadress relevant. Für die korrekte Handhabung der Sendungen ist die Angabe der Kundennummer des Vertragspartners
+zu Premiumadress erforderlich.";AM-XML-Beispiele\145
+;;
+Dialogpost;Neuanlage eines Einlieferungsauftrags für durch Absenderstempelung freigemachte Dialogpost ins Inland mit Paletten und Rabatten;AM-XML-Beispiele\023
+Dialogpost;Neuanlage eines Einlieferungsauftrags für durch Absenderstempelung freigemachte Dialogpost mit Aufzahlung. Zahlweise durch Angabe der Kontoverbindung.;AM-XML-Beispiele\031
+;;
+Brief;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland für verschiedene Formate;AM-XML-Beispiele\001
+Brief;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland für verschiedene Formate mit Anmeldung Infrastrukturrabatt.;AM-XML-Beispiele\004
+Brief Einzeltarif International;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe verschiedener Formate ins Ausland.;AM-XML-Beispiele\002
+Brief Einzeltarif International mit BZL;Neuanlage eines Einlieferungsauftrags für internationale Briefe zum Einzeltarif mit unterschiedlichen BZL in verschiedene Zonen.;AM-XML-Beispiele/122
+Brief;"Neuanlage eines Einlieferungsauftrags, bei dem das Feld ""Order Label"" mit einem Freitext belegt wird";AM-XML-Beispiele\054
+Brief;Neuanlage eines Einlieferungsauftrags für DV freigemachte Maxibriefe ins Inland mit Zuzahlung für das Sonderformat Maxibrief Plus;AM-XML-Beispiele\060
+Brief Kilotarif;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Ausland zum Kilotarif;AM-XML-Beispiele\003
+Brief Kilotarif mit BZL;Neuanlage eines Einlieferungsauftrages für internationale Briefe zum Kilotarif mit unterschiedlichen BZL in verschiedene Zonen;AM-XML-Beispiele/123
+M-Beutel Kilotarif;Neuanlage eines Einlieferungsauftrags für M-Beutel zum Kilotarif in verschiedene Zonen.;AM-XML-Beispiele\098
+Postkarte;Neuanlage eines Einlieferungsauftrags für DV freigemachte Postkarten ins Inland;AM-XML-Beispiele\005
+Büchersendung;Neuanlage eines Einlieferungsauftrags für DV freigemachte Bücher-sendungen verschiedener Formate;AM-XML-Beispiele\007
+Warensendung;Neuanlage eines Einlieferungsauftrags für DV freigemachte Warensendungen verschiedener Formate;AM-XML-Beispiele\006
+Warensendung;Neuanlage eines Einlieferungsauftrags für DV freigemachte Warensendungen mit Rabatten für Leitcodelabel;AM-XML-Beispiele\057
+Blindensendung;Neuanlage eines Einlieferungsauftrags für DV freigemachte Blindensendungen;AM-XML-Beispiele\008
+PZA;Neuanlage eines Einlieferungsauftrags für DV freigemachte elektronische Postzustellungsaufträge (ePZA);AM-XML-Beispiele\009
+Postident;Neuanlage eines Einlieferungsauftrags für DV freigemachte Postident-Einlieferungen. Postident ist hier die Basisdienstleistung und keine zusätzliche Dienstleistung.;AM-XML-Beispiele\010
+Postident;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe mit Postident als BZL;AM-XML-Beispiele/124
+Brief mit BZL;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland mit verschiedenen Kombinationen von Briefzusatzleistungen;AM-XML-Beispiele\011\
+Dialogpost;Beschreibung: Neuanlage eines Einlieferungsauftrags für DV freigemachte Dialogpost ins Inland mit Paletten und Rabattierungen. In diesem Beispiel wird dargestellt, wie verschiedene Variants kombiniert werden können: es handelt sich um Sendungen mit werblichen Inhalt an Bestandskunden.;AM-XML-Beispiele\018
+Dialogpost;Neuanlage eines Einlieferungsauftrags für DV freigemachte Dialogpost mit Aufzahlung;AM-XML-Beispiele\028
+Streifbandzeitung;Neuanlage eines Einlieferungsauftrags für DV freigemachte Streifbandzeitungen;AM-XML-Beispiele\027
+PuB Einzeltarif International mit BZL;Neuanlage eines Einlieferungsauftrages für Presse und Buch International mit BZL in verschiedene Zonen;AM-XML-Beispiele/125
+PuB Kilotarif mit BZL;Neuanlage eines Einlieferungsauftrages für Presse und Buch International zum Kilotarif mit BZL in verschiedene Zonen;AM-XML-Beispiele/126
+Brief;Neuanlage eines Einlieferungsauftrags, bei dem der konstante Präfix der Frankier-ID sowie die Codierung für die Sendungsnummern auf Sendungscluster-Ebene (im Shipment) mitgeliefert werden.;AM-XML-Beispiele/131
+Brief;Neuanlage eines Einlieferungsauftrags, bei dem der konstante Präfix der Frankier-ID sowie die Codierung für die Sendungsnummern im Versandplan mitgeliefert werden.;AM-XML-Beispiele/132
+Brief;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland für verschiedene Formate mit Anmeldung Infrastrukturrabatt und Voranmeldung für Digitale Kopien.;AM-XML-Beispiele\143
+Brief;Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland für verschiedene Formate mit Voranmeldung für Digitale Kopien.;AM-XML-Beispiele\144
+;;
+Dialogpost;"Beschreibung: Neuanlage eines Dialogpost Einlieferungsauftrags mit Angabe von Paletteninformationen. Die Freimachung der Sendungen erfolgt durch einen Freimachungsvermerk. Als Zahlweise wird eine  PostCard angegeben.
+Es handelt sich um Sendungen mit einem nicht verblichen Inhalt.";AM-XML-Beispiele\045
+Dialogpost;Neuanlage eines Dialogpost Einlieferungsauftrags mit Angabe von Paletteninformationen. Es werden verschiedene Vorsortierrabatte verwendet. Verwendung eines Versandplans mit Sendungs-Ids wie bei der DV-Freimachung.;AM-XML-Beispiele\046
+Dialogpost;"Neuanlage eines Dialogpost Einlieferungsauftrags als Sammeleinlieferung für einzelne Leitregionen. 
+Es erfolgt eine Kennzeichnung als Leitregionseinlieferung, da die Mindestmenge je Position verschieden ist von derjenigen für eine bundesweite Einlieferung Dialogpost bzw. Dialogpost Easy. Es muss insbesondere kein Zuschlag Dialogpost Easy berücksichtigt werden.";AM-XML-Beispiele\068
+Dialogpost Vario;Neuanlage eines Einlieferungsauftrags für Dialogpost Varianten, bei dem die Fertigung im Einstromverfahren erfolgt. Es wird der Zuschlag für nicht automationsfähige Sendungen berechnet;AM-XML-Beispiele\033
+Dialogpost Kilotarif;Neuanlage eines Einlieferungsauftrages für DIalogpost zum Kilotarif in verschiedene Zonen. Teilweise werden Mengenrabatte geltend gemacht.;AM-XML-Beispiele/120
+Dialogpost Varianten;Neuanlage eines Einlieferungsauftrags für Dialogpost Varianten, bei dem die Fertigung im Mehrstromverfahren mit Palettenkonsolidierung erfolgt ;AM-XML-Beispiele\048
+Dialogpost Varianten;"Neuanlage eines variantenreinen Dialogpost Varianten Auftrags. Im Gegensatz zum nicht variantenreinen Dialogpost Varianten Auftrag verweisen hierbei die Paletten jeweils ausschließlich auf die Sendungen genau einer Variante.
+Bitte beachten Sie, dass hierfür eine Ausnahmegenehmigung der Deutschen Post erforderlich ist. Auskunft kann Ihnen der für Sie zuständige Vertriebsmitarbeiter der Deutschen Post geben.";AM-XML-Beispiele\097
+Dialogpost Vario International;Neuanlage eines Einlieferungsauftrags für einenen  Dialogpost Varianten Auftrag International in verschiedene Zonen.;AM-XML-Beispiele/119
+Dialogpost;Neuanlage eines Dialogpost Einlieferungsauftrags mit Abholung und Angabe von Paletteninformationen. Freimachung durch Freimachungsvermerk. Als Zahlweise wird eine PostCardID angegeben.;AM-XML-Beispiele\074
+Dialogpost;"Neuanlage eines Dialogpost Einlieferungsauftrags für geringe Mengen. Für die Sendungen ist ein Zuschlag ""Easy"" zu berechnen. Der Zuschlag gilt auch für aufgezahlte Sendungen.";AM-XML-Beispiele\138
+Postaktuell;Neuanlage eines Einlieferungsauftrags für Postaktuell mit ZSB an alle Haushalte und der Angabe von Paletteninformationen. Die Aussendung erfolgt in verschiedene Tarifzonen. Als Zahlweise wird eine PostCardID angegeben. ;AM-XML-Beispiele/079
+Postaktuell;Neuanlage eines Einlieferungsauftrags für Postaktuell mit ZSB an alle Haushalte mit Tagespost und der Angabe von Paletteninformationen. Die Aussendung erfolgt in verschiedene Tarifzonen. Als Zahlweise wird eine PostCard angegeben.  Zusätzlich wird die Abholung der Sendungen beauftragt.;AM-XML-Beispiele/080
+Postaktuell;Neuanlage eines Einlieferungsauftrags für Postaktuell mit ZSB-Selektion und Zuschlag für die Strassenabschnittsselektion an alle Haushalte mit Tagespost. Angabe von Paletteninformationen. Die Aussendung erfolgt in verschiedene Tarifzonen. Den Sendungen sind keine Response-Elemente beigelegt. Als Zahlweise wird eine PostCard angegeben. Zusätzlich wird die Abholung der Sendungen beauftragt.;AM-XML-Beispiele/117
+Postaktuell;Neuanlage eines Einlieferungsauftrags für Postaktuell ohne ZSB an alle Haushalte mit Tagespost und der Angabe von Paletteninformationen. Die Aussendung erfolgt in verschiedene Tarifzonen. Als Zahlweise wird eine PostCard angegeben. Zusätzlich wird die Abholung der Sendungen beauftragt..;AM-XML-Beispiele/088
+DHL-Infopost Vario;Neuanlage eines Einlieferungsauftrags für ein DHL-Infopost Vario-Mailing mit Abholung;AM-XML-Beispiele\134
+Dialogpost;"Neuanlage eines Dialogpost Einlieferungsauftrags mit der Zusatzleistung ""Terminzustellung"". Die Mindestsendungsmenge beträgt 250000 Sendungen, eine Aufzahlung ist nicht zulässig. Der Auftrag muss abgeholt werden";AM-XML-Beispiele\140
+PWSp;"Neuanlage eines Postwurfpezialauftrags mit Angabe von Paletteninformationen. Die Rolle Producer wird mit der Kundennummer des Adresselieferanten belegt. 
+Es handelt sich um Sendungen mit Warenproben. Die Sendungen sind daher nicht automationsfähig. Es muss entsprechender Zuschlag verwendet werden.";AM-XML-Beispiele\081
+PWSp;Neuanlage eines Postwurfpezialauftrags mit Angabe von Paletteninformationen. Die Rolle Producer wird mit der Kundennummer des Adresslieferanten belegt. Die Sendungen sind nicht automationsfähig.Es muss daher ein entsprechender Zuschlag verwendet werden.;AM-XML-Beispiele/082
+PWSp;Neuanlage eines Postwurfspezialauftrag im Format Standard mit einer Sendungsmenge zwischen 4000 und 19999 Sendungen. Aufgrund dieser Sendungsmenge ist der Zuschlag EASY notwendig. Die Rolle Producer wird mit der Kundennummer des Adresslieferanten belegt.;AM-XML-Beispiele/083
+PWSp;Neuanlage eines Postwurfspezialauftrags im Format Standard mit Palletierung und Abholung. Als Freimachungsart wird immer FV verwendet. Es gibt keine Deutschlandpaletten. Die Rolle Producer wird mit der Kundennummer des Adresslieferanten belegt.;AM-XML-Beispiele/084
+Warenpost international;Neuanlage eines Einlieferungsauftrages für internationale Warenpost mit Daten zur elektronischen Zollinhaltserklärung bzw. zu INTERCONNECT. Nach der Auftragserstellung mittels createOrder werden die Sendungsnummern mittels getOrder abgerufen.;AM-XML-Beispiele\142
+Warenpost international;"Neuanlage eines Einlieferungsauftrages für internationale Warenpost mit Daten zur elektronischen Zollinhaltserklärung bzw. zu INTERCONNECT. Das Beispiel berücksichtigt einerseits die Warenpost int mit Unterschrift und die Kombination Warenpost int untracked mit dem Ländernachweis. 
+Weiterhin wird hier der createOrder bereits mit S10-IDs erstellt.";AM-XML-Beispiele\147
+;;
+Dialogpost;Neuanlage eines Einlieferungsauftrags für Dialogpost mit PC-Frankierung. Die Lieferung erfolgt auf Paletten.;AM-XML-Beispiele\032
+;;
+Dialogpost;Neuanlage eines Einlieferungsauftrages für Plusbriefe Dialogpost mit Aufzahlung.;AM-XML-Beispiele/127
+;;
+Presse;Neuanlage eines Presse-Einlieferungsauftrags mit einer kostenpflichtigen Beilage. Einlieferung in einem ELN-Depot. Angabe von Paletteninformationen.;AM-XML-Beispiele/099
+Presse;Neuanlage eines Presse-Einlieferungsauftrags mit 3 Varianten, die durch Teilbelegung mit unterschiedlichen Beilagen entstehen. Einlieferung in einem SLN-Depot. Angabe von Paletteninformationen.;AM-XML-Beispiele/100
+Presse;Neuanlage eines Presse-Einlieferungsauftrags mit zwei Varianten, die durch Beilage Mehrfachversand bzw. Gegenstand entstehen. Abholung. Angabe von Paletteninformationen.;AM-XML-Beispiele/101
+Presse;Neuanlage eines einfachen Presse-Einlieferungsauftrags für Pressesendungen next Day. Einlieferung in einem Depot im SLN. Angabe von Paletteninformationen.;AM-XML-Beispiele/102
+Presse International;Neuanlage eines Presse-Einlieferungsauftrags für nationale und internationale Sendungen mit Zusatzleistungen in verschiedene Zonen. Die nationalen Sendungen enthalten auch die Angaben zu deren Beilagen, die internationalen Sendungen nicht. Einlieferung in einer GrASt. Angabe von Paletteninformationen.;AM-XML-Beispiele/103
+Presse;"Neuanlage eines Presse-Auftrags ohne Beilage als regulärer Versand.
+Als Zusatzleistung wird Premium Adress bestellt.";AM-XML-Beispiele/104
+Presse;Neuanlage eines Presse-Auftrags ohne Beilage als Werbeversand. Es handelt sich um eine Doppelnummer.;AM-XML-Beispiele/105
+Presse;Neuanlage eines Presse-Auftrags mit mehreren Variante, die durch Beilagen-Teilbelegung entstehen. Es handelt sich um eine Sondernummer.;AM-XML-Beispiele/106
+Presse;Neuanlage eines Presse-Einlieferungsauftrags mit 2 Beilagen, die exakt die gleiche Dicke und Gewicht haben.  Durch die Kombination der Beilagen entstehen unterschiedliche Varianten. Dieses Beispiel verdeutlicht insbesondere, dass für jede kostenpflichtige, physische Beilage eine separates Dienstleistung (Item) erzeugt werden muss,  die die Beilage referenziert. Dies gilt auch dann, wenn die Beilagen-Dienstleistungen dieselbe Produktnummer haben.;AM-XML-Beispiele/111
+Presse International;"Neuanlage eines Presse-Einlieferungsauftrags für nationale und internationale Sendungen mit Abholung.
+Bitte beachten Sie:
+Für die nationalen und internationalen Sendungen enthält die Nachricht jeweils ein eigenes ShipmentItem. Da sich die Abhol-Dienstleistung auf alle Sendungen des Auftrags und damit auf beide ShipmentItems bezieht, muss sie in einem dritten ShipmentItem übermittelt werden. Dieses enthält kein Shipment. Zudem sind im Item keine Referenzierung der Sendungen und keine Mengenangabe erforderlich.";AM-XML-Beispiele/116
+Presse;Neuanlage eines einfachen Presse-Einlieferungsauftrags für Pressesendungen next Day. Einlieferung in einem Depot im SLN. Angabe von Paletteninformationen. Palettenziel ist Zustellstützpunkt;AM-XML-Beispiele\135
+Presse;Neuanlage eines Presse-Einlieferungsauftrags mit einer kostenneutralen Beilage. Einlieferung in einem ELN-Depot. Angabe von Paletteninformationen.;AM-XML-Beispiele\136
+Presse;Neuanlage eines Presse-Einlieferungsauftrags mit 2 Varianten, die durch Teilbelegung mit unterschiedlichen kostenneutralen Beilagen entstehen. Einlieferung in einem SLN-Depot. Angabe von Paletteninformationen.;AM-XML-Beispiele\137
+;;
+Dialogpost;Neuanlage eines Dialogpost Einlieferungsauftrags mit Frankierservice PWZ.;AM-XML-Beispiele/078
+Brief;Neuanlage eines Einlieferungsauftrags für mit Frankierservice freigemachte Briefe unterschiedlicher Formate. Beachten Sie bitte, dass die Frankierservice Dienstleistungen hier in separaten ShipmentItems angegeben werden.;AM-XML-Beispiele/115
+;;
+Brief;Ungeplante Aufteilung einer Gesamteinlieferung für DV freigemachte Briefe. Der Versandplan wird bereits mit dem Anlegen der Teileinliefe-rungsgruppe übermittelt und beim Anlegen der Teileinlieferungen partiell übernommen.;AM-XML-Beispiele\014
+Brief;Geplante Aufteilung einer Gesamteinlieferung für DV freigemachte Briefe. Der Versandplan wird noch nicht mit dem Anlegen der Teileinlieferungsgruppe übermittelt, sondern erst beim Anlegen der einzelnen Teileinlieferungen.;AM-XML-Beispiele\013
+Dialogpost;Geplante Teileinlieferung für Dialogpost;AM-XML-Beispiele\065
+Dialogpost Vario;Neuanlage einer ungeplanten Teileinlieferung für ein Dialogpost Vario-Mailing;AM-XML-Beispiele\066
+Postaktuell;Neuanlage einer geplanten Teileinlieferungsgruppe für Postaktuell.;AM-XML-Beispiele/133
+;;
+Brief;Neuanlage von Einlieferungs- und Zusatzaufträgen für DV freigemachte Briefe als einzelne Aufträge. Abrechnung des ZA nach dem Standardverfahren (39);AM-XML-Beispiele\017
+;;
+NA;"Neuanlage eines Zusatzauftrages für Abholung.
+(Bitte beachten Sie, dass die Einlieferungsaufträge das Transportkennzeichen „E“ verwenden müssen, wenn später ein Abhol-ZA darauf referenzieren soll.)";AM-XML-Beispiele/077
+NA;"Neuanlage eines Zusatzauftrages für Abholung und Lagerung.
+(Bitte beachten Sie, dass die Einlieferungsaufträge das Transportkennzeichen „E“ verwenden müssen, wenn später ein ZA für Abholung und Lagerung darauf referenzieren soll.)";AM-XML-Beispiele/129
+;;
+Brief;Neuanlage eines Einlieferungsauftrages für internationale Briefe  mit  Ländernachweis;AM-XML-Beispiele\121
+;;
+Brief;Neuanlage und Änderung eines Einlieferungsauftrags. Mit der Änderungsmeldung werden Einlieferungsdatum und -ort geändert;AM-XML-Beispiele\059
+Dialogpost;Neuanlage eines Dialogpost Einlieferungsauftrags ohne Angabe von Paletteninformationen. Diese werden durch zwei changeOrder Operationen nachgeliefert. ;AM-XML-Beispiele/042
+Dialogpost;"Neuanlage eines Dialogpost Auftrags für die reguläre Vorankündigung. Die Vorankündigung ist mindestens 7 Tage vor geplanter Einlieferung zu schicken. Die zu erreichende Datenqualität ist ""DM"" (Detailmeldung). Diese wird mit einer Auftragsaktualisierung zu einem Auftrag der Datenqualität ""AU"" verfeinert. Die Datenqualität ""AU"" muss mindestens zwei Tage vor Einlieferung vorliegen.";AM-XML-Beispiele\047
+Dialogpost;Neuanlage und Auftragsfortschreibung eines Dialogpost Auftrags, bei der der Versandplan zunächst fortgeschrieben, dann aber doch noch komplett ersetzt wird;AM-XML-Beispiele\049
+Dialogpost;Neuanlage und Auftragsfortschreibung eines Dialogpost Auftrages, bei dem die Packaging-Sektion durch eine Auftragsänderung ergänzt wird;AM-XML-Beispiele\050
+Dialogpost;Neuanlage und Änderung eines Einlieferungsauftrags für PC freigemachte Dialogpost mit Angabe von Paletten. In der Auftragsänderung werden Einlieferungstag, Sendungsgewicht, Format und Produkt geändert. Daraus ergibt sich auch die Notwendigkeit die geänderte Paletteninformation zu übermitteln.;AM-XML-Beispiele\036
+Dialogpost;Neuanlage und Änderung eines Dialogpost Einlieferungsauftrags. Durch die Auftragsänderung wird aus der zunächst angekündigten Einlieferung eine Abholung gemacht.;AM-XML-Beispiele\075
+Dialogpost;Neuanlage und Änderung eines Dialogpost Einlieferungsauftrags. Durch die Auftragsänderung wird aus der zunächst angekündigten Abholung eine Einlieferung gemacht.;AM-XML-Beispiele\076
+Presse;"Neuanlage und Änderung eines Presse-Einlieferungsauftrags. Durch die Auftragsänderung wird aus der zunächst angekündigten Abholung eine Einlieferung gemacht. In der Auftragsänderung ist daher die Induction-Sektion anzupassen. Zudem muss die Dienstleistung für die Abholung entfernt werden. Dabei wird im Shipment die updateMethod=""add"" verwendet, damit der Versandplan nicht erneut übermittelt werden muss.";AM-XML-Beispiele/109
+Presse;Änderung der Zeitungsnummer und der Heftnummer bei einem Presse-Auftrag.;AM-XML-Beispiele/110
+Presse;"Verschiebung des Abholtermins um einen Tag bei gleichzeitiger Änderung des Transportnetzes von ELN auf SLN. Bitte beachten Sie dabei insbesondere die erforderliche Änderung der Produktnummern aufgrund der unterschiedlichen Transportnetze vor und nach der Auftragsänderung. Im Shipment der Auftragsänderung wird die updateMethod=""add"" verwendet, damit der Versandplan nicht erneut übermittelt werden muss.";AM-XML-Beispiele/112
+;;
+Dialogpost;"Neuanlage eines Dialogpost KOOP-Auftrags mit weniger als 1000 Paletten. Daher entfällt die 4 Wochenmeldung und der Auftrag wir direkt mit der Datenqualität ""AU"" angelegt. Die Auftragsanlage muss mindestens 7 Tage und die Detaillierung 48 Stunden vor Einlieferung erfolgen.";AM-XML-Beispiele\035
+Dialogpost Katalog;"Neuanlage eines Dialogpost KOOP-Auftrags mit mehr als 1000 Paletten. Daher wird mindestens 4 Wochen vor Einlieferung die 4 Wochenmeldung geschickt. Diese wird mit einer Auftragsaktualisierung zu einem Auftrag der Datenqualität ""AU"" verfeinert. Im KOOP-Prozess muss die Datenqualität ""AU"" mindestens drei Tage vor Einlieferung vorliegen.";AM-XML-Beispiele\090
+;;
+Dialogpost;Stornierung eines Einlieferungsauftrags mit der Kundenauftragsnummer;AM-XML-Beispiele\037
+Brief;Stornierung einer Teileinlieferungsgruppe;AM-XML-Beispiele\038
+;;
+Brief;"Neuanlage mehrerer Einlieferungsaufträge für DV freigemachte Briefe unterschiedlicher Formate mit einer ""Bulk""-Nachricht";AM-XML-Beispiele\012
+Dialogpost;"Neuanlage mehrerer Dialogpost Einlieferungsaufträge mit einer ""Bulk""-Nachricht";AM-XML-Beispiele\052
+;;
+NA;Suchen von Aufträgen mit der seekOrder-Operation unter Verwendung verschiedener Suchmuster;AM-XML-Beispiele\053
+NA;Anlegen, Suchen und Laden eines einfachen Einlieferungsauftrags;AM-XML-Beispiele\055
+Presse;Suche nach Presse-Aufträgen mit ZKZ, Einlieferungskennung, Heftfolgejahr, Heftfolgenummer und Einlieferungsdatum.;AM-XML-Beispiele/107
+NA;"Laden eines Einlieferungsauftrags unter Verwendung der Kundenauftragsnummer.
+(Ggf. laden mit und ohne Versandplan/Packaging-Information)";AM-XML-Beispiele\040
+NA;Laden eines Einlieferungsauftrags mit gleichzeitigem Anfordern und Laden der zu den Paletten des Auftrags gehörenden NVEs. ;AM-XML-Beispiele/130
+;;
+NA;Abfrage aller noch nicht gelesenen Meldungen. Die Anzahl der maximal zurück zu liefernden Meldungen wird auf 50 begrenzt.;AM-XML-Beispiele/085
+NA;Abfrage aller noch nicht gelesenen Meldungen zu einem ganz bestimmten Auftrag. Die Anzahl der maximal zurück zu liefernden Meldungen wird auf 25 begrenzt.;AM-XML-Beispiele/086
+NA;"Abfrage aller noch nicht gelesenen Meldungen der Meldungsrubrik ""Auftragseingang"", die im fest vorgegebenen Zeitraum (letzte zehn Tage) für die vorgegebene EKP erzeugt wurden. Die Anzahl der maximal zurück zu liefernden Meldungen wird auf 25 begrenzt.
+Die Sortierreihenfolge der Nachrichten in der Antwort ist absteigend, d.h. die jüngeren Nachrichten zuerst.";AM-XML-Beispiele/087
+Presse;Abfrage aller noch nicht gelesenen Meldungen, die im fest vorgegebenen Zeitraum (letzte zehn Tage) für die vorgegebene ZKZ erzeugt wurden.;AM-XML-Beispiele/108
+;;
+NA;Das Beispiel zeigt einen den Namenskonventionen für die Dateneinlieferung beim EDI-CC entsprechende createOrder-Nachricht.;AM-XML-Beispiele/092
+;;
+NA;Das Beispiel zeigt den SOAP-Datenstrom (Request und Response) einer createOrder-Operation.;AM-XML-Beispiele/069
+NA;Das Beispiel zeigt den SOAP-Datenstrom (Request und Response) einer changeOrder-Operation.;AM-XML-Beispiele/070
+NA;Das Beispiel zeigt den SOAP-Datenstrom (Request und Response) einer cancelOrder-Operation.;AM-XML-Beispiele/071
+NA;Das Beispiel zeigt den SOAP-Datenstrom (Request und Response) einer seekOrder-Operation.;AM-XML-Beispiele/072
+NA;Das Beispiel zeigt den SOAP-Datenstrom (Request und Response) einer getOrder-Operation.;AM-XML-Beispiele/073
+;;
+NA;Das Beispiel enthält verschiedene Responses vom AM-System, in denen alle möglichen Rückgabewerten vorkommen: OK, WARNING, ERROR.;AM-XML-Beispiele/114
+;;
+Nachnahme;"(Nicht durch Verwendung durch externe B2B-Kunden vorgesehen!)
+Das Beispiel zeigt die Auftragsanlage für die Abrechnung von Nachnahme-Gebühren im postinternen Nachnahme-Prozess.";AM-XML-Beispiele/118
+;;
+NA;"Das Beispiel zeigt, wie S10-IDs (beispielhaft vom Typ ""S10ID_UNTRACKED"") bereits vor Auftragsanlage separat abgefragt werden, um diese in der Produktion internationaler Warenpost-Sendungen nutzen zu können.";AM-XML-Beispiele/146

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 18.12.2006
+Beispiel: 012_01
+Beschreibung: Es werden mehrere Einlieferungsaufträge für DV freigemachte Briefe unterschiedlicher Formate in einem "Bulk" angelegt. 
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/processOrderManagementOperationsRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/processOrderManagementOperationsRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/processOrderManagementOperationsRequest.xsd">
+	<processOrderManagementOperationsRequest>
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OperationList>
+			<Operation consecutiveNumber="1">
+				<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+					<OrderHeader>
+						<OrderType>EA</OrderType>
+						<State>AU</State>
+						<OrderLabel>AM-XML Beispiel</OrderLabel>
+						<SubmissionType>G</SubmissionType>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01200100</SystemID>
+						</CustOrderID>
+					</OrderHeader>
+					<Parties>
+						<Originator>
+							<CustID>6000000121</CustID>
+						</Originator>
+						<Submitter>
+							<CustID>6002000131</CustID>
+						</Submitter>
+						<Payer>
+							<CustID>6000000121</CustID>
+							<PaymentMeans>
+								<Procedure>10</Procedure>
+								<Participation>01</Participation>
+							</PaymentMeans>
+						</Payer>
+					</Parties>
+					<Induction>
+						<TransitDirectionCode>E</TransitDirectionCode>
+						<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+						<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+					</Induction>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>1</ShipmentID>
+							<Qty>12500</Qty>
+							<Format>S</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="1" to="2000" zip="03" precT="2"></Dst>
+								<Dst from="2001" to="4000" zip="17" precT="2"></Dst>
+								<Dst from="4001" to="6000" zip="33" precT="2"></Dst>
+								<Dst from="6001" to="8500" zip="39" precT="2"></Dst>
+								<Dst from="8501" to="12500" zip="73" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>1</ItemID>
+							<LineItem>
+								<!-- Standardbrief -->
+								<ProductNumber>102100001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>2</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>2</ShipmentID>
+							<Qty>8200</Qty>
+							<Format>K</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="12501" to="14608" zip="11" precT="2"></Dst>
+								<Dst from="14609" to="14702" zip="27" precT="2"></Dst>
+								<Dst from="14703" to="16021" zip="34" precT="2"></Dst>
+								<Dst from="16022" to="18209" zip="39" precT="2"></Dst>
+								<Dst from="18210" to="20700" zip="54" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>3</ItemID>
+							<LineItem>
+								<!-- Kompaktbrief -->
+								<ProductNumber>102200001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>4</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>3</ShipmentID>
+							<Qty>1000</Qty>
+							<Format>G</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="20701" to="20822" zip="12" precT="2"></Dst>
+								<Dst from="20823" to="21504" zip="24" precT="2"></Dst>
+								<Dst from="21505" to="21700" zip="25" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>5</ItemID>
+							<LineItem>
+								<!-- Großbrief -->
+								<ProductNumber>102300001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>6</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>4</ShipmentID>
+							<Qty>440</Qty>
+							<Format>M</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="21701" to="21855" zip="12" precT="2"></Dst>
+								<Dst from="21856" to="22140" zip="17" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>7</ItemID>
+							<LineItem>
+								<!-- Maxibrief -->
+								<ProductNumber>102400001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>8</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+				</createOrderRequest>
+			</Operation>
+			<Operation consecutiveNumber="2">
+				<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+					<OrderHeader>
+						<OrderType>EA</OrderType>
+						<State>AU</State>
+						<OrderLabel>AM-XML Beispiel</OrderLabel>
+						<SubmissionType>G</SubmissionType>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01200200</SystemID>
+						</CustOrderID>
+					</OrderHeader>
+					<Parties>
+						<Originator>
+							<CustID>6000000121</CustID>
+						</Originator>
+						<Submitter>
+							<CustID>6002000131</CustID>
+						</Submitter>
+						<Payer>
+							<CustID>6000000121</CustID>
+							<PaymentMeans>
+								<Procedure>10</Procedure>
+								<Participation>01</Participation>
+							</PaymentMeans>
+						</Payer>
+					</Parties>
+					<Induction>
+						<TransitDirectionCode>E</TransitDirectionCode>
+						<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+						<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+					</Induction>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>1</ShipmentID>
+							<Qty>5600</Qty>
+							<Format>S</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0002</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="1" to="720" zip="12" precT="2"></Dst>
+								<Dst from="721" to="1543" zip="15" precT="2"></Dst>
+								<Dst from="1544" to="3214" zip="18" precT="2"></Dst>
+								<Dst from="3215" to="4678" zip="19" precT="2"></Dst>
+								<Dst from="4679" to="5600" zip="23" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>1</ItemID>
+							<LineItem>
+								<!-- Standardbrief -->
+								<ProductNumber>102100001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>2</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+				</createOrderRequest>
+			</Operation>
+			<Operation consecutiveNumber="3">
+				<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+					<OrderHeader>
+						<OrderType>EA</OrderType>
+						<State>AU</State>
+						<OrderLabel>AM-XML Beispiel</OrderLabel>
+						<SubmissionType>G</SubmissionType>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01200300</SystemID>
+						</CustOrderID>
+					</OrderHeader>
+					<Parties>
+						<Originator>
+							<CustID>6000000121</CustID>
+						</Originator>
+						<Submitter>
+							<CustID>6002000131</CustID>
+						</Submitter>
+						<Payer>
+							<CustID>6000000121</CustID>
+							<PaymentMeans>
+								<Procedure>10</Procedure>
+								<Participation>01</Participation>
+							</PaymentMeans>
+						</Payer>
+					</Parties>
+					<Induction>
+						<TransitDirectionCode>E</TransitDirectionCode>
+						<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+						<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+					</Induction>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>1</ShipmentID>
+							<Qty>2000</Qty>
+							<Format>S</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0043</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="1" to="1000" zip="54" precT="2"></Dst>
+								<Dst from="1001" to="2000" zip="57" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>1</ItemID>
+							<LineItem>
+								<!-- Standardbrief -->
+								<ProductNumber>102100001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>2</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>2</ShipmentID>
+							<Qty>570</Qty>
+							<Format>M</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0043</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="2">
+								<Dst from="2001" to="2200" zip="44" precT="2"></Dst>
+								<Dst from="2201" to="2345" zip="47" precT="2"></Dst>
+								<Dst from="2346" to="2453" zip="63" precT="2"></Dst>
+								<Dst from="2454" to="2570" zip="65" precT="2"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>3</ItemID>
+							<LineItem>
+								<!-- Maxibrief -->
+								<ProductNumber>102400001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>4</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+				</createOrderRequest>
+			</Operation>
+			<Operation consecutiveNumber="4">
+				<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+					<OrderHeader>
+						<OrderType>EA</OrderType>
+						<State>AU</State>
+						<OrderLabel>AM-XML Beispiel 002</OrderLabel>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01200400</SystemID>
+						</CustOrderID>
+					</OrderHeader>
+					<Parties>
+						<Originator>
+							<CustID>6000000121</CustID>
+						</Originator>
+						<Submitter>
+							<CustID>6002000131</CustID>
+						</Submitter>
+						<Payer>
+							<CustID>6000000121</CustID>
+							<PaymentMeans>
+								<Procedure>50</Procedure>
+								<Participation>01</Participation>
+							</PaymentMeans>
+						</Payer>
+					</Parties>
+					<Induction>
+						<TransitDirectionCode>E</TransitDirectionCode>
+						<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+						<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+					</Induction>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>1</ShipmentID>
+							<Qty>225</Qty>
+							<Format>S</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="0">
+								<Dst from="1" to="115" cc="AU"></Dst>
+								<Dst from="216" to="225" cc="BE"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>1</ItemID>
+							<LineItem>
+								<!-- Europabrief-Standardbrief GK -->
+								<ProductNumber>208900001</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>2</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>2</ShipmentID>
+							<Qty>130</Qty>
+							<Format>K</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="0">
+								<Dst from="226" to="310" cc="US"></Dst>
+								<Dst from="311" to="355" cc="CA"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>3</ItemID>
+							<LineItem>
+								<!-- Weltbrief-Luft-Kompaktbrief GK -->
+								<ProductNumber>209000002</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>4</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+					<ShipmentItem>
+						<Shipment>
+							<ShipmentID>3</ShipmentID>
+							<Qty>99</Qty>
+							<Format>M</Format>
+							<Postage>
+								<Type>DV</Type>
+								<PaymentClearingNumber>0001</PaymentClearingNumber>
+							</Postage>
+							<Destination prec="0">
+								<Dst from="356" to="410" cc="BR"></Dst>
+								<Dst from="411" to="450" cc="PE"></Dst>
+							</Destination>
+						</Shipment>
+						<Item>
+							<ItemID>5</ItemID>
+							<LineItem>
+								<!-- Weltbrief-Luft-Maxibrief 500g GK -->
+								<ProductNumber>209200500</ProductNumber>
+							</LineItem>
+						</Item>
+						<Item>
+							<ItemID>6</ItemID>
+							<LineItem>
+								<!-- Entgeltermäßigung DV-Freimachung -->
+								<ProductNumber>239036248</ProductNumber>
+							</LineItem>
+						</Item>
+					</ShipmentItem>
+				</createOrderRequest>
+			</Operation>
+		</OperationList>
+	</processOrderManagementOperationsRequest>
+</n:Request>

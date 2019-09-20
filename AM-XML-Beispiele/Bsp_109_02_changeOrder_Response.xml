@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <changeOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>WARNING</ReturnCode>
+      <ErrMsg>
+        <ErrDateTime>2011-05-10T12:26:27</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514253</ErrCode>
+        <ErrDesc>Für den EA mit der AM-Nr. 00000004155306 entspricht/entsprechen die Heftfolgenummer(n) (4/2009 / &lt;keine Angabe&gt;/&lt;keine Angabe&gt;) nicht der letzten vergebenen Heftfolgenummer (1/2014) oder ihrem Nachfolger (2/2014).</ErrDesc>
+      </ErrMsg>
+      <ErrMsg>
+        <ErrDateTime>2011-05-10T12:26:27</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514255</ErrCode>
+        <ErrDesc>Für den EA mit der AM-Nr. 00000004155306 liegt das Heftfolgejahr (von/bis 2009/&lt;keine Angabe&gt;) außerhalb des zulässigen Zeitraums. Das Heftfolgejahr darf nicht mehr als 31 Tage in der Vergangenheit/Zukunft liegen.</ErrDesc>
+      </ErrMsg>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110510122626</ODOCID>
+      <CreationDateTime>2011-05-10T12:26:27</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2011-05-10T12:26:26</ChangedAt>
+      <State>AU</State>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderID>00000004155306</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>110512A10900100</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </changeOrderResponse>
+</n:Response>

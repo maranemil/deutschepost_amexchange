@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 140_01
+Beschreibung: 
+Neunanlage eines Dialogpost Einlieferungsauftrags mit der Zusatzleistung "Terminzustellung". Die Mindestsendungsmenge beträgt 250.000 Sendungen, eine Aufzahlung ist nicht zulässig. 
+Der Auftrag muss palettiert werden. Der Auftrag muss abgeholt werden. Eine Einlieferung ist nicht zulässig.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>160503145256A00000218</MsgID>
+			<CreationDateTime>2016-05-03T14:52:56</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6000000121</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Dialogpost Termin</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6000000121</CustID>
+				<SystemID>160503A00000014</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>25</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+		<!-- die Abholung ist Pflicht. Eine Einlieferung ist nicht zulässig -->
+			<TransitDirectionCode>A</TransitDirectionCode>
+			<Address>
+				<StreetName>Teststr.</StreetName>
+				<StreetNumber>31</StreetNumber>
+				<Zip>64295</Zip>
+				<CityName>Musterstadt</CityName>
+				<CC>DE</CC>
+			</Address>
+			<EarliestDateTime>2016-07-22T12:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>251157</Qty>
+				<IndividualWeight value="320" unit="g"/>
+				<Format>G</Format>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="01067" precP="2" precT="5" from="1" to="190"/>
+					<Dst zip="01069" precP="2" precT="5" from="191" to="250"/>
+					<Dst zip="01097" precP="2" precT="5" from="251" to="315"/>
+					<Dst zip="01099" precP="2" precT="5" from="316" to="355"/>
+					<Dst zip="01101" precP="2" precT="5" from="356" to="360"/>
+					<Dst zip="01108" precP="2" precT="5" from="361" to="370"/>
+					<Dst zip="01109" precP="2" precT="5" from="371" to="405"/>
+					<Dst zip="01127" precP="2" precT="5" from="406" to="445"/>
+					<Dst zip="01129" precP="2" precT="5" from="446" to="455"/>
+					<Dst zip="01130" precP="2" precT="5" from="456" to="460"/>
+					<Dst zip="01139" precP="2" precT="5" from="461" to="470"/>
+					<Dst zip="01157" precP="2" precT="5" from="471" to="495"/>
+					<Dst zip="01159" precP="2" precT="5" from="496" to="525"/>
+					<Dst zip="01169" precP="2" precT="5" from="526" to="600"/>
+					<Dst zip="01187" precP="2" precT="5" from="601" to="660"/>
+					<Dst zip="01189" precP="2" precT="5" from="661" to="670"/>
+					<Dst zip="01217" precP="2" precT="5" from="671" to="700"/>
+					<Dst zip="01219" precP="2" precT="5" from="701" to="745"/>
+					<Dst zip="01230" precP="2" precT="5" from="746" to="750"/>
+					<Dst zip="01237" precP="2" precT="5" from="751" to="765"/>
+					<Dst zip="01239" precP="2" precT="5" from="766" to="790"/>
+					<Dst zip="01257" precP="2" precT="5" from="791" to="845"/>
+					<Dst zip="01259" precP="2" precT="5" from="846" to="885"/>
+					<Dst zip="01277" precP="2" precT="5" from="886" to="970"/>
+					<Dst zip="01279" precP="2" precT="5" from="971" to="1005"/>
+					<Dst zip="01307" precP="2" precT="5" from="1006" to="1055"/>
+					<Dst zip="01309" precP="2" precT="5" from="1056" to="1120"/>
+					<Dst zip="01324" precP="2" precT="5" from="1121" to="1150"/>
+					<Dst zip="01326" precP="2" precT="5" from="1151" to="1170"/>
+					<Dst zip="01427" precP="2" precT="5" from="1171" to="1175"/>
+					<Dst zip="01445" precP="2" precT="5" from="1176" to="1225"/>
+					<Dst zip="01454" precP="2" precT="5" from="1226" to="1265"/>
+					<Dst zip="01458" precP="2" precT="5" from="1266" to="1280"/>
+					<Dst zip="01462" precP="2" precT="5" from="1281" to="1285"/>
+					<Dst zip="01468" precP="2" precT="5" from="1286" to="1290"/>
+					<Dst zip="01471" precP="2" precT="5" from="1291" to="1315"/>
+					<Dst zip="01474" precP="2" precT="5" from="1316" to="1325"/>
+					<Dst zip="01477" precP="2" precT="5" from="1326" to="1340"/>
+					<Dst zip="01558" precP="2" precT="5" from="1341" to="1400"/>
+					<Dst zip="01560" precP="2" precT="5" from="1401" to="1405"/>
+					<Dst zip="01561" precP="2" precT="5" from="1406" to="1425"/>
+					<Dst zip="01587" precP="2" precT="5" from="1426" to="1480"/>
+					<Dst zip="01589" precP="2" precT="5" from="1481" to="1495"/>
+					<Dst zip="01591" precP="2" precT="5" from="1496" to="1505"/>
+					<!-- und so weiter.....-->
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+				<!-- Dialogpost Groß -->
+					<ProductNumber>250300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>888</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+				<!-- EE Bd/Beh. LR Dialogpost Groß -->
+					<ProductNumber>1000526</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>250269</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+				<!--  	EE Bd/Beh. PLZ Dialogpost Groß -->
+					<ProductNumber>1000527</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>251137</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+				<!-- EE Pal LR Dialogpost Groß-->
+					<ProductNumber>1000529</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+				<!-- Angaben zum Zustelltermin -->
+					<ProductNumber>2058</ProductNumber>
+					<!-- der Zustelltermin darf fühestens 6 Tage nach dem Abholtermin liegen-->
+					<EarliestDateTime>2016-07-29T12:00:00</EarliestDateTime>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>6</ItemID>
+				<LineItem>
+				<!-- Abholung Dialogpost -->
+					<ProductNumber>250100001</ProductNumber>
+					<EarliestDateTime>2016-07-22T12:00:00</EarliestDateTime>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>164</SlotQty>
+			<Type>PAL</Type>
+			<Qty>164</Qty>
+						<Package packageID="1" productGroup="DiP" format="G" sortMethod="BD" type="PAL" stackable="false" zipDst="01" zipFrom="01067" zipTo="01471">
+				<GWM value="442.800" unit="kg"/>
+				<NWM value="420.800" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1315</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="DiP" format="G" sortMethod="BD" type="PAL" stackable="false" zipDst="01" zipFrom="01474" zipTo="01998">
+				<GWM value="439.600" unit="kg"/>
+				<NWM value="417.600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1305</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="3" productGroup="DiP" format="G" sortMethod="BD" type="PAL" stackable="false" zipDst="02" zipFrom="02013" zipTo="02999">
+				<GWM value="340.400" unit="kg"/>
+				<NWM value="318.400" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>995</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+						<!-- und so weiter -->
+						<Package packageID="164" productGroup="DiP" format="G" sortMethod="BD" type="PAL" stackable="false" zipDst="99" zipFrom="99084" zipTo="99998">
+				<GWM value="530.800" unit="kg"/>
+				<NWM value="508.800" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1590</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

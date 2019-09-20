@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 078_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für Dialogpost mit Frankierservice PWZ
+In diesem Fall wird ein Sample Service Dialogpost-Auftrag mit Abholung verwendet.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderDesc>Mailingaktion mit Beiblatt</OrderDesc>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>163112A07800100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<PostCardID>60000001212501001</PostCardID>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>A</TransitDirectionCode>
+			<Address>
+				<StreetName>Marienkamp</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<District>Buldern</District>
+				<Zip>48249</Zip>
+				<CityName>Dulmen</CityName>
+				<CC>DE</CC>
+			</Address>
+			<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Umschlag</Desc>
+				<Type>EIZ</Type>
+				<Qty>10000</Qty>
+				<IndividualWeight unit="g" value="20"/>
+				<Format>S</Format>
+				<Postage>
+					<Type>PWZ</Type>
+					<Amount value="0.28" currency="EUR"/>
+				</Postage>
+				<Destination prec="2">
+					<Dst zip="01" qty="263" precP="2" precT="2"/>
+					<Dst zip="02" qty="1000" precP="2" precT="2"/>
+					<Dst zip="03" qty="312" precP="2" precT="2"/>
+					<Dst zip="04" qty="555" precP="2" precT="2"/>
+					<Dst zip="05" qty="714" precP="2" precT="2"/>
+					<Dst zip="06" qty="277" precP="2" precT="2"/>
+					<Dst zip="09" qty="833" precP="2" precT="2"/>
+					<Dst zip="10" qty="140" precP="2" precT="2"/>
+					<Dst zip="19" qty="153" precP="2" precT="2"/>
+					<Dst zip="20" qty="222" precP="2" precT="2"/>
+					<Dst zip="29" qty="111" precP="2" precT="2"/>
+					<Dst zip="30" qty="149" precP="2" precT="2"/>
+					<Dst zip="39" qty="303" precP="2" precT="2"/>
+					<Dst zip="40" qty="322" precP="2" precT="2"/>
+					<Dst zip="49" qty="178" precP="2" precT="2"/>
+					<Dst zip="50" qty="400" precP="2" precT="2"/>
+					<Dst zip="59" qty="833" precP="2" precT="2"/>
+					<Dst zip="60" qty="294" precP="2" precT="2"/>
+					<Dst zip="69" qty="129" precP="2" precT="2"/>
+					<Dst zip="70" qty="208" precP="2" precT="2"/>
+					<Dst zip="79" qty="416" precP="2" precT="2"/>
+					<Dst zip="80" qty="169" precP="2" precT="2"/>
+					<Dst zip="89" qty="217" precP="2" precT="2"/>
+					<Dst zip="90" qty="357" precP="2" precT="2"/>
+					<Dst zip="99" qty="1445" precP="2" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Dialogpost Standard -->
+					<ProductNumber>250200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Abholung Dialogpost  -->
+					<ProductNumber>250100001</ProductNumber>
+					<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Frankierservice PWZ Dialogpost Standard -->
+					<ProductNumber>911100034</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>1</SlotQty>
+			<Type>PAL</Type>
+			<Qty>1</Qty>
+			<Package packageID="1" productGroup="DiP" format="S" sortMethod="BD" type="PAL" stackable="true" frameQty="11" zipDst="DE" zipFrom="12354" zipTo="98564">
+				<NWM value="500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>10000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

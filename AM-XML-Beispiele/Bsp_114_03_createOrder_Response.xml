@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderResponse" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:om="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common">
+	<createOrderResponse testcase="false" codeTableVersion="1.0" version="1.0">
+		<Return>
+			<ReturnCode>ERROR</ReturnCode>
+			<ErrMsg>
+				<ErrDateTime>2009-10-01T13:57:22</ErrDateTime>
+				<ErrCat>ERROR</ErrCat>
+				<ErrCode>514046</ErrCode>
+				<ErrDesc>Bei dem EA mit der AM-Nr. 00090929167074 gibt es Zusatzprodukte, die nicht auf ein Basisprodukt oder auf einen anderen Auftrag verweisen (siehe Sendungsnummer 1 / Dienstleistung DL-Nummer 3).</ErrDesc>
+			</ErrMsg>
+			<ErrMsg>
+				<ErrDateTime>2009-10-01T13:57:22</ErrDateTime>
+				<ErrCat>ERROR</ErrCat>
+				<ErrCode>514051</ErrCode>
+				<ErrDesc>Bei dem EA mit der Auftragsnummer 00090929167074 gibt es für die Sendungsnummer 1 mit der Dienstleistung DL-Cluster-Nummer 1, DL-Nummer 2, Abrechnungsinformationsart Ermäßigung DV-Freimachung eine Dienstleistung, die als abhängige Dienstleistung des DL-Clusters 2 hätte angegeben werden müssen. Dies ist jedoch nicht der Fall.</ErrDesc>
+			</ErrMsg>
+		</Return>
+		<MsgHeader>
+			<MsgID>061112102356A00000001</MsgID>
+			<CreationDateTime>2009-10-01T13:58:12</CreationDateTime>
+			<Receiver>5037346381</Receiver>
+			<Origin>
+				<SystemName>AM</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<ProductionState/>
+			<State>AU</State>
+			<CustOrderID>
+				<CustID>5037346381</CustID>
+				<SystemID>091001AETBZL002</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+	</createOrderResponse>
+</n:Response>

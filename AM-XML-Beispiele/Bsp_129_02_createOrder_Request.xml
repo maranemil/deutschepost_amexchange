@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 01.12.2015
+Beispiel: 129_02
+Unterstützt ab Order Management Service Version: 4.1
+Beschreibung: Neuanlage eines Zusatzauftrages für Abholung und Lagerung.
+Mit dieser Datei wird die Abholung und Lagerung per Zusatzauftrag beauftragt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>ZA</OrderType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A12900200</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>V</TransitDirectionCode>
+			<Address>
+				<StreetName>Marienkamp</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<District>Buldern</District>
+				<Zip>48249</Zip>
+				<CityName>Dulmen</CityName>
+				<CC>DE</CC>
+			</Address>
+			<EarliestDateTime>2015-12-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Item>
+				<ItemID>1</ItemID>
+				<Ref>
+					<RefOrder>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>150531A12900100</SystemID>
+						</CustOrderID>
+					</RefOrder>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Abholung Dialogpost -->
+					<ProductNumber>904400001</ProductNumber>
+					<EarliestDateTime>2015-12-01T10:00:00</EarliestDateTime>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefOrder>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>150531A12900100</SystemID>
+						</CustOrderID>
+					</RefOrder>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Lagerung DIalogpost -->
+					<ProductNumber>904400003</ProductNumber>
+					<EarliestDateTime>2015-12-13T10:00:00</EarliestDateTime>
+					<LatestDateTime>2015-12-19T10:00:00</LatestDateTime>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

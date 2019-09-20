@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderResponse" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:om="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common">
+	<createOrderResponse testcase="false" codeTableVersion="1.0" version="1.0">
+		<Return>
+			<ReturnCode>ERROR</ReturnCode>
+			<ErrMsg>
+				<ErrDateTime>2009-10-01T13:34:28</ErrDateTime>
+				<ErrCat>ERROR</ErrCat>
+				<ErrCode>518136</ErrCode>
+				<ErrDesc>Die Dienstleistungen einer ShipmentItem-Sektion dürfen nur auf die in dieser Sektion definierten Sendungen verweisen. Dies trifft für die Referenz auf Sendung 1 von Dienstleistung 000001013 nicht zu.</ErrDesc>
+			</ErrMsg>
+		</Return>
+		<MsgHeader>
+			<MsgID>061112102356A00000001</MsgID>
+			<CreationDateTime>2009-10-01T13:35:18</CreationDateTime>
+			<Receiver>5037346381</Receiver>
+			<Origin>
+				<SystemName>AM</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<ProductionState/>
+			<State>AU</State>
+			<CustOrderID>
+				<CustID>5037346381</CustID>
+				<SystemID>091001AET000001</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+	</createOrderResponse>
+</n:Response>

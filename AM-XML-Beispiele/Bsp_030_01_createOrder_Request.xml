@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Roger Osterbart
+Version: 1.0
+Erstellung: 01.08.2017
+Beispiel: 030_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für AFM freigemachte Briefe in  allen Formaten mit Anmeldung Infrastrukturrabatt.
+Für den Prozess wird die AM-Auftragsnummer aus der Response  für die Frankierung benötigt, da sie im Matrixcode auf den Sendungen abgebildet sein muss.
+Wenn die Sendungsmenge erst durch den Frankiervorgang ermittelt wird, dann ist eine Auftragsanlage mit provisorischer Angabe möglich. 
+Nach der Frankierung erfolgt dann die Aktualisierung mit den korrekten Mengen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2018-01-02T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2018-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>170801A03000100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6002000131</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6002000131</CustID>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2018-01-04T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>1</Qty>
+				<Format>S</Format>
+				<Postage>
+					<Type>AFM</Type>
+					<Amount value="0.70" currency="EUR"/>
+					<Code>9D9999999E</Code>
+				</Postage>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Standardbrief -->
+					<ProductNumber>102100001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Anmeldung Entgeltermäßigung Infrastrukturrabatt -->
+					<ProductNumber>1000706</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

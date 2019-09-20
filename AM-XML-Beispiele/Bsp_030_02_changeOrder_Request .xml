@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Roger Osterbart
+Version: 1.0
+Erstellung: 01.08.2017
+Beispiel: 030_02
+Beschreibung: Aktualisierung eines Einlieferungsauftrags für AFM freigemachte Briefe in  allen Formaten mit Anmeldung Infrastrukturrabatt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" 
+xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/changeOrderRequest.xsd">
+	<changeOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000002</MsgID>
+			<CreationDateTime>2018-01-02T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2018-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>170801A03000100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>453</Qty>
+				<Format>S</Format>
+				<Postage>
+					<Type>AFM</Type>
+					<Amount value="0.70" currency="EUR"/>
+					<Code>9D9999999E</Code>
+				</Postage>
+				<Destination prec="0">
+					<!-- Im Versandplan werden die laufenden Sendungsnummern übermittelt -->
+					<Dst from="8457" to="8909" zip="DE" precT="2"/>
+				</Destination>	
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Standardbrief -->
+					<ProductNumber>102100001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Anmeldung Entgeltermäßigung Infrastrukturrabatt -->
+					<ProductNumber>1000706</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>151</Qty>
+				<Format>K</Format>
+				<Postage>
+					<Type>AFM</Type>
+					<Amount value="0.85" currency="EUR"/>
+					<Code>9D9999999E</Code>
+				</Postage>
+				<Destination prec="0">
+					<!-- Im Versandplan werden die laufenden Sendungsnummern übermittelt -->
+					<Dst from="8910" to="9060" zip="DE" precT="2"/>
+				</Destination>	
+			</Shipment>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Kompaktbrief -->
+					<ProductNumber>102200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Anmeldung Entgeltermäßigung Infrastrukturrabatt -->
+					<ProductNumber>1000706</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Qty>275</Qty>
+				<Format>G</Format>
+				<Postage>
+					<Type>AFM</Type>
+					<Amount value="1.45" currency="EUR"/>
+					<Code>9D9999999E</Code>
+				</Postage>
+				<Destination prec="0">
+					<!-- Im Versandplan werden die laufenden Sendungsnummern übermittelt -->
+					<Dst from="9061" to="9335" zip="DE" precT="2"/>
+				</Destination>	
+			</Shipment>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<!-- Großbrief -->
+					<ProductNumber>102300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>6</ItemID>
+				<LineItem>
+					<!-- Anmeldung Entgeltermäßigung Infrastrukturrabatt -->
+					<ProductNumber>1000706</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>4</ShipmentID>
+				<Qty>75</Qty>
+				<Format>M</Format>
+				<Postage>
+					<Type>AFM</Type>
+					<Amount value="2.60" currency="EUR"/>
+					<Code>9D9999999E</Code>
+				</Postage>
+				<Destination prec="0">
+					<!-- Im Versandplan werden die laufenden Sendungsnummern übermittelt -->
+					<Dst from="9336" to="9410" zip="DE" precT="2"/>
+				</Destination>	
+			</Shipment>
+			<Item>
+				<ItemID>7</ItemID>
+				<LineItem>
+					<!-- Maxibrief -->
+					<ProductNumber>102400001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>8</ItemID>
+				<LineItem>
+					<!-- Anmeldung Entgeltermäßigung Infrastrukturrabatt -->
+					<ProductNumber>1000706</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</changeOrderRequest>
+</n:Request>

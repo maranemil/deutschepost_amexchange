@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <seekOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0"
+    maxResultsExceeded="false">
+    <Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110428094159</ODOCID>
+      <CreationDateTime>2011-04-28T09:42:00</CreationDateTime>
+      <Receiver>6000000121</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <SearchResult>
+      <OrderHeader includesDestinations="false" includesPackaging="true" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-04-11T16:24:04</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>false</IsActive>
+        <OrderLabel>5/2011</OrderLabel>
+        <CreationDate>2011-04-11</CreationDate>
+        <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+        <OrderID>00000004058332</OrderID>
+        <CustOrderID>
+          <CustID>6000000121</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110411R00000009</SystemID>
+        </CustOrderID>
+        <TotalQty>23263</TotalQty>
+        <TotalAmount value="10336.52" currency="EUR" />
+        <OtherAttribute type="HF_NR_VON" value="5" />
+        <OtherAttribute type="ELK" value="R" />
+        <OtherAttribute type="HF_JAHR_VON" value="2011" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+          <Contract>
+            <ContractID>010004</ContractID>
+            <ContractTypeCode>ZKZ</ContractTypeCode>
+          </Contract>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-02T00:00:00</EarliestDateTime>
+      </Induction>
+    </SearchResult>
+    <SearchResult>
+      <OrderHeader includesPackaging="true" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-04-19T11:03:41</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>true</IsActive>
+        <OrderLabel>5/2011</OrderLabel>
+        <CreationDate>2011-04-11</CreationDate>
+        <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+        <OrderID>00000004106586</OrderID>
+        <CustOrderID>
+          <CustID>6000000121</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110411R00000009</SystemID>
+        </CustOrderID>
+        <TotalQty>9994</TotalQty>
+        <TotalAmount value="4440.67" currency="EUR" />
+        <OtherAttribute type="HF_NR_VON" value="5" />
+        <OtherAttribute type="ELK" value="R" />
+        <OtherAttribute type="HF_JAHR_VON" value="2011" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+          <Contract>
+            <ContractID>010004</ContractID>
+            <ContractTypeCode>ZKZ</ContractTypeCode>
+          </Contract>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-02T00:00:00</EarliestDateTime>
+      </Induction>
+    </SearchResult>
+    <SearchResult>
+      <OrderHeader includesPackaging="true" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-04-19T11:03:43</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>true</IsActive>
+        <OrderLabel>5/2011</OrderLabel>
+        <CreationDate>2011-04-11</CreationDate>
+        <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+        <OrderID>00000004106602</OrderID>
+        <CustOrderID>
+          <CustID>6000000121</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110411R00000009</SystemID>
+        </CustOrderID>
+        <TotalQty>13269</TotalQty>
+        <TotalAmount value="5895.84" currency="EUR" />
+        <OtherAttribute type="HF_NR_VON" value="5" />
+        <OtherAttribute type="ELK" value="R" />
+        <OtherAttribute type="HF_JAHR_VON" value="2011" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+          <Contract>
+            <ContractID>010004</ContractID>
+            <ContractTypeCode>ZKZ</ContractTypeCode>
+          </Contract>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-03T00:00:00</EarliestDateTime>
+      </Induction>
+    </SearchResult>
+    <OrderTree>
+      <OrderHeader includesDestinations="false" includesPackaging="true" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-04-11T16:24:04</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>false</IsActive>
+        <OrderLabel>5/2011</OrderLabel>
+        <CreationDate>2011-04-11</CreationDate>
+        <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+        <OrderID>00000004058332</OrderID>
+        <CustOrderID>
+          <CustID>6000000121</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110411R00000009</SystemID>
+        </CustOrderID>
+        <TotalQty>23263</TotalQty>
+        <TotalAmount value="10336.52" currency="EUR" />
+        <OtherAttribute type="HF_NR_VON" value="5" />
+        <OtherAttribute type="ELK" value="R" />
+        <OtherAttribute type="HF_JAHR_VON" value="2011" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+          <Contract>
+            <ContractID>010004</ContractID>
+            <ContractTypeCode>ZKZ</ContractTypeCode>
+          </Contract>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-02T00:00:00</EarliestDateTime>
+      </Induction>
+    </OrderTree>
+    <OrderTree>
+      <OrderHeader includesPackaging="true" >
+        <ProductionState>GPL</ProductionState>
+        <ChangedAt>2011-04-19T11:03:43</ChangedAt>
+        <OrderType>JS</OrderType>
+        <OrderLabel>5/2011</OrderLabel>
+        <OrderCategory>null</OrderCategory>
+        <OrderID>00000004058332</OrderID>
+        <CustOrderID>
+          <CustID>6000000121</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110411R00000009</SystemID>
+        </CustOrderID>
+        <TotalQty>23263</TotalQty>
+        <TotalAmount value="4440.67" currency="EUR" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-02T00:00:00</EarliestDateTime>
+      </Induction>
+      <OrderTree>
+        <OrderHeader includesPackaging="true" >
+          <ProductionState>PLA</ProductionState>
+          <ChangedAt>2011-04-19T11:03:41</ChangedAt>
+          <OrderType>EA</OrderType>
+          <State>AU</State>
+          <Released>true</Released>
+          <AchievedDataQuality>AU</AchievedDataQuality>
+          <IsActive>true</IsActive>
+          <OrderLabel>5/2011</OrderLabel>
+          <CreationDate>2011-04-11</CreationDate>
+          <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+          <OrderID>00000004106586</OrderID>
+          <CustOrderID>
+            <CustID>6000000121</CustID>
+            <SystemName>B2B</SystemName>
+            <SystemID>110411R00000009</SystemID>
+          </CustOrderID>
+          <TotalQty>9994</TotalQty>
+          <TotalAmount value="4440.67" currency="EUR" />
+          <OtherAttribute type="HF_NR_VON" value="5" />
+          <OtherAttribute type="ELK" value="R" />
+          <OtherAttribute type="HF_JAHR_VON" value="2011" />
+        </OrderHeader>
+        <Parties>
+          <Originator>
+            <CustID>6000000121</CustID>
+          </Originator>
+          <Producer>
+            <CustID>6002000131</CustID>
+          </Producer>
+          <Submitter>
+            <CustID>6002000131</CustID>
+          </Submitter>
+          <Payer>
+            <CustID>6000000121</CustID>
+            <Contract>
+              <ContractID>010004</ContractID>
+              <ContractTypeCode>ZKZ</ContractTypeCode>
+            </Contract>
+          </Payer>
+        </Parties>
+        <Induction>
+          <EarliestDateTime>2015-05-02T00:00:00</EarliestDateTime>
+        </Induction>
+      </OrderTree>
+      <OrderTree>
+        <OrderHeader includesPackaging="true" >
+          <ProductionState>PLA</ProductionState>
+          <ChangedAt>2011-04-19T11:03:43</ChangedAt>
+          <OrderType>EA</OrderType>
+          <State>AU</State>
+          <Released>true</Released>
+          <AchievedDataQuality>AU</AchievedDataQuality>
+          <IsActive>true</IsActive>
+          <OrderLabel>5/2011</OrderLabel>
+          <CreationDate>2011-04-11</CreationDate>
+          <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+          <OrderID>00000004106602</OrderID>
+          <CustOrderID>
+            <CustID>6000000121</CustID>
+            <SystemName>B2B</SystemName>
+            <SystemID>110411R00000009</SystemID>
+          </CustOrderID>
+          <TotalQty>13269</TotalQty>
+          <TotalAmount value="5895.84" currency="EUR" />
+          <OtherAttribute type="HF_NR_VON" value="5" />
+          <OtherAttribute type="ELK" value="R" />
+          <OtherAttribute type="HF_JAHR_VON" value="2011" />
+        </OrderHeader>
+        <Parties>
+          <Originator>
+            <CustID>6000000121</CustID>
+          </Originator>
+          <Producer>
+            <CustID>6002000131</CustID>
+          </Producer>
+          <Submitter>
+            <CustID>6002000131</CustID>
+          </Submitter>
+          <Payer>
+            <CustID>6000000121</CustID>
+            <Contract>
+              <ContractID>010004</ContractID>
+              <ContractTypeCode>ZKZ</ContractTypeCode>
+            </Contract>
+          </Payer>
+        </Parties>
+        <Induction>
+          <EarliestDateTime>2015-05-03T00:00:00</EarliestDateTime>
+        </Induction>
+      </OrderTree>
+    </OrderTree>
+  </seekOrderResponse>
+</n:Response>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Autor: Henning Ebel
+Version: 1.0
+Erstellung: 23.10.2018
+Beispiel: 146_01
+Beschreibung: Abruf von S10-IDs zur späteren Verwendung für "Warenpost International"-Sendungen
+Der Typ bestimmt dabei, für welche Art von "Warenpost International"-Produkt die S10-IDs verwendet werden sollen.
+(C) Deutsche Post AG
+-->
+<getIdRangeRequest xmlns="urn:www-deutschepost-de:Mail/OM/WebserviceProvider/NumberManagement">
+                <type>S10ID_UNTRACKED</type>
+                <!--Der Typ der benötigten S10-ID (siehe Code Table für Übersicht zu verfügbaren Typen)-->
+				<quantity>10</quantity>
+                <!--Die Anzahl benötigter S10-IDs (aktuell beschränkt auf maximal 1.000 je Aufruf)-->
+				<ucp>6002000131</ucp> 					
+				<!--Die EKP-Nummer des Kunden, für den die S10-IDs abgefragt werden.-->
+                <username>User</username>
+                <password>Passwort</password>
+</getIdRangeRequest>

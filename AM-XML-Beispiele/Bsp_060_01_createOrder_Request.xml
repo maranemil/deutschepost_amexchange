@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 28.12.2006
+Beispiel: 060_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für DV freigemachte Maxibriefe ins Inland mit Zuzahlung für das Sonderformat Maxibrief Plus.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A06000100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>120</Qty>
+				<Format>M</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="1" to="2" zip="01" precT="0"/>
+					<Dst from="3" to="4" zip="06" precT="0"/>
+					<Dst from="5" to="6" zip="08" precT="0"/>
+					<Dst from="7" to="8" zip="09" precT="0"/>
+					<Dst from="9" to="10" zip="10" precT="0"/>
+					<Dst from="11" to="12" zip="12" precT="0"/>
+					<Dst from="13" to="14" zip="13" precT="0"/>
+					<Dst from="15" to="16" zip="14" precT="0"/>
+					<Dst from="17" to="17" zip="20" precT="0"/>
+					<Dst from="18" to="20" zip="21" precT="0"/>
+					<Dst from="21" to="22" zip="22" precT="0"/>
+					<Dst from="23" to="23" zip="25" precT="0"/>
+					<Dst from="24" to="26" zip="26" precT="0"/>
+					<Dst from="27" to="27" zip="27" precT="0"/>
+					<Dst from="28" to="30" zip="28" precT="0"/>
+					<Dst from="31" to="32" zip="29" precT="0"/>
+					<Dst from="33" to="34" zip="30" precT="0"/>
+					<Dst from="35" to="36" zip="31" precT="0"/>
+					<Dst from="37" to="38" zip="32" precT="0"/>
+					<Dst from="39" to="40" zip="34" precT="0"/>
+					<Dst from="41" to="42" zip="40" precT="0"/>
+					<Dst from="43" to="44" zip="41" precT="0"/>
+					<Dst from="45" to="46" zip="44" precT="0"/>
+					<Dst from="47" to="48" zip="45" precT="0"/>
+					<Dst from="49" to="49" zip="46" precT="0"/>
+					<Dst from="50" to="52" zip="47" precT="0"/>
+					<Dst from="53" to="54" zip="48" precT="0"/>
+					<Dst from="55" to="56" zip="49" precT="0"/>
+					<Dst from="57" to="58" zip="50" precT="0"/>
+					<Dst from="59" to="60" zip="51" precT="0"/>
+					<Dst from="61" to="62" zip="52" precT="0"/>
+					<Dst from="63" to="64" zip="53" precT="0"/>
+					<Dst from="65" to="66" zip="56" precT="0"/>
+					<Dst from="67" to="67" zip="58" precT="0"/>
+					<Dst from="68" to="69" zip="59" precT="0"/>
+					<Dst from="70" to="71" zip="63" precT="0"/>
+					<Dst from="72" to="74" zip="65" precT="0"/>
+					<Dst from="75" to="76" zip="66" precT="0"/>
+					<Dst from="77" to="77" zip="69" precT="0"/>
+					<Dst from="78" to="80" zip="70" precT="0"/>
+					<Dst from="81" to="82" zip="71" precT="0"/>
+					<Dst from="83" to="84" zip="72" precT="0"/>
+					<Dst from="85" to="86" zip="73" precT="0"/>
+					<Dst from="87" to="88" zip="74" precT="0"/>
+					<Dst from="89" to="90" zip="76" precT="0"/>
+					<Dst from="91" to="92" zip="78" precT="0"/>
+					<Dst from="93" to="94" zip="79" precT="0"/>
+					<Dst from="95" to="95" zip="80" precT="0"/>
+					<Dst from="96" to="98" zip="82" precT="0"/>
+					<Dst from="99" to="100" zip="85" precT="0"/>
+					<Dst from="101" to="102" zip="86" precT="0"/>
+					<Dst from="103" to="103" zip="88" precT="0"/>
+					<Dst from="104" to="105" zip="89" precT="0"/>
+					<Dst from="106" to="108" zip="90" precT="0"/>
+					<Dst from="109" to="110" zip="91" precT="0"/>
+					<Dst from="111" to="112" zip="92" precT="0"/>
+					<Dst from="113" to="114" zip="95" precT="0"/>
+					<Dst from="115" to="116" zip="97" precT="0"/>
+					<Dst from="117" to="118" zip="98" precT="0"/>
+					<Dst from="119" to="120" zip="99" precT="0"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Maxibrief -->
+					<ProductNumber>102400001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>120</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Zusatzentgelt Maxibrief -->
+					<ProductNumber>1296</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

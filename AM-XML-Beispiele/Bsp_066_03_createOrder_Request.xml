@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 066_03
+Beschreibung: Neuanlage einer (ungeplanten) Teileinlieferung für ein Dialogpost Vario-Mailing. Zuerst Ankündigung einer Gesamteinlieferung, dann Aufteilung in mehrere Teileinlieferungen.
+Mit dieser Datei wird die zweite Teileinlieferung und damit gleichzeitig die Schlußeinlieferung angekündigt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>TE</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>S</SubmissionType>
+			<SubmissionID>2</SubmissionID>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>161112A06600300</SystemID>
+			</CustOrderID>
+			<RefOrder>
+				<CustOrderID>
+					<CustID>6002000131</CustID>
+					<SystemID>162112A06600100</SystemID>
+				</CustOrderID>
+			</RefOrder>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<PostCardID>60000001212501001</PostCardID>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2016-06-02T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>0</ShipmentID>
+				<Desc>Variante 1</Desc>
+				<Qty>1826</Qty>
+				<TotalQty>3052</TotalQty>
+				<IndividualWeight value="400" unit="g"/>
+				<Format>G</Format>
+				<Length value="29.7" unit="cm"/>
+				<Width value="21.0" unit="cm"/>
+				<Thickness value="25.0" unit="mm"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<RefDst prec="5">
+					<Range from="60313" to="69483"/>
+				</RefDst>
+			</Shipment>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Variante 2</Desc>
+				<Qty>2226</Qty>
+				<TotalQty>4480</TotalQty>
+				<IndividualWeight value="380" unit="g"/>
+				<Format>G</Format>
+				<Length value="29.7" unit="cm"/>
+				<Width value="21.0" unit="cm"/>
+				<Thickness value="25.1" unit="mm"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<RefDst prec="5">
+					<Range from="60015" to="69493"/>
+				</RefDst>
+			</Shipment>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Desc>Variante 3</Desc>
+				<Qty>468</Qty>
+				<TotalQty>1600</TotalQty>
+				<IndividualWeight value="450" unit="g"/>
+				<Format>G</Format>
+				<Length value="29.7" unit="cm"/>
+				<Width value="21.0" unit="cm"/>
+				<Thickness value="25.0" unit="mm"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<RefDst prec="5">
+					<Range from="60008" to="69483"/>
+				</RefDst>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Dialogpost Groß -->
+					<ProductNumber>250300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>1826</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>2226</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>468</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Entgeltermäßigung Bd/Beh. PLZ Dialogpost Groß -->
+					<ProductNumber>1000527</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>17</SlotQty>
+			<Type>PAL</Type>
+			<Qty>17</Qty>
+			<Package packageID="1" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="187.140" unit="kg"/>
+				<NWM value="98.240" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>116</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>108</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>24</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="199.760" unit="kg"/>
+				<NWM value="110.860" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>72</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>152</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>54</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="3" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="183.100" unit="kg"/>
+				<NWM value="94.200" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>86</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>110</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>40</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="4" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="188.560" unit="kg"/>
+				<NWM value="99.660" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>76</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>142</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>34</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="5" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="182.980" unit="kg"/>
+				<NWM value="94.080" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>66</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>126</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>44</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="6" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="184.880" unit="kg"/>
+				<NWM value="95.980" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>82</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>126</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>34</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="7" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="186.700" unit="kg"/>
+				<NWM value="97.800" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>84</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>105</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>54</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="8" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="183.420" unit="kg"/>
+				<NWM value="94.520" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>72</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>109</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>54</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="9" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="185.620" unit="kg"/>
+				<NWM value="96.720" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>82</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>109</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>50</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="10" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="198.600" unit="kg"/>
+				<NWM value="109.700" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>84</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>115</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>72</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="11" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>106</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>174</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="12" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>156</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>174</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="13" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>156</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>174</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="14" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>176</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>124</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="15" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>156</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>174</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="16" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>156</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>174</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="17" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6">
+				<GWM value="51.820" unit="kg"/>
+				<NWM value="15.120" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>156</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>124</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

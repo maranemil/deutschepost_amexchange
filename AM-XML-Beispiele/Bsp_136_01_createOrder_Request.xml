@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Erstellung: 29.12.2008
+Beispiel: 136_01
+Beschreibung: Neuanlage eines PrD-Einlieferungsauftrags mit einer kostenpflichtigen Beilage. Einlieferung in einem ELN-Depot. Angabe von Paletteninformationen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Heft 3/2009</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A13600200</SystemID>
+			</CustOrderID>
+			<OtherAttribute type="ELK" value="R"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="3"/>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<Contract>
+					<ContractID>10004</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>1800</Qty>
+				<!-- Einzelgewicht inkl. Gewicht der Beilagen. -->
+				<IndividualWeight value="150" unit="g"/>
+				<!-- Beilage: Fremdbeilage -->
+				<Supplement>
+					<SupplementID>1</SupplementID>
+					<!-- Beilage kostenneutrale Fremdbeilage -->
+					<Type>FB</Type>
+					<IndividualWeight value="25" unit="g"/>
+					<Qty>1</Qty>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="01067" qty="300" precT="2" precP="1"/>
+					<Dst zip="01068" qty="300" precT="2" precP="1"/>
+					<Dst zip="01087" qty="300" precT="2" precP="1"/>
+					<Dst zip="02026" qty="500" precT="2" precP="1"/>
+					<Dst zip="02029" qty="400" precT="2" precP="1"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Postvertriebsstück second-day-service -->
+					<ProductNumber>12</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>1</Qty>
+			<Package packageID="1" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false" zipDst="DE" zipFrom="01067" zipTo="02029">
+				<NWM value="225" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1800</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

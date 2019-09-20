@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 27.04.2010
+Beispiel: 125_01
+Beschreibung: Neuanlage eines Einlieferungsauftrages für Presse und Buch International mit BZL in verschiedene Zonen
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel 125</OrderLabel>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A12500100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>50</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>225</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="1" to="215" cc="AU"/>
+					<Dst from="216" to="225" cc="BE"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Presse&Buch Land bis 500g (Zone EU) -->
+					<ProductNumber>109900500</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>124</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>124</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Zone EU -->
+					<ProductNumber>1098</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>100</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="226" to="325" cc="CH"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<!-- Presse&Buch Land bis 500g (Rest Europa) -->
+					<ProductNumber>109910500</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>6</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>24</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>7</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>24</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Zone Non-EU -->
+					<ProductNumber>1729</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>8</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Qty>130</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="326" to="410" cc="US"/>
+					<Dst from="411" to="455" cc="CA"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>9</ItemID>
+				<LineItem>
+					<!-- P.u.B. Intern. ET Welt Land bis 500 g -->
+					<ProductNumber>109910501</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>10</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>3</RefShipmentID>
+						<Qty>44</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>11</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>3</RefShipmentID>
+						<Qty>44</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Zone Non-EU -->
+					<ProductNumber>1729</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>12</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>4</ShipmentID>
+				<Qty>99</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="456" to="510" cc="NL"/>
+					<Dst from="511" to="554" cc="GB"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>13</ItemID>
+				<LineItem>
+					<!-- Presse&Buch Land bis 1000g (Zone EU) -->
+					<ProductNumber>109901000</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>14</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>4</RefShipmentID>
+						<Qty>67</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>15</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>4</RefShipmentID>
+						<Qty>17</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Eigenhändig -->
+					<ProductNumber>1096</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>16</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>4</RefShipmentID>
+						<Qty>18</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Eilzustellung -->
+					<ProductNumber>1099</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>17</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>5</ShipmentID>
+				<Qty>50</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="555" to="604" cc="TN"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>18</ItemID>
+				<LineItem>
+					<!-- Presse&Buch Land bis 1000g (Rest Europa) -->
+					<ProductNumber>109911000</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>19</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>5</RefShipmentID>
+						<Qty>29</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>20</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>5</RefShipmentID>
+						<Qty>15</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Eigenhändig -->
+					<ProductNumber>1096</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>21</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>6</ShipmentID>
+				<Qty>30</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="600" to="629" cc="TR"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>22</ItemID>
+				<LineItem>
+					<!-- P.u.B. Intern. ET Welt Land bis 1000 g -->
+					<ProductNumber>109911001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>23</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>6</RefShipmentID>
+						<Qty>9</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>24</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>6</RefShipmentID>
+						<Qty>5</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- mit Rückschein -->
+					<ProductNumber>1097</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>25</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

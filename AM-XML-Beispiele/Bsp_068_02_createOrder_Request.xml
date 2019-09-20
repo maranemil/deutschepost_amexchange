@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 068_02
+Beschreibung: 
+Neuanlage eines Dialogpost Einlieferungsauftrags als Sammeleinlieferung für einzelne Leitregionen. 
+Es erfolgt eine Kennzeichnung als Leitregionseinlieferung, da die Mindestmenge je Position verschieden ist von derjenigen für eine bundesweite Einlieferung Dialogpost bzw. Dialogpost Easy. Es muss insbesondere kein Zuschlag Dialogpost Easy berücksichtigt werden.
+Es wird Abholung vereinbart. Daher muss das Produkt "Abholung" in einem separaten Shipment dargestellt werden.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest altova://folder_resource/4.41/Abnahme\createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>161112A06800600</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>A</TransitDirectionCode>
+			<Address>
+				<StreetName>Marienkamp</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<District>Buldern</District>
+				<Zip>48249</Zip>
+				<CityName>Dulmen</CityName>
+				<CC>DE</CC>
+			</Address>
+			<EarliestDateTime>2016-08-10T09:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Dialogpost Standard - 1</Desc>
+				<Qty>400</Qty>
+				<IndividualWeight value="18" unit="g"/>
+				<Format>S</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0006</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="1" to="400" zip="53" qty="400" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Dialogpost Standard -->
+					<ProductNumber>250200001</ProductNumber>
+					<Variant>LR</Variant>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Desc>Dialogpost Standard - 2</Desc>
+				<Qty>150</Qty>
+				<AdditionalQty>50</AdditionalQty>
+				<IndividualWeight value="47" unit="g"/>
+				<Format>S</Format>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0006</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="401" to="550" zip="56" qty="150" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Dialogpost Standard -->
+					<ProductNumber>250200001</ProductNumber>
+					<Variant>LR</Variant>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<ProductNumber>250100001</ProductNumber>
+					<EarliestDateTime>2016-08-10T09:00:00</EarliestDateTime>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>2</SlotQty>
+			<Type>PAL</Type>
+			<Qty>2</Qty>
+			<Package packageID="1" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="53" zipFrom="53123" zipTo="53879">
+				<GWM value="27.632" unit="kg"></GWM>
+				<NWM value="7.200" unit="kg"></NWM>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>400</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="IP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="56" zipFrom="56123" zipTo="56987">
+				<GWM value="27.230" unit="kg"></GWM>
+				<NWM value="7.050" unit="kg"></NWM>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>150</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

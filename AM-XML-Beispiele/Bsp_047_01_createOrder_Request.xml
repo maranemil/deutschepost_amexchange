@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 047_01
+Neuanlage eines Dialogpost Auftrags für die reguläre Vorankündigung. Die Vorankündigung ist mindestens 7 Tage vor geplanter Einlieferung zu schicken. Die zu erreichende Datenqualität ist "DM" (Detailmeldung). Diese wird mit einer Auftragsaktualisierung zu einem Auftrag der Datenqualität "AU" verfeinert. Die Datenqualität "AU" muss mindestens zwei Tage vor Einlieferung vorliegen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2015-10-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6000000121</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<!-- Hinweis: Die Angabe State ist optional. Das AM-System ermittelt die tatsächliche Datenqualität. -->
+			<State>DM</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6000000121</CustID>
+				<SystemID>162112A09000200</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<PostCardID>60000001212501001</PostCardID>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<!-- Eine Detailmeldung ist nur gültig, wenn Sie mindestens 7 Tage vor Einlieferung erfolgt. -->
+			<EarliestDateTime>2016-05-10T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>987100</Qty>
+				<IndividualWeight value="450" unit="g"/>
+				<Format>G</Format>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Dialogpost Gross -->
+					<ProductNumber>250300001</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<!-- Hinweis: Die Palettenangaben sind optional. Bei Detailmeldung genügt es, nur die Anzahl der Paletten ohne deren explizite Auflistung zu übermitteln.  -->
+			<Type>PAL</Type>
+			<Qty>67</Qty>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

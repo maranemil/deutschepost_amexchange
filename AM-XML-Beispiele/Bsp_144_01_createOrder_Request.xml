@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Roger Osterbart
+Version: 1.0
+Erstellung: 02.07.2018
+Beispiel: 144_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für DV freigemachte Briefe ins Inland für verschiedene Formate mit Voranmeldung für Digitale Kopien.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2018-01-02T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2018-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel 004</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>170801A00400100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2018-01-04T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>10000</Qty>
+				<Format>S</Format>
+				<OtherAttribute type="ODY" value="2018-01-04"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="1" to="2000" zip="01" precT="2"/>
+					<Dst from="2001" to="4000" zip="07" precT="2"/>
+					<Dst from="4001" to="6000" zip="13" precT="2"/>
+					<Dst from="6001" to="8000" zip="19" precT="2"/>
+					<Dst from="8001" to="10000" zip="23" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Standardbrief -->
+					<ProductNumber>102100001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Voranmeldung Digitale Kopie -->
+					<ProductNumber>1000757</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>10000</Qty>
+				<Format>K</Format>
+				<OtherAttribute type="ODY" value="2018-01-04"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="10001" to="12000" zip="01" precT="2"/>
+					<Dst from="12001" to="14000" zip="27" precT="2"/>
+					<Dst from="14001" to="16000" zip="43" precT="2"/>
+					<Dst from="16001" to="18000" zip="59" precT="2"/>
+					<Dst from="18001" to="20000" zip="63" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Kompaktbrief -->
+					<ProductNumber>102200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>6</ItemID>
+				<LineItem>
+					<!-- Voranmeldung Digitale Kopie -->
+					<ProductNumber>1000757</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Qty>3500</Qty>
+				<Format>G</Format>
+				<OtherAttribute type="ODY" value="2018-01-04"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="20001" to="21000" zip="12" precT="2"/>
+					<Dst from="21001" to="22000" zip="14" precT="2"/>
+					<Dst from="22001" to="23000" zip="47" precT="2"/>
+					<Dst from="23001" to="23500" zip="56" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>7</ItemID>
+				<LineItem>
+					<!-- Großbrief -->
+					<ProductNumber>102300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>8</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>9</ItemID>
+				<LineItem>
+					<!-- Voranmeldung Digitale Kopie -->
+					<ProductNumber>1000757</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>4</ShipmentID>
+				<Qty>1000</Qty>
+				<Format>M</Format>
+				<OtherAttribute type="ODY" value="2018-01-04"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="23501" to="23700" zip="03" precT="2"/>
+					<Dst from="23701" to="23800" zip="07" precT="2"/>
+					<Dst from="23801" to="24000" zip="11" precT="2"/>
+					<Dst from="24001" to="24500" zip="29" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>10</ItemID>
+				<LineItem>
+					<!-- Maxibrief -->
+					<ProductNumber>102400001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>11</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>12</ItemID>
+				<LineItem>
+					<!-- Voranmeldung Digitale Kopie -->
+					<ProductNumber>1000757</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 043_01
+Beschreibung: Neuanlage eines Dialogpost Einlieferungsauftrags mit Angabe von Paletteninformationen. Die Sendungen werden vom Absender freigestempelt (AFM).
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>161112A04300100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<PostCardID>60000001212501001</PostCardID>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>0</ShipmentID>
+				<Desc>Dialogpost-Aussendung</Desc>
+				<Qty>48710</Qty>
+				<IndividualWeight value="498" unit="g"/>
+				<Format>G</Format>
+				<Length value="29.7" unit="cm"/>
+				<Width value="21.0" unit="cm"/>
+				<Thickness value="15.0" unit="mm"/>
+				<Postage>
+					<Type>AFM</Type>
+					<Amount value="0.79" currency="EUR"/>
+					<Code>A234567</Code>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="01099" qty="1" precP="0" precT="2"/>
+					<Dst zip="01156" qty="1" precP="0" precT="2"/>
+					<Dst zip="01307" qty="2" precP="0" precT="2"/>
+					<Dst zip="01309" qty="1" precP="0" precT="2"/>
+					<Dst zip="01445" qty="1" precP="0" precT="2"/>
+					<Dst zip="01454" qty="1" precP="0" precT="2"/>
+					<Dst zip="01728" qty="1" precP="0" precT="2"/>
+					<Dst zip="01968" qty="1" precP="0" precT="2"/>
+					<Dst zip="01979" qty="1" precP="0" precT="2"/>
+					<Dst zip="02894" qty="1" precP="0" precT="2"/>
+					<Dst zip="04178" qty="1" precP="0" precT="2"/>
+					<Dst zip="04357" qty="1" precP="0" precT="2"/>
+					<Dst zip="04741" qty="1" precP="0" precT="2"/>
+					<Dst zip="06679" qty="1" precP="0" precT="2"/>
+					<Dst zip="07907" qty="1" precP="0" precT="2"/>
+					<Dst zip="07937" qty="1" precP="0" precT="2"/>
+					<Dst zip="08541" qty="1" precP="0" precT="2"/>
+					<Dst zip="09120" qty="1" precP="0" precT="2"/>
+					<Dst zip="09356" qty="1" precP="0" precT="2"/>
+					<Dst zip="10551" qty="1" precP="0" precT="2"/>
+					<Dst zip="12043" qty="1" precP="0" precT="2"/>
+					<Dst zip="12435" qty="1" precP="0" precT="2"/>
+					<Dst zip="13125" qty="1" precP="0" precT="2"/>
+					<Dst zip="13589" qty="1" precP="0" precT="2"/>
+					<Dst zip="14089" qty="1" precP="0" precT="2"/>
+					<Dst zip="14476" qty="1" precP="0" precT="2"/>
+					<Dst zip="14547" qty="1" precP="0" precT="2"/>
+					<Dst zip="15232" qty="1" precP="0" precT="2"/>
+					<Dst zip="15526" qty="1" precP="0" precT="2"/>
+					<Dst zip="15711" qty="1" precP="0" precT="2"/>
+					<Dst zip="15827" qty="1" precP="0" precT="2"/>
+					<Dst zip="16356" qty="1" precP="0" precT="2"/>
+					<Dst zip="17237" qty="1" precP="0" precT="2"/>
+					<Dst zip="18375" qty="1" precP="0" precT="2"/>
+					<Dst zip="18435" qty="1" precP="0" precT="2"/>
+					<Dst zip="18445" qty="1" precP="0" precT="2"/>
+					<Dst zip="18569" qty="1" precP="0" precT="2"/>
+					<Dst zip="19303" qty="1" precP="0" precT="2"/>
+					<Dst zip="21502" qty="1" precP="0" precT="2"/>
+					<Dst zip="21762" qty="1" precP="0" precT="2"/>
+					<Dst zip="22081" qty="1" precP="0" precT="2"/>
+					<Dst zip="22083" qty="1" precP="0" precT="2"/>
+					<Dst zip="22085" qty="2" precP="0" precT="2"/>
+					<Dst zip="22307" qty="1" precP="0" precT="2"/>
+					<Dst zip="22415" qty="1" precP="0" precT="2"/>
+					<Dst zip="22459" qty="1" precP="0" precT="2"/>
+					<Dst zip="22559" qty="1" precP="0" precT="2"/>
+					<Dst zip="23879" qty="1" precP="0" precT="2"/>
+					<Dst zip="24321" qty="1" precP="0" precT="2"/>
+					<Dst zip="24558" qty="1" precP="0" precT="2"/>
+					<Dst zip="25436" qty="1" precP="0" precT="2"/>
+					<Dst zip="25826" qty="1" precP="0" precT="2"/>
+					<Dst zip="26180" qty="1" precP="0" precT="2"/>
+					<Dst zip="26345" qty="1" precP="0" precT="2"/>
+					<Dst zip="26954" qty="1" precP="0" precT="2"/>
+					<Dst zip="27321" qty="1" precP="0" precT="2"/>
+					<Dst zip="27637" qty="1" precP="0" precT="2"/>
+					<Dst zip="28205" qty="1" precP="0" precT="2"/>
+					<Dst zip="28329" qty="1" precP="0" precT="2"/>
+					<Dst zip="29328" qty="1" precP="0" precT="2"/>
+					<Dst zip="29559" qty="1" precP="0" precT="2"/>
+					<Dst zip="29640" qty="1" precP="0" precT="2"/>
+					<Dst zip="29690" qty="1" precP="0" precT="2"/>
+					<Dst zip="30826" qty="1" precP="0" precT="2"/>
+					<Dst zip="31848" qty="1" precP="0" precT="2"/>
+					<Dst zip="32049" qty="1" precP="0" precT="2"/>
+					<Dst zip="32105" qty="1" precP="0" precT="2"/>
+					<Dst zip="32760" qty="1" precP="0" precT="2"/>
+					<Dst zip="33829" qty="1" precP="0" precT="2"/>
+					<Dst zip="34132" qty="1" precP="0" precT="2"/>
+					<Dst zip="34225" qty="1" precP="0" precT="2"/>
+					<Dst zip="34537" qty="1" precP="0" precT="2"/>
+					<Dst zip="34560" qty="2" precP="0" precT="2"/>
+					<Dst zip="35037" qty="2" precP="0" precT="2"/>
+					<Dst zip="35708" qty="1" precP="0" precT="2"/>
+					<Dst zip="38106" qty="1" precP="0" precT="2"/>
+					<Dst zip="38159" qty="1" precP="0" precT="2"/>
+					<Dst zip="38165" qty="1" precP="0" precT="2"/>
+					<Dst zip="38239" qty="1" precP="0" precT="2"/>
+					<Dst zip="38272" qty="1" precP="0" precT="2"/>
+					<Dst zip="38518" qty="1" precP="0" precT="2"/>
+					<Dst zip="39517" qty="1" precP="0" precT="2"/>
+					<Dst zip="40721" qty="1" precP="0" precT="2"/>
+					<Dst zip="40789" qty="1" precP="0" precT="2"/>
+					<Dst zip="41334" qty="1" precP="0" precT="2"/>
+					<Dst zip="42275" qty="1" precP="0" precT="2"/>
+					<Dst zip="42369" qty="1" precP="0" precT="2"/>
+					<Dst zip="42499" qty="1" precP="0" precT="2"/>
+					<Dst zip="42651" qty="1" precP="0" precT="2"/>
+					<Dst zip="44805" qty="1" precP="0" precT="2"/>
+					<Dst zip="44869" qty="1" precP="0" precT="2"/>
+					<Dst zip="45147" qty="1" precP="0" precT="2"/>
+					<Dst zip="45359" qty="1" precP="0" precT="2"/>
+					<Dst zip="47239" qty="1" precP="0" precT="2"/>
+					<Dst zip="47443" qty="1" precP="0" precT="2"/>
+					<Dst zip="47495" qty="1" precP="0" precT="2"/>
+					<Dst zip="47807" qty="1" precP="0" precT="2"/>
+					<Dst zip="48366" qty="1" precP="0" precT="2"/>
+					<Dst zip="48599" qty="1" precP="0" precT="2"/>
+					<Dst zip="49326" qty="1" precP="0" precT="2"/>
+					<Dst zip="49811" qty="1" precP="0" precT="2"/>
+					<Dst zip="50259" qty="2" precP="0" precT="2"/>
+					<Dst zip="50676" qty="1" precP="0" precT="2"/>
+					<Dst zip="50827" qty="1" precP="0" precT="2"/>
+					<Dst zip="51069" qty="1" precP="0" precT="2"/>
+					<Dst zip="53721" qty="2" precP="0" precT="2"/>
+					<Dst zip="53773" qty="1" precP="0" precT="2"/>
+					<Dst zip="54314" qty="1" precP="0" precT="2"/>
+					<Dst zip="55128" qty="1" precP="0" precT="2"/>
+					<Dst zip="55593" qty="1" precP="0" precT="2"/>
+					<Dst zip="56220" qty="1" precP="0" precT="2"/>
+					<Dst zip="56307" qty="1" precP="0" precT="2"/>
+					<Dst zip="56316" qty="1" precP="0" precT="2"/>
+					<Dst zip="56337" qty="1" precP="0" precT="2"/>
+					<Dst zip="56567" qty="1" precP="0" precT="2"/>
+					<Dst zip="56575" qty="1" precP="0" precT="2"/>
+					<Dst zip="56823" qty="1" precP="0" precT="2"/>
+					<Dst zip="57078" qty="1" precP="0" precT="2"/>
+					<Dst zip="58097" qty="1" precP="0" precT="2"/>
+					<Dst zip="59494" qty="2" precP="0" precT="2"/>
+					<Dst zip="60311" qty="1" precP="1" precT="2"/>
+					<Dst zip="60438" qty="1" precP="1" precT="2"/>
+					<Dst zip="60439" qty="1" precP="1" precT="2"/>
+					<Dst zip="60489" qty="1" precP="1" precT="2"/>
+					<Dst zip="61194" qty="1" precP="1" precT="2"/>
+					<Dst zip="63179" qty="1" precP="1" precT="2"/>
+					<Dst zip="63303" qty="2" precP="1" precT="2"/>
+					<Dst zip="63450" qty="1" precP="1" precT="2"/>
+					<Dst zip="63454" qty="1" precP="1" precT="2"/>
+					<Dst zip="63486" qty="1" precP="1" precT="2"/>
+					<Dst zip="63500" qty="1" precP="1" precT="2"/>
+					<Dst zip="63571" qty="1" precP="1" precT="2"/>
+					<Dst zip="63776" qty="1" precP="1" precT="2"/>
+					<Dst zip="64297" qty="1" precP="1" precT="2"/>
+					<Dst zip="64683" qty="1" precP="1" precT="2"/>
+					<Dst zip="64747" qty="1" precP="1" precT="2"/>
+					<Dst zip="64757" qty="1" precP="1" precT="2"/>
+					<Dst zip="64759" qty="1" precP="1" precT="2"/>
+					<Dst zip="65187" qty="1" precP="1" precT="2"/>
+					<Dst zip="65207" qty="1" precP="1" precT="2"/>
+					<Dst zip="65232" qty="1" precP="1" precT="2"/>
+					<Dst zip="65307" qty="1" precP="1" precT="2"/>
+					<Dst zip="65375" qty="1" precP="1" precT="2"/>
+					<Dst zip="65510" qty="1" precP="1" precT="2"/>
+					<Dst zip="66265" qty="1" precP="1" precT="2"/>
+					<Dst zip="66352" qty="1" precP="1" precT="2"/>
+					<Dst zip="66386" qty="1" precP="1" precT="2"/>
+					<Dst zip="66589" qty="1" precP="1" precT="2"/>
+					<Dst zip="66629" qty="1" precP="1" precT="2"/>
+					<Dst zip="66799" qty="1" precP="1" precT="2"/>
+					<Dst zip="66871" qty="1" precP="1" precT="2"/>
+					<Dst zip="67061" qty="1" precP="1" precT="2"/>
+					<Dst zip="67069" qty="1" precP="1" precT="2"/>
+					<Dst zip="67098" qty="1" precP="1" precT="2"/>
+					<Dst zip="67105" qty="1" precP="1" precT="2"/>
+					<Dst zip="67157" qty="1" precP="1" precT="2"/>
+					<Dst zip="67269" qty="1" precP="1" precT="2"/>
+					<Dst zip="67304" qty="1" precP="1" precT="2"/>
+					<Dst zip="67433" qty="1" precP="1" precT="2"/>
+					<Dst zip="67435" qty="1" precP="1" precT="2"/>
+					<Dst zip="68161" qty="1" precP="1" precT="2"/>
+					<Dst zip="68163" qty="1" precP="1" precT="2"/>
+					<Dst zip="68259" qty="1" precP="1" precT="2"/>
+					<Dst zip="68307" qty="1" precP="1" precT="2"/>
+					<Dst zip="68519" qty="6" precP="1" precT="2"/>
+					<Dst zip="68526" qty="4" precP="1" precT="2"/>
+					<Dst zip="68535" qty="3" precP="1" precT="2"/>
+					<Dst zip="68549" qty="3" precP="1" precT="2"/>
+					<Dst zip="68723" qty="40" precP="1" precT="5"/>
+					<Dst zip="68753" qty="55" precP="1" precT="5"/>
+					<Dst zip="68766" qty="12" precP="1" precT="5"/>
+					<Dst zip="68775" qty="2" precP="1" precT="2"/>
+					<Dst zip="68782" qty="1" precP="1" precT="2"/>
+					<Dst zip="68789" qty="38" precP="1" precT="5"/>
+					<Dst zip="68794" qty="19" precP="1" precT="5"/>
+					<Dst zip="68799" qty="9" precP="1" precT="5"/>
+					<Dst zip="68804" qty="2" precP="1" precT="2"/>
+					<Dst zip="68809" qty="10" precP="1" precT="5"/>
+					<Dst zip="69118" qty="2" precP="1" precT="2"/>
+					<Dst zip="69123" qty="2" precP="1" precT="2"/>
+					<Dst zip="69126" qty="2" precP="1" precT="2"/>
+					<Dst zip="69151" qty="45" precP="2" precT="5"/>
+					<Dst zip="69168" qty="93" precP="2" precT="5"/>
+					<Dst zip="69181" qty="99" precP="2" precT="5"/>
+					<Dst zip="69190" qty="40" precP="2" precT="5"/>
+					<Dst zip="69198" qty="9" precP="2" precT="5"/>
+					<Dst zip="69207" qty="41" precP="2" precT="5"/>
+					<Dst zip="69214" qty="11" precP="2" precT="5"/>
+					<Dst zip="69221" qty="6" precP="1" precT="2"/>
+					<Dst zip="69226" qty="40" precP="2" precT="5"/>
+					<Dst zip="69231" qty="39" precP="2" precT="5"/>
+					<Dst zip="69234" qty="75" precP="2" precT="5"/>
+					<Dst zip="69239" qty="12" precP="2" precT="5"/>
+					<Dst zip="69242" qty="79" precP="2" precT="5"/>
+					<Dst zip="69245" qty="24" precP="2" precT="5"/>
+					<Dst zip="69250" qty="8" precP="2" precT="5"/>
+					<Dst zip="69251" qty="4" precP="1" precT="2"/>
+					<Dst zip="69253" qty="4" precP="1" precT="2"/>
+					<Dst zip="69254" qty="22" precP="2" precT="5"/>
+					<Dst zip="69256" qty="18" precP="2" precT="5"/>
+					<Dst zip="69257" qty="19" precP="2" precT="5"/>
+					<Dst zip="69259" qty="5" precP="1" precT="2"/>
+					<Dst zip="69412" qty="298" precP="2" precT="5"/>
+					<Dst zip="69427" qty="49" precP="2" precT="5"/>
+					<Dst zip="69429" qty="161" precP="2" precT="5"/>
+					<Dst zip="69434" qty="47" precP="2" precT="5"/>
+					<Dst zip="69436" qty="42" precP="2" precT="5"/>
+					<Dst zip="69437" qty="64" precP="1" precT="5"/>
+					<Dst zip="69437" qty="2" precP="2" precT="5"/>
+					<Dst zip="69437" qty="1" precP="1" precT="5"/>
+					<Dst zip="69437" qty="4" precP="2" precT="5"/>
+					<Dst zip="69437" qty="8" precP="1" precT="5"/>
+					<Dst zip="69437" qty="16" precP="2" precT="5"/>
+					<Dst zip="69437" qty="1" precP="1" precT="5"/>
+					<Dst zip="69437" qty="1" precP="2" precT="5"/>
+					<Dst zip="69437" qty="2" precP="1" precT="5"/>
+					<Dst zip="69437" qty="4" precP="2" precT="5"/>
+					<Dst zip="69437" qty="8" precP="1" precT="5"/>
+					<Dst zip="69437" qty="1" precP="2" precT="5"/>
+					<Dst zip="69437" qty="8" precP="1" precT="5"/>
+					<Dst zip="69437" qty="4" precP="2" precT="5"/>
+					<Dst zip="69437" qty="1" precP="1" precT="5"/>
+					<Dst zip="69437" qty="2" precP="2" precT="5"/>
+					<Dst zip="69439" qty="31" precP="1" precT="5"/>
+					<Dst zip="69469" qty="10" precP="1" precT="5"/>
+					<Dst zip="69493" qty="2" precP="1" precT="2"/>
+					<Dst zip="70173" qty="3" precP="1" precT="2"/>
+					<Dst zip="70174" qty="17" precP="2" precT="5"/>
+					<Dst zip="70176" qty="26" precP="2" precT="5"/>
+					<Dst zip="70178" qty="20" precP="2" precT="5"/>
+					<Dst zip="70180" qty="21" precP="2" precT="5"/>
+					<Dst zip="70182" qty="14" precP="2" precT="5"/>
+					<Dst zip="70184" qty="14" precP="2" precT="5"/>
+					<Dst zip="70186" qty="28" precP="2" precT="5"/>
+					<Dst zip="70188" qty="20" precP="2" precT="5"/>
+					<Dst zip="70190" qty="22" precP="2" precT="5"/>
+					<Dst zip="70191" qty="40" precP="2" precT="5"/>
+					<Dst zip="70192" qty="6" precP="1" precT="2"/>
+					<Dst zip="70193" qty="25" precP="2" precT="5"/>
+					<Dst zip="70195" qty="18" precP="2" precT="5"/>
+					<Dst zip="70197" qty="26" precP="2" precT="5"/>
+					<Dst zip="70199" qty="20" precP="2" precT="5"/>
+					<Dst zip="70327" qty="44" precP="2" precT="5"/>
+					<Dst zip="70329" qty="20" precP="2" precT="5"/>
+					<Dst zip="70372" qty="80" precP="2" precT="5"/>
+					<Dst zip="70374" qty="110" precP="2" precT="5"/>
+					<Dst zip="70376" qty="110" precP="2" precT="5"/>
+					<Dst zip="70378" qty="145" precP="2" precT="5"/>
+					<Dst zip="70435" qty="188" precP="2" precT="5"/>
+					<Dst zip="70437" qty="175" precP="2" precT="5"/>
+					<Dst zip="70439" qty="141" precP="2" precT="5"/>
+					<Dst zip="70469" qty="122" precP="2" precT="5"/>
+					<Dst zip="70499" qty="184" precP="2" precT="5"/>
+					<Dst zip="70563" qty="25" precP="2" precT="5"/>
+					<Dst zip="70565" qty="18" precP="2" precT="5"/>
+					<Dst zip="70567" qty="36" precP="2" precT="5"/>
+					<Dst zip="70569" qty="34" precP="2" precT="5"/>
+					<Dst zip="70597" qty="22" precP="2" precT="5"/>
+					<Dst zip="70599" qty="27" precP="2" precT="5"/>
+					<Dst zip="70619" qty="43" precP="2" precT="5"/>
+					<Dst zip="70734" qty="60" precP="2" precT="5"/>
+					<Dst zip="70736" qty="126" precP="2" precT="5"/>
+					<Dst zip="70771" qty="38" precP="2" precT="5"/>
+					<Dst zip="70794" qty="43" precP="2" precT="5"/>
+					<Dst zip="70806" qty="983" precP="2" precT="5"/>
+					<Dst zip="70825" qty="36" precP="1" precT="5"/>
+					<Dst zip="70825" qty="47" precP="2" precT="5"/>
+					<Dst zip="70825" qty="5" precP="1" precT="5"/>
+					<Dst zip="70825" qty="2" precP="2" precT="5"/>
+					<Dst zip="70825" qty="2" precP="1" precT="5"/>
+					<Dst zip="70825" qty="19" precP="2" precT="5"/>
+					<Dst zip="70839" qty="73" precP="1" precT="5"/>
+					<Dst zip="71032" qty="11" precP="2" precT="5"/>
+					<Dst zip="71034" qty="23" precP="2" precT="5"/>
+					<Dst zip="71063" qty="11" precP="2" precT="5"/>
+					<Dst zip="71065" qty="11" precP="2" precT="5"/>
+					<Dst zip="71067" qty="15" precP="2" precT="5"/>
+					<Dst zip="71069" qty="17" precP="2" precT="5"/>
+					<Dst zip="71083" qty="2" precP="2" precT="2"/>
+					<Dst zip="71088" qty="3" precP="2" precT="2"/>
+					<Dst zip="71093" qty="1" precP="2" precT="2"/>
+					<Dst zip="71101" qty="9" precP="2" precT="5"/>
+					<Dst zip="71106" qty="6" precP="2" precT="2"/>
+					<Dst zip="71111" qty="7" precP="2" precT="2"/>
+					<Dst zip="71116" qty="1" precP="2" precT="2"/>
+					<Dst zip="71120" qty="7" precP="2" precT="2"/>
+					<Dst zip="71144" qty="5" precP="2" precT="2"/>
+					<Dst zip="71157" qty="1" precP="2" precT="2"/>
+					<Dst zip="71229" qty="182" precP="2" precT="5"/>
+					<Dst zip="71254" qty="204" precP="2" precT="5"/>
+					<Dst zip="71263" qty="54" precP="2" precT="5"/>
+					<Dst zip="71272" qty="64" precP="2" precT="5"/>
+					<Dst zip="71277" qty="51" precP="2" precT="5"/>
+					<Dst zip="71282" qty="114" precP="2" precT="5"/>
+					<Dst zip="71287" qty="35" precP="2" precT="5"/>
+					<Dst zip="71292" qty="16" precP="2" precT="5"/>
+					<Dst zip="71296" qty="22" precP="2" precT="5"/>
+					<Dst zip="71297" qty="14" precP="2" precT="5"/>
+					<Dst zip="71299" qty="16" precP="2" precT="5"/>
+					<Dst zip="71332" qty="56" precP="2" precT="5"/>
+					<Dst zip="71334" qty="85" precP="2" precT="5"/>
+					<Dst zip="71336" qty="78" precP="2" precT="5"/>
+					<Dst zip="71364" qty="134" precP="2" precT="5"/>
+					<Dst zip="71384" qty="67" precP="2" precT="5"/>
+					<Dst zip="71394" qty="26" precP="2" precT="5"/>
+					<Dst zip="71397" qty="66" precP="2" precT="5"/>
+					<Dst zip="71404" qty="35" precP="2" precT="5"/>
+					<Dst zip="71409" qty="53" precP="2" precT="5"/>
+					<Dst zip="71522" qty="516" precP="2" precT="5"/>
+					<Dst zip="71540" qty="266" precP="2" precT="5"/>
+					<Dst zip="71543" qty="656" precP="2" precT="5"/>
+					<Dst zip="71546" qty="196" precP="2" precT="5"/>
+					<Dst zip="71549" qty="116" precP="2" precT="5"/>
+					<Dst zip="71554" qty="98" precP="2" precT="5"/>
+					<Dst zip="71560" qty="138" precP="2" precT="5"/>
+					<Dst zip="71563" qty="94" precP="2" precT="5"/>
+					<Dst zip="71566" qty="41" precP="2" precT="5"/>
+					<Dst zip="71570" qty="70" precP="2" precT="5"/>
+					<Dst zip="71573" qty="64" precP="2" precT="5"/>
+					<Dst zip="71576" qty="34" precP="2" precT="5"/>
+					<Dst zip="71577" qty="63" precP="2" precT="5"/>
+					<Dst zip="71579" qty="64" precP="2" precT="5"/>
+					<Dst zip="71634" qty="696" precP="2" precT="5"/>
+					<Dst zip="71636" qty="621" precP="2" precT="5"/>
+					<Dst zip="71638" qty="628" precP="2" precT="5"/>
+					<Dst zip="71640" qty="311" precP="2" precT="5"/>
+					<Dst zip="71642" qty="429" precP="2" precT="5"/>
+					<Dst zip="71665" qty="362" precP="2" precT="5"/>
+					<Dst zip="71672" qty="333" precP="2" precT="5"/>
+					<Dst zip="71679" qty="251" precP="2" precT="5"/>
+					<Dst zip="71686" qty="307" precP="2" precT="5"/>
+					<Dst zip="71691" qty="293" precP="2" precT="5"/>
+					<Dst zip="71696" qty="315" precP="2" precT="5"/>
+					<Dst zip="71701" qty="141" precP="2" precT="5"/>
+					<Dst zip="71706" qty="249" precP="2" precT="5"/>
+					<Dst zip="71711" qty="458" precP="2" precT="5"/>
+					<Dst zip="71717" qty="442" precP="2" precT="5"/>
+					<Dst zip="71720" qty="406" precP="2" precT="5"/>
+					<Dst zip="71723" qty="280" precP="2" precT="5"/>
+					<Dst zip="71726" qty="122" precP="2" precT="5"/>
+					<Dst zip="71729" qty="100" precP="2" precT="5"/>
+					<Dst zip="71732" qty="273" precP="2" precT="5"/>
+					<Dst zip="71735" qty="45" precP="2" precT="5"/>
+					<Dst zip="71737" qty="56" precP="2" precT="5"/>
+					<Dst zip="71739" qty="42" precP="2" precT="5"/>
+					<Dst zip="72070" qty="1" precP="1" precT="2"/>
+					<Dst zip="72108" qty="3" precP="1" precT="2"/>
+					<Dst zip="72145" qty="1" precP="1" precT="2"/>
+					<Dst zip="72213" qty="1" precP="1" precT="2"/>
+					<Dst zip="72296" qty="1" precP="1" precT="2"/>
+					<Dst zip="72336" qty="1" precP="1" precT="2"/>
+					<Dst zip="72351" qty="1" precP="1" precT="2"/>
+					<Dst zip="72379" qty="1" precP="1" precT="2"/>
+					<Dst zip="72461" qty="1" precP="1" precT="2"/>
+					<Dst zip="72488" qty="1" precP="1" precT="2"/>
+					<Dst zip="72501" qty="1" precP="1" precT="2"/>
+					<Dst zip="72574" qty="1" precP="1" precT="2"/>
+					<Dst zip="72587" qty="1" precP="1" precT="2"/>
+					<Dst zip="72622" qty="3" precP="1" precT="2"/>
+					<Dst zip="72631" qty="1" precP="1" precT="2"/>
+					<Dst zip="72655" qty="1" precP="1" precT="2"/>
+					<Dst zip="72760" qty="1" precP="1" precT="2"/>
+					<Dst zip="72762" qty="1" precP="1" precT="2"/>
+					<Dst zip="72810" qty="1" precP="1" precT="2"/>
+					<Dst zip="73033" qty="1" precP="1" precT="2"/>
+					<Dst zip="73037" qty="1" precP="1" precT="2"/>
+					<Dst zip="73061" qty="2" precP="1" precT="2"/>
+					<Dst zip="73066" qty="1" precP="1" precT="2"/>
+					<Dst zip="73072" qty="1" precP="1" precT="2"/>
+					<Dst zip="73114" qty="1" precP="1" precT="2"/>
+					<Dst zip="73207" qty="1" precP="1" precT="2"/>
+					<Dst zip="73249" qty="2" precP="1" precT="2"/>
+					<Dst zip="73262" qty="1" precP="1" precT="2"/>
+					<Dst zip="73265" qty="1" precP="1" precT="2"/>
+					<Dst zip="73450" qty="1" precP="1" precT="2"/>
+					<Dst zip="73453" qty="2" precP="1" precT="2"/>
+					<Dst zip="73460" qty="1" precP="1" precT="2"/>
+					<Dst zip="73525" qty="2" precP="1" precT="2"/>
+					<Dst zip="73529" qty="1" precP="1" precT="2"/>
+					<Dst zip="73540" qty="1" precP="1" precT="2"/>
+					<Dst zip="73614" qty="31" precP="1" precT="5"/>
+					<Dst zip="73630" qty="26" precP="1" precT="5"/>
+					<Dst zip="73635" qty="16" precP="1" precT="5"/>
+					<Dst zip="73642" qty="15" precP="1" precT="5"/>
+					<Dst zip="73650" qty="8" precP="1" precT="5"/>
+					<Dst zip="73655" qty="7" precP="1" precT="2"/>
+					<Dst zip="73660" qty="5" precP="1" precT="2"/>
+					<Dst zip="73663" qty="11" precP="1" precT="5"/>
+					<Dst zip="73666" qty="4" precP="1" precT="2"/>
+					<Dst zip="73667" qty="4" precP="1" precT="2"/>
+					<Dst zip="73728" qty="7" precP="1" precT="2"/>
+					<Dst zip="73730" qty="14" precP="1" precT="5"/>
+					<Dst zip="73732" qty="9" precP="1" precT="5"/>
+					<Dst zip="73733" qty="11" precP="1" precT="5"/>
+					<Dst zip="73734" qty="17" precP="1" precT="5"/>
+					<Dst zip="73760" qty="23" precP="1" precT="5"/>
+					<Dst zip="73765" qty="9" precP="1" precT="5"/>
+					<Dst zip="73770" qty="8" precP="1" precT="5"/>
+					<Dst zip="73773" qty="5" precP="1" precT="2"/>
+					<Dst zip="73776" qty="5" precP="1" precT="2"/>
+					<Dst zip="73779" qty="3" precP="1" precT="2"/>
+					<Dst zip="74072" qty="2156" precP="2" precT="5"/>
+					<Dst zip="74074" qty="2878" precP="2" precT="5"/>
+					<Dst zip="74076" qty="2210" precP="2" precT="5"/>
+					<Dst zip="74078" qty="3717" precP="2" precT="5"/>
+					<Dst zip="74080" qty="3327" precP="2" precT="5"/>
+					<Dst zip="74081" qty="2485" precP="2" precT="5"/>
+					<Dst zip="74082" qty="1" precP="2" precT="2"/>
+					<Dst zip="74172" qty="3776" precP="2" precT="5"/>
+					<Dst zip="74177" qty="2395" precP="2" precT="5"/>
+					<Dst zip="74182" qty="1699" precP="2" precT="5"/>
+					<Dst zip="74189" qty="1612" precP="2" precT="5"/>
+					<Dst zip="74193" qty="1284" precP="2" precT="5"/>
+					<Dst zip="74196" qty="1052" precP="2" precT="5"/>
+					<Dst zip="74199" qty="809" precP="2" precT="5"/>
+					<Dst zip="74206" qty="944" precP="2" precT="5"/>
+					<Dst zip="74211" qty="1441" precP="2" precT="5"/>
+					<Dst zip="74214" qty="445" precP="2" precT="5"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Dialogpost Gross-->
+					<ProductNumber>250300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>346</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!--EE Bund/Behälter Leitregion Dialogpost Gross-->
+					<ProductNumber>1000526</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>48364</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!--EE Bund/Behälter PLZ Dialogpost Gross-->
+					<ProductNumber>1000527</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>816</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!--EE Paletten Leitzone Dialogpost Gross-->
+					<ProductNumber>1000528</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>5</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>47767</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!--EE Paletten Leitregion Dialogpost Gross-->
+					<ProductNumber>1000529</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>75</SlotQty>
+			<Type>PAL</Type>
+			<Qty>75</Qty>
+			<Package packageID="1" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="69" zipFrom="69151" zipTo="69234">
+				<GWM value="287.632" unit="kg"/>
+				<NWM value="216.132" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>434</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="69" zipFrom="69234" zipTo="69412">
+				<GWM value="274.230" unit="kg"/>
+				<NWM value="204.180" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>410</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="3" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="69" zipFrom="69412" zipTo="69437">
+				<GWM value="299.628" unit="kg"/>
+				<NWM value="229.578" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>461</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="4" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="6" zipFrom="68723" zipTo="69493">
+				<GWM value="282.930" unit="kg"/>
+				<NWM value="204.180" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>410</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="5" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="70" zipFrom="70174" zipTo="70374">
+				<GWM value="363.796" unit="kg"/>
+				<NWM value="274.896" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>552</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="6" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="70" zipFrom="70374" zipTo="70439">
+				<GWM value="419.074" unit="kg"/>
+				<NWM value="330.174" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>663</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="7" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="70" zipFrom="70439" zipTo="70619">
+				<GWM value="397.660" unit="kg"/>
+				<NWM value="308.760" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>620</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="8" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="70" zipFrom="70734" zipTo="70806">
+				<GWM value="425.050" unit="kg"/>
+				<NWM value="336.150" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>675</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="9" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="70" zipFrom="70806" zipTo="70825">
+				<GWM value="403.314" unit="kg"/>
+				<NWM value="320.214" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>643</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="10" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71032" zipTo="71277">
+				<GWM value="393.764" unit="kg"/>
+				<NWM value="307.764" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>618</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="11" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71277" zipTo="71384">
+				<GWM value="395.258" unit="kg"/>
+				<NWM value="309.258" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>621</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="12" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71384" zipTo="71522">
+				<GWM value="401.234" unit="kg"/>
+				<NWM value="315.234" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>633</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="13" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71522" zipTo="71543">
+				<GWM value="418.664" unit="kg"/>
+				<NWM value="332.664" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>668</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="14" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71543" zipTo="71549">
+				<GWM value="416.174" unit="kg"/>
+				<NWM value="330.174" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>663</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="15" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71549" zipTo="71577">
+				<GWM value="393.764" unit="kg"/>
+				<NWM value="307.764" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>618</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="16" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71579" zipTo="71634">
+				<GWM value="422.648" unit="kg"/>
+				<NWM value="336.648" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>676</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="17" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71634" zipTo="71636">
+				<GWM value="424.142" unit="kg"/>
+				<NWM value="338.142" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>679</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="18" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71636" zipTo="71640">
+				<GWM value="420.158" unit="kg"/>
+				<NWM value="334.158" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>671</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="19" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71640" zipTo="71642">
+				<GWM value="413.684" unit="kg"/>
+				<NWM value="327.684" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>658</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="20" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71642" zipTo="71672">
+				<GWM value="417.170" unit="kg"/>
+				<NWM value="331.170" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>665</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="21" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71672" zipTo="71686">
+				<GWM value="411.194" unit="kg"/>
+				<NWM value="325.194" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>653</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="22" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71691" zipTo="71701">
+				<GWM value="412.688" unit="kg"/>
+				<NWM value="326.688" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>656</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="23" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71701" zipTo="71711">
+				<GWM value="417.170" unit="kg"/>
+				<NWM value="331.170" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>665</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="24" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71711" zipTo="71720">
+				<GWM value="424.142" unit="kg"/>
+				<NWM value="338.142" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>679</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="25" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71720" zipTo="71726">
+				<GWM value="405.760" unit="kg"/>
+				<NWM value="321.210" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>645</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="26" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="71" zipFrom="71726" zipTo="71157">
+				<GWM value="388.330" unit="kg"/>
+				<NWM value="303.780" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>610</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="27" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74072" zipTo="74072">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="28" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74072" zipTo="74072">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="29" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74072" zipTo="74072">
+				<GWM value="443.476" unit="kg"/>
+				<NWM value="354.576" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>712</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="30" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74072" zipTo="74074">
+				<GWM value="443.974" unit="kg"/>
+				<NWM value="355.074" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>713</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="31" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74074" zipTo="74074">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="32" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74074" zipTo="74074">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="33" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74074" zipTo="74074">
+				<GWM value="439.492" unit="kg"/>
+				<NWM value="350.592" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>704</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="34" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74074" zipTo="74076">
+				<GWM value="443.476" unit="kg"/>
+				<NWM value="354.576" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>712</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="35" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74076" zipTo="74076">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="36" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74076" zipTo="74076">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="37" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74076" zipTo="74078">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="38" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74078" zipTo="74078">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="39" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74078" zipTo="74078">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="40" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74078" zipTo="74078">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="41" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74078" zipTo="74078">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="42" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74078" zipTo="74080">
+				<GWM value="441.484" unit="kg"/>
+				<NWM value="352.584" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>708</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="43" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74080" zipTo="74080">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="44" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74080" zipTo="74080">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="45" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74080" zipTo="74080">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="46" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74080" zipTo="74080">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="47" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74080" zipTo="74081">
+				<GWM value="441.982" unit="kg"/>
+				<NWM value="353.082" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>709</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="48" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74081" zipTo="74081">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="49" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74081" zipTo="74081">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="50" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74081" zipTo="74172">
+				<GWM value="437.500" unit="kg"/>
+				<NWM value="348.600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>700</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="51" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74172" zipTo="74172">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="52" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74172" zipTo="74172">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="53" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74172" zipTo="74172">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="54" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74172" zipTo="74172">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="55" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74172" zipTo="74177">
+				<GWM value="437.002" unit="kg"/>
+				<NWM value="348.102" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>699</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="56" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74177" zipTo="74177">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="57" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74177" zipTo="74177">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="58" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74177" zipTo="74177">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="59" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74177" zipTo="74182">
+				<GWM value="443.476" unit="kg"/>
+				<NWM value="354.576" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>712</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="60" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74182" zipTo="74182">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="61" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74182" zipTo="74189">
+				<GWM value="443.974" unit="kg"/>
+				<NWM value="355.074" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>713</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="62" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74189" zipTo="74189">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="63" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74189" zipTo="74193">
+				<GWM value="442.978" unit="kg"/>
+				<NWM value="354.078" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>711</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="64" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74193" zipTo="74193">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="65" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74193" zipTo="74196">
+				<GWM value="440.488" unit="kg"/>
+				<NWM value="351.588" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>706</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="66" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74196" zipTo="74196">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="67" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74196" zipTo="74199">
+				<GWM value="443.476" unit="kg"/>
+				<NWM value="354.576" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>712</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="68" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74199" zipTo="74206">
+				<GWM value="440.986" unit="kg"/>
+				<NWM value="352.086" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>707</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="69" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74206" zipTo="74211">
+				<GWM value="440.488" unit="kg"/>
+				<NWM value="351.588" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>706</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="70" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74211" zipTo="74211">
+				<GWM value="444.472" unit="kg"/>
+				<NWM value="355.572" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>714</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="71" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74211" zipTo="74214">
+				<GWM value="303.656" unit="kg"/>
+				<NWM value="235.056" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>472</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="72" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="74" zipFrom="74214" zipTo="74082">
+				<GWM value="280.792" unit="kg"/>
+				<NWM value="213.642" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>429</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="73" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="7" zipFrom="70825" zipTo="73779">
+				<GWM value="275.138" unit="kg"/>
+				<NWM value="202.188" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>406</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="74" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="DE" zipFrom="01099" zipTo="50827">
+				<GWM value="143.182" unit="kg"/>
+				<NWM value="54.282" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>109</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="75" productGroup="DiP" format="G" sortMethod="BH" type="PAL" stackable="false" zipDst="DE" zipFrom="51069" zipTo="59494">
+				<GWM value="48.564" unit="kg"/>
+				<NWM value="8.964" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>18</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

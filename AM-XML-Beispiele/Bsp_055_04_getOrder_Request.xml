@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 15.01.2007
+Beispiel: 055_01
+Beschreibung: Anlegen, Suchen und Laden eines einfachen Einlieferungsauftrags
+Mit dieser Datei wird der zuvor angelegete Auftrag unter Verwendung der Kundenauftragsnummer geladen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/getOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/getOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/getOrderRequest.xsd">
+	<getOrderRequest codeTableVersion="1.0" version="1.0" includeDst="false" includePackaging="false" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A05500100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+	</getOrderRequest>
+</n:Request>

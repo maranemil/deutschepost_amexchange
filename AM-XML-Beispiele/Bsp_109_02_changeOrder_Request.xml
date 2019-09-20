@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Erstellung: 16.03.2009
+Beispiel: 109_02
+Beschreibung:
+	Der zuvor als Abholung übermittelte Presse-Auftrag wird auf Einlieferung geändert.	Die Induction-Sektion ist daher anzupassen.
+	Zudem muss die Dienstleistung für die Abholung entfernt werden.
+	Dabei wird im Shipment die updateMethod="add" verwendet, damit der Versandplan nicht erneut übermittelt werden muss. 
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/changeOrderRequest.xsd">
+	<changeOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Heft 4/12</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A10900100</SystemID>
+			</CustOrderID>
+			<OtherAttribute type="ELK" value="R"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="4"/>
+		</OrderHeader>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>SLN34</ProductionPlantID>
+			<EarliestDateTime>2015-11-19T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment updateMethod="add">
+				<ShipmentID>1</ShipmentID>
+				<Qty>1500</Qty>
+				<IndividualWeight value="200" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<!-- Der Versandplan sollte hier nicht neu übermittelt werden. Daher ist updateMethod="add" gesetzt. -->
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Postvertriebsstück next day -->
+					<ProductNumber>11</ProductNumber>
+				</LineItem>
+			</Item>
+			<!-- Da es sich nun um eine Einlieferung handelt, entfällt der 2. Item für die Abholung hier.  -->
+		</ShipmentItem>
+	</changeOrderRequest>
+</n:Request>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 06.10.2009
+Beispiel: 115_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für mit Frankierservice freigemachte Briefe unterschiedlicher Formate. 
+	Beachten Sie bitte, dass die Frankierservice Dienstleistungen hier in separaten ShipmentItems angegeben werden.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A11500100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>5</Qty>
+				<Format>S</Format>
+				<Postage>
+					<Type>FS</Type>
+				</Postage>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<TotalAmount currency="EUR" value="2.75"/>
+				<LineItem>
+					<!-- Standardbrief -->
+					<ProductNumber>102100001</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Qty>7</Qty>
+				<Format>G</Format>
+				<Postage>
+					<Type>FS</Type>
+				</Postage>
+			</Shipment>
+			<Item>
+				<ItemID>2</ItemID>
+				<TotalAmount currency="EUR" value="10.15"/>
+				<LineItem>
+					<!-- Großbrief -->
+					<ProductNumber>102300001</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Qty>11</Qty>
+				<Format>M</Format>
+				<Postage>
+					<Type>FS</Type>
+				</Postage>
+			</Shipment>
+			<Item>
+				<ItemID>3</ItemID>
+				<TotalAmount currency="EUR" value="24.2"/>
+				<LineItem>
+					<!-- Maxibrief -->
+					<ProductNumber>102400001</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Item>
+				<ItemID>4</ItemID>
+				<TotalAmount currency="EUR" value="9"/>
+				<LineItem>
+					<!-- Frankierservice Standard/Kompakti -->
+					<ProductNumber>911000014</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Item>
+				<ItemID>5</ItemID>
+				<TotalAmount currency="EUR" value="7"/>
+				<LineItem>
+					<!-- Frankierservice Groß/Maxi -->
+					<ProductNumber>911000015</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>TRA</Type>
+			<Qty>1</Qty>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

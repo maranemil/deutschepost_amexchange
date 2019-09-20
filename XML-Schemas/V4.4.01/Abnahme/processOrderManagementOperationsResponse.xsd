@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Udo Reuter
+Version  : 4.4.01
+Datum    : 24.08.2015
+Copyright Deutsche Post AG
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pomo="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/processOrderManagementOperationsResponse" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:common="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" targetNamespace="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/processOrderManagementOperationsResponse">
+	<xsd:import namespace="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" schemaLocation="errorHandling.xsd"/>
+	<xsd:import namespace="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" schemaLocation="common.xsd"/>
+	<xsd:element name="Response">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element name="Exception" type="err:ExceptionFrame" minOccurs="0"/>
+				<xsd:element name="processOrderManagementOperationsResponse" type="common:ProcessOrderManagementOperationsResponseType" minOccurs="0"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

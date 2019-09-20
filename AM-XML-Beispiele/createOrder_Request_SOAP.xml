@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/03/addressing" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<soap:Header>
+		<wsse:Security soap:mustUnderstand="1">
+			<wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="SecurityToken-115b71ae-7ae2-47c6-a1cd-87c540312330">
+				<wsse:Username>ws_am_user</wsse:Username>
+				<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">XYZ</wsse:Password>
+			</wsse:UsernameToken>
+		</wsse:Security>
+	</soap:Header>
+	<soap:Body>
+		<n:Request xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest  O:/Realisierung/AM.exchange/AM-XML-Schemas_Zert/createOrderRequest.xsd">
+			<createOrderRequest codeTableVersion="1.0" testcase="true" version="1.0">
+				<MsgHeader>
+					<User>muster01</User>
+					<Password>H4juk9</Password>
+					<MsgID>061112102356A00000001</MsgID>
+					<CreationDateTime>2007-01-04T08:00:00</CreationDateTime>
+					<Receiver>DPAG</Receiver>
+					<SubmitterSMS>
+						<CustID>6002000131</CustID>
+					</SubmitterSMS>
+					<Origin>
+						<SystemName>A-AS1</SystemName>
+						<SystemVersion>1.3</SystemVersion>
+						<CertificationDate>2006-09-29</CertificationDate>
+					</Origin>
+				</MsgHeader>
+				<OrderHeader>
+					<OrderType>EA</OrderType>
+					<State>AU</State>
+					<OrderLabel>AM-XML Beispiel 001</OrderLabel>
+					<SubmissionType>G</SubmissionType>
+					<CustOrderID>
+						<CustID>6002000131</CustID>
+						<SystemID>070619A00100100</SystemID>
+					</CustOrderID>
+				</OrderHeader>
+				<Parties>
+					<Originator>
+						<CustID>6000000121</CustID>
+					</Originator>
+					<Submitter>
+						<CustID>6002000131</CustID>
+					</Submitter>
+					<Payer>
+						<CustID>6000000121</CustID>
+						<PaymentMeans>
+							<Procedure>10</Procedure>
+							<Participation>01</Participation>
+						</PaymentMeans>
+					</Payer>
+				</Parties>
+				<Induction>
+					<TransitDirectionCode>E</TransitDirectionCode>
+					<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+					<EarliestDateTime>2007-01-11T10:00:00</EarliestDateTime>
+				</Induction>
+				<ShipmentItem>
+					<Shipment>
+						<ShipmentID>1</ShipmentID>
+						<Qty>10000</Qty>
+						<Format>S</Format>
+						<OtherAttribute type="ODY" value="2015-01-04"></OtherAttribute>
+						<Postage>
+							<Type>DV</Type>
+							<PaymentClearingNumber>0001</PaymentClearingNumber>
+						</Postage>
+						<Destination prec="2">
+							<Dst from="1" precT="2" to="2000" zip="01"></Dst>
+							<Dst from="2001" precT="2" to="4000" zip="07"></Dst>
+							<Dst from="4001" precT="2" to="6000" zip="13"></Dst>
+							<Dst from="6001" precT="2" to="8000" zip="19"></Dst>
+							<Dst from="8001" precT="2" to="10000" zip="23"></Dst>
+						</Destination>
+					</Shipment>
+					<Item>
+						<ItemID>1</ItemID>
+						<LineItem>
+							<!-- Standardbrief -->
+							<ProductNumber>102100001</ProductNumber>
+						</LineItem>
+					</Item>
+					<Item>
+						<ItemID>2</ItemID>
+						<LineItem>
+							<!-- Entgeltermäßigung DV-Freimachung -->
+							<ProductNumber>239036248</ProductNumber>
+						</LineItem>
+					</Item>
+				</ShipmentItem>
+				<ShipmentItem>
+					<Shipment>
+						<ShipmentID>2</ShipmentID>
+						<Qty>10000</Qty>
+						<Format>K</Format>
+						<OtherAttribute type="ODY" value="2015-01-04"></OtherAttribute>
+						<Postage>
+							<Type>DV</Type>
+							<PaymentClearingNumber>0001</PaymentClearingNumber>
+						</Postage>
+						<Destination prec="2">
+							<Dst from="10001" precT="2" to="12000" zip="05"></Dst>
+							<Dst from="12001" precT="2" to="14000" zip="27"></Dst>
+							<Dst from="14001" precT="2" to="16000" zip="43"></Dst>
+							<Dst from="16001" precT="2" to="18000" zip="59"></Dst>
+							<Dst from="18001" precT="2" to="20000" zip="63"></Dst>
+						</Destination>
+					</Shipment>
+					<Item>
+						<ItemID>3</ItemID>
+						<LineItem>
+							<!-- Kompaktbrief -->
+							<ProductNumber>102200001</ProductNumber>
+						</LineItem>
+					</Item>
+					<Item>
+						<ItemID>4</ItemID>
+						<LineItem>
+							<!-- Entgeltermäßigung DV-Freimachung -->
+							<ProductNumber>239036248</ProductNumber>
+						</LineItem>
+					</Item>
+				</ShipmentItem>
+				<ShipmentItem>
+					<Shipment>
+						<ShipmentID>3</ShipmentID>
+						<Qty>3500</Qty>
+						<Format>G</Format>
+						<OtherAttribute type="ODY" value="2015-01-04"></OtherAttribute>
+						<Postage>
+							<Type>DV</Type>
+							<PaymentClearingNumber>0001</PaymentClearingNumber>
+						</Postage>
+						<Destination prec="2">
+							<Dst from="20001" precT="2" to="21000" zip="12"></Dst>
+							<Dst from="22001" precT="2" to="23000" zip="47"></Dst>
+							<Dst from="23001" precT="2" to="23500" zip="56"></Dst>
+						</Destination>
+					</Shipment>
+					<Item>
+						<ItemID>5</ItemID>
+						<LineItem>
+							<!-- Großbrief -->
+							<ProductNumber>102300001</ProductNumber>
+						</LineItem>
+					</Item>
+					<Item>
+						<ItemID>6</ItemID>
+						<LineItem>
+							<!-- Entgeltermäßigung DV-Freimachung -->
+							<ProductNumber>239036248</ProductNumber>
+						</LineItem>
+					</Item>
+				</ShipmentItem>
+				<ShipmentItem>
+					<Shipment>
+						<ShipmentID>4</ShipmentID>
+						<Qty>1000</Qty>
+						<Format>M</Format>
+						<OtherAttribute type="ODY" value="2015-01-04"></OtherAttribute>
+						<Postage>
+							<Type>DV</Type>
+							<PaymentClearingNumber>0001</PaymentClearingNumber>
+						</Postage>
+						<Destination prec="2">
+							<Dst from="23501" precT="2" to="23700" zip="03"></Dst>
+							<Dst from="23701" precT="2" to="23800" zip="07"></Dst>
+							<Dst from="23801" precT="2" to="24000" zip="11"></Dst>
+							<Dst from="24001" precT="2" to="24500" zip="29"></Dst>
+						</Destination>
+					</Shipment>
+					<Item>
+						<ItemID>7</ItemID>
+						<LineItem>
+							<!-- Maxibrief -->
+							<ProductNumber>102400001</ProductNumber>
+						</LineItem>
+					</Item>
+					<Item>
+						<ItemID>8</ItemID>
+						<LineItem>
+							<!-- Entgeltermäßigung DV-Freimachung -->
+							<ProductNumber>239036248</ProductNumber>
+						</LineItem>
+					</Item>
+				</ShipmentItem>
+			</createOrderRequest>
+		</n:Request>
+	</soap:Body>
+</soap:Envelope>

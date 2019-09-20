@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 13.03.2009
+Beispiel: 107_01
+Beschreibung: Suche nach Presse-Aufträgen mit ZKZ, Einlieferungskennung, Heftfolgejahr, Heftfolgenummer und Einlieferungsdatum.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderRequest
+  O:/AM.exchange/XML-Schemas/OM-4.4/zert/seekOrderRequest.xsd">
+	<seekOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OtherAttribute type="ELK" value="R"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="1"/>
+			<OtherAttribute type="HF_JAHR_BIS" value="2009"/>
+			<OtherAttribute type="HF_NR_BIS" value="5"/>
+		</OrderHeader>
+		<Parties>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<Contract>
+					<ContractID>10002</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<Induction>
+			<EarliestDateTime>2015-11-13T10:00:00</EarliestDateTime>
+			<LatestDateTime>2010-11-19T10:00:00</LatestDateTime>
+		</Induction>
+	</seekOrderRequest>
+</n:Request>

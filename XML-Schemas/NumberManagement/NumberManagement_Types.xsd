@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.1"
+	xmlns:annox="http://annox.dev.java.net"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	xmlns="urn:www-deutschepost-de:Mail/OM/WebserviceProvider/NumberManagement"
+	targetNamespace="urn:www-deutschepost-de:Mail/OM/WebserviceProvider/NumberManagement">
+	
+	<xsd:annotation>
+        <xsd:appinfo>
+            <jaxb:globalBindings generateElementProperty="false">
+                <jaxb:serializable/>
+            </jaxb:globalBindings>
+        </xsd:appinfo>
+    </xsd:annotation>
+	
+	<!-- EKP-Type -->
+	<xsd:simpleType name="string10_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="0" />
+			<xsd:maxLength value="10" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Type for BZ -->
+	<xsd:simpleType name="string20_Type">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="0" />
+			<xsd:maxLength value="20" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="NumberType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="SSCC" />
+            <xsd:enumeration value="S10ID_TRACKED" />
+			<xsd:enumeration value="S10ID_UNTRACKED" />
+			<xsd:enumeration value="S10ID_SIGNED" />
+        </xsd:restriction>
+    </xsd:simpleType>
+	
+	<xsd:simpleType name="UserType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="4" />
+			<xsd:maxLength value="20" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="PasswordType">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="6" />
+			<xsd:maxLength value="20" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="getIdRangeResponse">
+		<xsd:sequence>
+			<xsd:element name="start" type="string20_Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="end" type="string20_Type" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="quantity" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="getIdRangeRequest">
+		<xsd:sequence>
+			<xsd:element name="type" type="NumberType" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="quantity" type="xsd:integer" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="ucp" type="string10_Type" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="username" type="UserType" minOccurs="0" maxOccurs="1" />
+			<xsd:element name="password" type="PasswordType" minOccurs="0" maxOccurs="1" />			
+			<xsd:element name="station" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+			<xsd:element name="mailcenter" type="string20_Type" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

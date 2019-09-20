@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 134_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für DHL Infopost für verschiedene Gewichte.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2016-08-22T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel 134</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>161112A00100100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>04</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>A</TransitDirectionCode>
+			<Address>
+				<StreetName>Marienkamp</StreetName>
+				<StreetNumber>17</StreetNumber>
+				<District>Buldern</District>
+				<Zip>48249</Zip>
+				<CityName>Dulmen</CityName>
+				<CC>DE</CC>
+			</Address>
+			<EarliestDateTime>2016-08-22T09:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>0</ShipmentID>
+				<Desc>Variante 1</Desc>
+				<Qty>1526</Qty>
+				<IndividualWeight value="1800" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+					<FrankingIdPrefix>80999</FrankingIdPrefix>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="123456" to="124277" zip="14" precP="2"/>
+					<Dst from="124278" to="124981" zip="29" precP="2"/>
+				</Destination>
+			</Shipment>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Variante 2</Desc>
+				<Qty>2240</Qty>
+				<IndividualWeight value="1780" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="2">
+					<Dst from="124982" to="126191" zip="14" precP="2"/>
+					<Dst from="126192" to="127016" zip="21" precP="2"/>
+					<Dst from="127017" to="127221" zip="29" precP="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- DHL Infopost -->
+					<ProductNumber>101901000</ProductNumber>
+					<Variant>VARIOPLUS</Variant>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>1526</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>2240</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Codierentgelt  -->
+					<ProductNumber>901300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>0</RefShipmentID>
+						<Qty>1526</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>2240</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Service GOGREEN -->
+					<ProductNumber>1554</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Abholung -->
+					<ProductNumber>170300350</ProductNumber>
+					<EarliestDateTime>2016-08-22T09:00:00</EarliestDateTime>
+					<LatestDateTime>2016-08-22T10:30:00</LatestDateTime>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>3</SlotQty>
+			<Type>PAL</Type>
+			<Qty>3</Qty>
+			<Package packageID="1" productGroup="DHL IP" type="PAL" stackable="false" zipDst="14">
+				<GWM value="276.020" unit="kg"/>
+				<NWM value="248.020" unit="kg"/>
+			</Package>
+			<Package packageID="2" productGroup="DHL IP" type="PAL" stackable="false" zipDst="21">
+				<GWM value="264.300" unit="kg"/>
+				<NWM value="236.300" unit="kg"/>
+			</Package>
+			<Package packageID="3" productGroup="DHL IP" type="PAL" stackable="false" zipDst="29">
+				<GWM value="269.280" unit="kg"/>
+				<NWM value="241.280" unit="kg"/>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

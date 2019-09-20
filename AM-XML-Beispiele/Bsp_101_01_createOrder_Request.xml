@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Erstellung: 29.12.2008
+Beispiel: 101
+Beschreibung: 
+	Neuanlage eines PrD-Einlieferungsauftrags mit zwei Varianten, die durch Beilage Mehrfachversand bzw. Gegenstand entstehen. 
+	Abholung. Angabe von Paletteninformationen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Heft 4/12</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A10100100</SystemID>
+			</CustOrderID>
+			<OtherAttribute type="ELK" value="R"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="4"/>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<Contract>
+					<ContractID>10005</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>A</TransitDirectionCode>
+			<Address>
+				<StreetName>Hauptstr.</StreetName>
+				<StreetNumber>26a</StreetNumber>
+				<District>Oldenburg</District>
+				<Zip>17495</Zip>
+				<CityName>Ranzin</CityName>
+				<CC>DE</CC>
+			</Address>
+			<EarliestDateTime>2015-11-19T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<!-- V1: mit Mehrfachversand, ohne Gegenstand -->
+				<ShipmentID>1</ShipmentID>
+				<Desc>Variante 1 mit Mehrfachversand ohne Gegenstand</Desc>
+				<Qty>1000</Qty>
+				<!-- Das Gewicht des Mehrfachversandes wird mit einbezogen! 140+80=220g. -->
+				<IndividualWeight value="220" unit="g"/>
+				<!-- Beilage Mehrfachversand -->
+				<Supplement>
+					<SupplementID>1</SupplementID>
+					<Type>MV</Type>
+					<IndividualWeight value="80" unit="g"/>
+					<Thickness value="7" unit="mm"/>
+					<!-- ZKZ des zweiten Heftes -->
+					<OtherAttribute type="ZKZ" value="10003"/>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="60000" qty="1000" precT="5" precP="2"/>
+				</Destination>
+			</Shipment>
+			<Shipment>
+				<!-- V2: mit Mehrfachversand, mit Gegenstand -->
+				<ShipmentID>2</ShipmentID>
+				<Desc>Variante 2 mit Mehrfachversand mit Gegenstand</Desc>
+				<Qty>500</Qty>
+				<!-- 140g + 80g + 18g = 238g -->
+				<IndividualWeight value="238" unit="g"/>
+				<!-- Beilage Mehrfachversand -->
+				<Supplement>
+					<SupplementID>2</SupplementID>
+					<Type>MV</Type>
+					<IndividualWeight value="80" unit="g"/>
+					<Thickness value="7" unit="mm"/>
+					<OtherAttribute type="ZKZ" value="10003"/>
+				</Supplement>
+				<!-- Beilage Gegenstand -->
+				<Supplement>
+					<SupplementID>3</SupplementID>
+					<Type>IT</Type>
+					<IndividualWeight value="18" unit="g"/>
+					<Thickness value="3" unit="mm"/>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="60000" qty="500" precT="5" precP="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Postvertriebsstück next day -->
+					<ProductNumber>11</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<RefSupplementID>1</RefSupplementID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<RefSupplementID>2</RefSupplementID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Mehrfachversand -->
+					<ProductNumber>211</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<RefSupplementID>3</RefSupplementID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Gegenstand 3-5 mm -->
+					<ProductNumber>43</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Abholung palettierter Sendungen PVSt SLN -->
+					<ProductNumber>93</ProductNumber>
+					<EarliestDateTime>2015-11-19T10:00:00</EarliestDateTime>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<SlotQty>1</SlotQty>
+			<Type>PAL</Type>
+			<Qty>1</Qty>
+			<Package packageID="1" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false" zipDst="60000" zipFrom="60000" zipTo="60000">
+				<NWM value="339" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1000</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>500</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/processOrderManagementOperationsResponse" 
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <processOrderManagementOperationsResponse>
+    <Return>
+      <ReturnCode>WARNING</ReturnCode>
+      <ErrMsg>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>525001</ErrCode>
+        <ErrDesc>Bei der Verarbeitung der Nachricht sind bei 3 Service-Operationen Warnungen aufgetreten.</ErrDesc>
+      </ErrMsg>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20160511100927279</ODOCID>
+      <CreationDateTime>2016-05-11T10:09:28</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.1</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OperationList>
+      <Operation consecutiveNumber="1">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>WARNING</ReturnCode>
+      <ErrMsg>
+        <ErrDateTime>2016-05-11T10:09:28</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514324</ErrCode>
+        <ErrDesc>Die Zahlungsabwicklung für den EA mit der AM-Nummer 00000008688025 erfolgt per Lastschrift. Die DPAG wird sich bei Ihnen melden, um ein SEPA-Basislastschrift-Mandat für eine SEPA-Lastschrift einzuholen.</ErrDesc>
+      </ErrMsg>
+    </Return>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2016-05-11T10:09:28</ChangedAt>
+      <State>DM</State>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderID>00000008688025</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>162112A05200100</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+      </Operation>
+      <Operation consecutiveNumber="2">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+<Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2016-05-11T10:09:29</ChangedAt>
+      <State>DM</State>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderID>00000008688138</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>162112A05200200</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+      </Operation>
+      <Operation consecutiveNumber="3">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+<Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2016-05-11T10:09:30</ChangedAt>
+      <State>DM</State>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderID>00000008688251</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>162112A05200300</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+      </Operation>
+    </OperationList>
+  </processOrderManagementOperationsResponse>
+</n:Response>

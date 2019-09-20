@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Erstellung: 29.12.2008
+Beispiel: 103
+Beschreibung: Neuanlage eines PrD-Einlieferungsauftrags für nationale und internationale Presse-Sendungen mit Zusatzleistungen. 
+	Die nationalen Sendungen enthalten auch die Angaben zu deren Beilagen, die internationalen Sendungen nicht.
+	Einlieferung in einer GrASt. Angabe von Paletteninformationen.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Heft 3/12</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A10300100</SystemID>
+			</CustOrderID>
+			<OtherAttribute type="ELK" value="R"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="3"/>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<Contract>
+					<ContractID>10005</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>SLN34</ProductionPlantID>
+			<EarliestDateTime>2015-11-15T10:00:00</EarliestDateTime>
+		</Induction>
+		<!-- Postvertriebsstück -->
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Qty>2000</Qty>
+				<!-- Zeitung 200g + Gegenstand 25g = 225g -->
+				<IndividualWeight value="225" unit="g"/>
+				<Supplement>
+					<SupplementID>1</SupplementID>
+					<Type>IT</Type>
+					<IndividualWeight value="25" unit="g"/>
+					<Thickness value="3" unit="mm"/>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="50000" qty="1000" precT="2" precP="0"/>
+					<Dst zip="60000" qty="1000" precT="2" precP="0"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Postvertriebsstück next day -->
+					<ProductNumber>11</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<!-- Verweis auf die Beilageninformation -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<RefSupplementID>1</RefSupplementID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Beilage Gegenstand 6-10 mm -->
+					<ProductNumber>48</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Desc>P.u.B. International zum Kilotarif (Zone EU)</Desc>
+				<Type>KIL</Type>
+				<GWM value="305.0" unit="kg"/>
+				<Qty>1000</Qty>
+				<IndividualWeight value="305" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst cc="BE" qty="1000"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- P.u.B. Int. Land Kilotarif (Zone EU) -->
+					<ProductNumber>410</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>235</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Zone EU -->
+					<ProductNumber>453</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Desc>P.u.B. Int. Land Kilotarif (Rest-Europa)</Desc>
+				<Type>KIL</Type>
+				<GWM value="91.5" unit="kg"/>
+				<Qty>300</Qty>
+				<IndividualWeight value="305" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst cc="TR" qty="300"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<!-- P.u.B. Int. Land Kilotarif (Rest-Europa) -->
+					<ProductNumber>415</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>6</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>3</RefShipmentID>
+						<Qty>134</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Resteuropa -->
+					<ProductNumber>458</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>4</ShipmentID>
+				<Desc>P.u.B. Int. Luft Kilotarif (Zone EU)</Desc>
+				<Type>KIL</Type>
+				<GWM value="61.0" unit="kg"/>
+				<Qty>200</Qty>
+				<IndividualWeight value="305" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst cc="GB" qty="200"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>7</ItemID>
+				<LineItem>
+					<!-- P.u.B. Int. Luft Kilotarif (Zone EU) -->
+					<ProductNumber>400</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>8</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>4</RefShipmentID>
+						<Qty>104</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>450</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>9</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>4</RefShipmentID>
+						<Qty>64</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- mit Rückschein -->
+					<ProductNumber>452</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>2</Qty>
+			<Package packageID="1" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false" zipDst="DE" zipFrom="50000" zipTo="60000">
+				<NWM value="500" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>2000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false">
+				<NWM value="305" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>1000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 049_02
+Beschreibung: Neuanlage und Auftragsfortschreibung eines Dialogpost Auftrags, bei dem der Versandplan zunächst fortgeschrieben, dann aber doch noch komplett ersetzt wird.
+Mit dieser Datei wird die Shipment-Sektion des Dialogpost-Auftrags erweitert. Es kommen weitere 17600 Sendungen mit entsprechendem Versandplan hinzu. (updateMethod="add")
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/changeOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/changeOrderRequest.xsd">
+	<changeOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>DM</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>161112A04900100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<ShipmentItem>
+			<Shipment updateMethod="add">
+				<ShipmentID>1</ShipmentID>
+				<Desc>Dialogpost-Sendungen</Desc>
+				<Qty>185600</Qty>
+				<IndividualWeight value="20" unit="g"/>
+				<Format>S</Format>
+				<Length value="200" unit="mm"/>
+				<Width value="125" unit="mm"/>
+				<Thickness value="3" unit="mm"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="01067" qty="1600" precT="2"/>
+					<Dst zip="01069" qty="1600" precT="2"/>
+					<Dst zip="01097" qty="1600" precT="2"/>
+					<Dst zip="02730" qty="1600" precT="2"/>
+					<Dst zip="02733" qty="1600" precT="2"/>
+					<Dst zip="02827" qty="1600" precT="2"/>
+					<Dst zip="02828" qty="1600" precT="2"/>
+					<Dst zip="09600" qty="1600" precT="2"/>
+					<Dst zip="09603" qty="1600" precT="2"/>
+					<Dst zip="09623" qty="1600" precT="2"/>
+					<Dst zip="09629" qty="1600" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Dialogpost Standard sortiert-->
+					<ProductNumber>250200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!--EE Vorsortierung Bd./Beh. auf LR -->
+					<ProductNumber>1000517</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</changeOrderRequest>
+</n:Request>

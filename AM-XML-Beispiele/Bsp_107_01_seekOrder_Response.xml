@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.2/seekOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.2/common">
+  <seekOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0"
+    maxResultsExceeded="false">
+    <Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110510121404</ODOCID>
+      <CreationDateTime>2011-05-10T12:14:05</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <SearchResult>
+      <OrderHeader includesDestinations="true" includesPackaging="true" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-05-10T11:55:23</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>true</IsActive>
+        <OrderLabel>Heft 3/2011</OrderLabel>
+        <CreationDate>2011-05-10</CreationDate>
+        <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+        <OrderID>00000004154052</OrderID>
+        <CustOrderID>
+          <CustID>6002000131</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110512A10200100</SystemID>
+        </CustOrderID>
+        <TotalQty>1000</TotalQty>
+        <TotalAmount value="693.4" currency="EUR" />
+        <OtherAttribute type="HF_NR_VON" value="3" />
+        <OtherAttribute type="ELK" value="R" />
+        <OtherAttribute type="HF_JAHR_VON" value="2011" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+          <Contract>
+            <ContractID>010002</ContractID>
+            <ContractTypeCode>ZKZ</ContractTypeCode>
+          </Contract>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-19T00:00:00</EarliestDateTime>
+      </Induction>
+    </SearchResult>
+    <OrderTree>
+      <OrderHeader includesDestinations="true" includesPackaging="true" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-05-10T11:55:23</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>true</IsActive>
+        <OrderLabel>Heft 3/2011</OrderLabel>
+        <CreationDate>2011-05-10</CreationDate>
+        <OrderCategory>PRESSEDISTRIBUTION</OrderCategory>
+        <OrderID>00000004154052</OrderID>
+        <CustOrderID>
+          <CustID>6002000131</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110512A10200100</SystemID>
+        </CustOrderID>
+        <TotalQty>1000</TotalQty>
+        <TotalAmount value="693.4" currency="EUR" />
+        <OtherAttribute type="HF_NR_VON" value="3" />
+        <OtherAttribute type="ELK" value="R" />
+        <OtherAttribute type="HF_JAHR_VON" value="2011" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Producer>
+          <CustID>6002000131</CustID>
+        </Producer>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+          <Contract>
+            <ContractID>010002</ContractID>
+            <ContractTypeCode>ZKZ</ContractTypeCode>
+          </Contract>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-19T00:00:00</EarliestDateTime>
+      </Induction>
+    </OrderTree>
+  </seekOrderResponse>
+</n:Response>

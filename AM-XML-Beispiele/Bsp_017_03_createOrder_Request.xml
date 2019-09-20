@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 22.12.2006
+Beispiel: 017_03
+Beschreibung: Neuanlage von Einlieferungsaufträgen für DV freigemachte Briefe verschiedener Formate nach Verfahren 10.
+Danach Neuanlage eines Zusatzauftrags zur Abrechnung der Teilleistung BZA, für alle Sendungen der Einlieferungsaufträge.
+Es wird keine Nettoabrechnung gewünscht.
+Mit dieser Datei wird der ZA angelegt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>muster01</User>
+			<Password>H4juk9xy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>ZA</OrderType>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionID>0001</SubmissionID>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A01700300</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<!-- Standard-Verfahren, d.h. keine Nettoabrechnung -->
+					<Procedure>39</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Item>
+				<ItemID>1</ItemID>
+				<Ref>
+					<!-- Verweis auf die Standard-Sendungen aus dem 1. EA -->
+					<RefOrder>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01700100</SystemID>
+						</CustOrderID>
+					</RefOrder>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<Ref>
+					<!-- Verweis auf die Standard-Sendungen aus dem 2. EA -->
+					<RefOrder>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01700200</SystemID>
+						</CustOrderID>
+					</RefOrder>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Teilleistung BZA Standardbrief allg. -->
+					<ProductNumber>1102130</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<!-- Verweis auf die Kompakt-Sendungen aus dem 1. EA -->
+					<RefOrder>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01700100</SystemID>
+						</CustOrderID>
+					</RefOrder>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<Ref>
+					<!-- Verweis auf die Kompakt-Sendungen aus dem 2. EA -->
+					<RefOrder>
+						<CustOrderID>
+							<CustID>6002000131</CustID>
+							<SystemID>151112A01700200</SystemID>
+						</CustOrderID>
+					</RefOrder>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Teilleistung BZA Kompaktbrief allg. -->
+					<ProductNumber>1102230</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

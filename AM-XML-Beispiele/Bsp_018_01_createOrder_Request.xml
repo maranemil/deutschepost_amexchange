@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 02.05.2017
+Beispiel: 018_01
+Beschreibung: Neuanlage eines Einlieferungsauftrags für DV freigemachte Dialogpost ins Inland mit Paletten und Rabattierungen. In diesem Beispiel wird dargestellt, wie verschiedene Variants
+kombiniert werden können: es handelt sich um Sendungen mit werblichen Inhalt an Bestandskunden.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2017-05-02T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>DM</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>170502A01800100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2017-07-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Dialogpost Standard</Desc>
+				<Qty>30000</Qty>
+				<IndividualWeight value="19" unit="g"/>
+				<Format>S</Format>
+				<Length value="235" unit="mm"/>
+				<Width value="125" unit="mm"/>
+				<Thickness value="4" unit="mm"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="5">
+					<Dst from="1" to="500" zip="14532"/>
+					<Dst from="501" to="1500" zip="16552"/>
+					<Dst from="1501" to="6000" zip="23437" precT="2"/>
+					<Dst from="6001" to="9000" zip="38735" precT="2"/>
+					<Dst from="9001" to="12000" zip="42454" precT="2"/>
+					<Dst from="12001" to="15000" zip="56754" precT="2"/>
+					<Dst from="15001" to="19500" zip="62435" precT="2"/>
+					<Dst from="19501" to="22500" zip="75643" precT="2"/>
+					<Dst from="22501" to="27000" zip="87654" precT="2"/>
+					<Dst from="27001" to="30000" zip="97626" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<!-- Dialogpost Standard-->
+				<ItemID>1</ItemID>
+				<LineItem>
+					<ProductNumber>250200001</ProductNumber>
+					<!-- Hier wird dargestellt, dass es sich um Sendungen an Bestandskunden handelt -->
+					<Variant>BKD</Variant>
+					<!-- Hier wird dargestellt, dass es sich um Sendungen mit einem werblichen Inhalt handelt-->
+					<Variant>WE</Variant>
+				</LineItem>
+			</Item>
+			<Item>
+				<!-- Entgeltermäßigung DV-Freimachung -->
+				<ItemID>2</ItemID>
+				<LineItem>
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<!--EE Behälterfertigung Leitregion-->
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>28500</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<ProductNumber>1000517</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>1</Qty>
+			<Package packageID="1" type="PAL" productGroup="DiP" format="S" sortMethod="BH" stackable="false" zipDst="DE">
+				<GWM value="590.00" unit="kg"/>
+				<NWM value="570.00" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>30000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

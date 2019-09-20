@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Erstellung: 12.03.2009
+Beispiel: 106_01
+Beschreibung: Neuanlage eines Presse-Auftrags mit mehreren Variante, die durch Beilagen-Teilbelegung entstehen. Es handelt sich um eine Sondernummer.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Heft 5/12</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A10600100</SystemID>
+			</CustOrderID>
+			<OtherAttribute type="ELK" value="S"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="5"/>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<Contract>
+					<ContractID>10002</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>SLN34</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<!-- V1: Heft ohne Beilage -->
+				<ShipmentID>1</ShipmentID>
+				<Desc>Variante 1 ohne Beilage</Desc>
+				<Qty>1000</Qty>
+				<!-- Einzelgewicht des Heftes -->
+				<IndividualWeight value="125" unit="g"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="01067" qty="300" precT="2" precP="1"/>
+					<Dst zip="01068" qty="300" precT="2" precP="1"/>
+					<Dst zip="01087" qty="200" precT="2" precP="1"/>
+					<Dst zip="02026" qty="100" precT="2" precP="1"/>
+					<Dst zip="02029" qty="100" precT="2" precP="1"/>
+				</Destination>
+			</Shipment>
+			<Shipment>
+				<!-- V2: Heft mit Gegenstand als Beilage -->
+				<ShipmentID>2</ShipmentID>
+				<Desc>Variante 2 mit Gegenstand als Beilage</Desc>
+				<Qty>500</Qty>
+				<!-- Einzelgewicht des Heftes inklusive der Beilage -->
+				<IndividualWeight value="150" unit="g"/>
+				<Supplement>
+					<SupplementID>1</SupplementID>
+					<Type>IT</Type>
+					<IndividualWeight value="25" unit="g"/>
+					<Thickness value="7" unit="mm"/>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="01067" qty="100" precT="2" precP="1"/>
+					<Dst zip="01068" qty="100" precT="2" precP="1"/>
+					<Dst zip="01087" qty="100" precT="2" precP="1"/>
+					<Dst zip="02026" qty="100" precT="2" precP="1"/>
+					<Dst zip="02029" qty="500" precT="2" precP="1"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Pressesendung next day -->
+					<ProductNumber>16</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<!-- Verweis auf die Beilageninformation -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<RefSupplementID>1</RefSupplementID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Beilage Gegenstand 6-10 mm -->
+					<ProductNumber>148</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>1</Qty>
+			<Package packageID="1" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false" zipDst="DE" zipFrom="01067" zipTo="02029">
+				<NWM value="200" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>1500</Qty>
+					</RefShipment>
+				</Ref>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>500</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

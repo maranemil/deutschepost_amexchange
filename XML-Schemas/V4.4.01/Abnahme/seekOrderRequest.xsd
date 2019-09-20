@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Udo Reuter
+Version  : 4.4.01
+Datum    : 24.08.2015
+Copyright Deutsche Post AG
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:seekOrder="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:common="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" targetNamespace="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderRequest">
+	<xsd:import namespace="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" schemaLocation="common.xsd"/>
+	<xsd:element name="Request">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="seekOrderRequest" type="common:SeekOrderRequestType" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

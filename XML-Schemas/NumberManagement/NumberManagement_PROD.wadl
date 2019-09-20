@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://wadl.dev.java.net/2009/02"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:type="urn:www-deutschepost-de:Mail/OM/WebserviceProvider/NumberManagement"
+		targetNamespace="urn:www-deutschepost-de:Mail/OM/WebserviceProvider/Intern/NumberManagement">
+	<grammars>
+		<include href="NumberManagement_Types.xsd"/>
+	</grammars>
+	<resources base="https://sop-ws.deutschepost.de:10443/sbb/services/production/rest/"> 
+		<resource path="numbermanagement/" id="NumberManagementService">
+			<resource path="getIdRange">
+				<method name="POST" id="getIdRange">
+					<request>
+						<representation mediaType="application/xml" element="type:getIdRangeRequest"/>
+					</request>
+					<response>
+						<representation mediaType="application/xml" type="type:getIdRangeResponse"/>
+					</response>
+				</method>
+			</resource>	
+		</resource>
+	</resources>
+</application>

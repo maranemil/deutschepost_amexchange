@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 097_01
+Beschreibung: Neuanlage eines variantenreinen Dialogpost Varianten Auftrags - Mehrstromverfahren ohne Palettenkonsolidierung.
+Im Gegensatz zum nicht variantenreinen Dialogpost Varianten Auftrag verweisen hierbei die Paletten jeweils ausschließlich auf die Sendungen genau einer Variante.
+Bitte beachten Sie, dass hierfür eine Ausnahmegenehmigung der Deutschen Post erforderlich ist.
+Auskunft kann Ihnen der für Sie zuständige Vertriebsmitarbeiter der Deutschen Post geben.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest E:\Entwicklerhandbuch\AM.exchange-EHB_4.4.1\XML-Schemas\V4.4.01\Abnahme\createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>162112A09700100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>10</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Variante 1</Desc>
+				<Qty>2750</Qty>
+				<IndividualWeight value="641" unit="g"/>
+				<Format>G</Format>
+				<OtherAttribute type="ODY" value="2008-06-30"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0003</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="5">
+					<Dst from="1" to="76" zip="03370" precP="1" precT="2"/>
+					<Dst from="77" to="125" zip="04470" precP="1" precT="2"/>
+					<Dst from="125" to="188" zip="04471" precP="1" precT="2"/>
+					<Dst from="189" to="223" zip="05501" precP="1" precT="2"/>
+					<Dst from="224" to="300" zip="07601" precP="1" precT="2"/>
+					<Dst from="301" to="339" zip="15101" precP="1" precT="2"/>
+					<Dst from="340" to="421" zip="16202" precP="1" precT="2"/>
+					<Dst from="422" to="489" zip="16221" precP="1" precT="2"/>
+					<Dst from="490" to="588" zip="17431" precP="1" precT="2"/>
+					<Dst from="589" to="652" zip="18571" precP="1" precT="2"/>
+					<Dst from="653" to="750" zip="19682" precP="1" precT="2"/>
+					<Dst from="751" to="1751" zip="64293" precP="1" precT="2"/>
+					<Dst from="1752" to="2752" zip="52076" precP="1" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Desc>Variante 2</Desc>
+				<Qty>1678</Qty>
+				<IndividualWeight value="800" unit="g"/>
+				<Format>G</Format>
+				<OtherAttribute type="ODY" value="2008-06-30"/>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0003</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="5">
+					<Dst from="751" to="823" zip="03371" precP="1" precT="2"/>
+					<Dst from="824" to="888" zip="04471" precP="1" precT="2"/>
+					<Dst from="889" to="965" zip="04490" precP="1" precT="2"/>
+					<Dst from="966" to="1043" zip="05511" precP="1" precT="2"/>
+					<Dst from="1044" to="1099" zip="06512" precP="1" precT="2"/>
+					<Dst from="1100" to="1188" zip="07711" precP="1" precT="2"/>
+					<Dst from="1189" to="1267" zip="15112" precP="1" precT="2"/>
+					<Dst from="1268" to="1349" zip="16312" precP="1" precT="2"/>
+					<Dst from="1350" to="1428" zip="16421" precP="1" precT="2"/>
+					<Dst from="1429" to="2429" zip="52076" precP="1" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Entgeltermaessigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Dialogpost Groß -->
+					<ProductNumber>250300001</ProductNumber>
+					<Variant>VP</Variant>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>750</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>678</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Entgeltermäßigung Vorsortierung Palette auf Leitzone -->
+					<ProductNumber>1000528</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>4</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>750</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>678</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Entgeltermäßigung Vorsortierung Behälter auf Leitregion -->
+					<ProductNumber>1000526</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>10</Qty>
+			<!-- Variantenreine Palette für die Variante 1 in die Leitzone 0 -->
+			<Package packageID="1" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="0">
+				<NWM value="192.3" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>300</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<!-- Variantenreine Palette für die Variante 1 in die Leitzone 1 -->
+			<Package packageID="2" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="1">
+				<NWM value="288.45" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>450</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<!-- Variantenreine Palette für die Variante 2 in die Leitzone 0 -->
+			<Package packageID="3" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="0">
+				<NWM value="350.4" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>438</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<!-- Variantenreine Palette für die Variante 2 in die Leitzone 1 -->
+			<Package packageID="4" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="1">
+				<NWM value="192" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>240</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<!-- Variantenreine Palette für die Variante 2 in die Leitzone 5 -->
+			<Package packageID="5" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="5">
+				<NWM value="400" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>500</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<!-- Variantenreine Palette für die Variante 2 in die Leitzone 5 -->
+			<Package packageID="6" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="5">
+				<NWM value="400" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>500</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		<!-- Variantenreine Palette für die Variante 1 in die Leitzone 5 -->
+		<Package packageID="7" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="5">
+			<NWM value="400" unit="kg"/>
+			<Ref>
+				<RefShipment>
+					<RefShipmentID>2</RefShipmentID>
+					<Qty>500</Qty>
+				</RefShipment>
+			</Ref>
+		</Package>
+		<!-- Variantenreine Palette für die Variante 1 in die Leitzone 5 -->
+		<Package packageID="8" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="5">
+			<NWM value="400" unit="kg"/>
+			<Ref>
+				<RefShipment>
+					<RefShipmentID>2</RefShipmentID>
+					<Qty>500</Qty>
+				</RefShipment>
+			</Ref>
+		</Package>
+		<!-- Variantenreine Palette für die Variante 1 in die Leitzone 6 -->
+		<Package packageID="9" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="6">
+			<NWM value="400" unit="kg"/>
+			<Ref>
+				<RefShipment>
+					<RefShipmentID>2</RefShipmentID>
+					<Qty>500</Qty>
+				</RefShipment>
+			</Ref>
+		</Package>
+		<!-- Variantenreine Palette für die Variante 1 in die Leitzone 6 -->
+		<Package packageID="10" productGroup="DiP" format="G" sortMethod="BH" stackable="false" type="PAL" zipDst="5">
+			<NWM value="400" unit="kg"/>
+			<Ref>
+				<RefShipment>
+					<RefShipmentID>2</RefShipmentID>
+					<Qty>500</Qty>
+				</RefShipment>
+			</Ref>
+		</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

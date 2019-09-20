@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 27.12.2006
+Beispiel: 038_05
+Beschreibung: Stornierung einer Teileinlieferungsgruppe. (Zuerst Storno der Einlieferungsaufträge, dann Storno der Gruppe.)
+Mit dieser Datei wird die zweite Teileinlieferung storniert.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/cancelOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/cancelOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/cancelOrderRequest.xsd">
+	<cancelOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A03800300</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+	</cancelOrderRequest>
+</n:Request>

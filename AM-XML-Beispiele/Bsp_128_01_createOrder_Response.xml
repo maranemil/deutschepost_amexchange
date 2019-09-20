@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+<Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20160502145919841</ODOCID>
+      <CreationDateTime>2016-05-02T14:59:21</CreationDateTime>
+      <Receiver>6000000121</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.1</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2016-05-02T14:59:20</ChangedAt>
+      <State>PM</State>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderID>00000008650800</OrderID>
+      <CustOrderID>
+        <CustID>6000000121</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>161112A12800100</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+</n:Response>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 01.08.2017
+Beispiel: 142_02
+Beschreibung: Abruf der Sendungsnummern eines Einlieferungsauftrages für internationale Warenpost.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/getOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/getOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/getOrderRequest.xsd">
+	<getOrderRequest codeTableVersion="1.0" version="1.0" includeDst="true" includePackaging="false" testcase="true">
+		<MsgHeader>
+			<User>User</User>
+			<Password>Passwort</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2017-11-15T09:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>5.0</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>170801A14200100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+	</getOrderRequest>
+</n:Request>

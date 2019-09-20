@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Erstellung: 17.03.2009
+Beispiel: 111
+Beschreibung: Neuanlage eines Presse-Einlieferungsauftrags mit 2 Beilagen, die exakt die gleiche Dicke und Gewicht haben.
+	Durch die Kombination der Beilagen entstehen unterschiedliche Varianten.
+	Dieses Beispiel verdeutlicht insbesondere, dass für jede kostenpflichtige, physische Beilage eine separates Dienstleistung (Item) erzeugt werden muss,
+	die die Beilage referenziert. Dies gilt auch dann, wenn die Beilagen-Dienstleistungen dieselbe Produktnummer haben.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<User>schnel01</User>
+			<Password>Cy2GFWxy</Password>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>Heft 3/4 2009</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A11100100</SystemID>
+			</CustOrderID>
+			<OtherAttribute type="ELK" value="R"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_VON" value="3"/>
+			<OtherAttribute type="HF_JAHR_VON" value="2009"/>
+			<OtherAttribute type="HF_NR_BIS" value="4"/>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Producer>
+				<CustID>6002000131</CustID>
+			</Producer>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<Contract>
+					<ContractID>10004</ContractID>
+					<ContractTypeCode>ZKZ</ContractTypeCode>
+				</Contract>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-15T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<!-- V1: Gegenstand 1 als Beilage -->
+				<ShipmentID>1</ShipmentID>
+				<Desc>Variante 1 Gegenstand 1 als Beilage</Desc>
+				<Qty>1000</Qty>
+				<!-- Heft: 220g + Gegenstand 1: 30g = 250g -->
+				<IndividualWeight value="250" unit="g"/>
+				<Supplement>
+					<SupplementID>1</SupplementID>
+					<Type>IT</Type>
+					<IndividualWeight value="30" unit="g"/>
+					<Thickness value="4" unit="mm"/>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="30000" qty="300" precT="5" precP="0"/>
+					<Dst zip="40000" qty="700" precT="5" precP="0"/>
+				</Destination>
+			</Shipment>
+			<Shipment>
+				<!-- V2: Gegenstand 1 und Gegenstand 2 als Beilage -->
+				<ShipmentID>2</ShipmentID>
+				<Desc>Variante 1 Gegenstand 1 und Gegenstand 2 als Beilage</Desc>
+				<Qty>1500</Qty>
+				<!-- Heft: 220g + Gegenstand 1: 30g + Gegenstand 2: 30g = 280g -->
+				<IndividualWeight value="280" unit="g"/>
+				<!-- Beilage Gegenstand 1 -->
+				<Supplement>
+					<SupplementID>2</SupplementID>
+					<Type>IT</Type>
+					<IndividualWeight value="30" unit="g"/>
+					<Thickness value="4" unit="mm"/>
+				</Supplement>
+				<!-- Beilage Gegenstand 2 -->
+				<Supplement>
+					<SupplementID>3</SupplementID>
+					<Type>IT</Type>
+					<IndividualWeight value="30" unit="g"/>
+					<Thickness value="4" unit="mm"/>
+				</Supplement>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="30000" qty="1000" precT="5" precP="0"/>
+					<Dst zip="40000" qty="500" precT="5" precP="0"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Postvertriebsstück second-day-service -->
+					<ProductNumber>12</ProductNumber>
+				</LineItem>
+			</Item>
+			<!-- Jetzt folgt für jede physische Beilage ein Item. -->
+			<!-- Diese Regel gilt auch dann, wenn die Items für die unterschiedlichen Gegenstände dieselbe Produktnummer haben, wie in diesem  Beispiel. -->
+			<Item>
+				<ItemID>2</ItemID>
+				<Ref>
+					<!-- Gegenstand 1 liegt V1 und V2 bei. -->
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<RefSupplementID>1</RefSupplementID>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<RefSupplementID>2</RefSupplementID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Gegenstand:  3-5 mm -->
+					<ProductNumber>43</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<!-- Gegenstand 2 liegt nur V2 bei. -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<RefSupplementID>3</RefSupplementID>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Gegenstand:  3-5 mm -->
+					<ProductNumber>43</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>2</Qty>
+			<Package packageID="1" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false" zipDst="30000" zipFrom="30000" zipTo="30000">
+				<NWM value="355" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>300</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>1000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="PRD" sortMethod="BD" type="PAL" stackable="false" zipDst="40000" zipFrom="40000" zipTo="40000">
+				<NWM value="315" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>700</Qty>
+					</RefShipment>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>500</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

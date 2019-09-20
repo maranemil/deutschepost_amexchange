@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 049_01
+Beschreibung: Neuanlage und Auftragsfortschreibung eines Dialogpost Auftrags, bei dem der Versandplan zunächst fortgeschrieben, dann aber doch noch komplett ersetzt wird.
+Mit dieser Datei wird der Dialogpost-Auftrag zunächst nur mit einem Teil des Versandplans angelegt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest E:\Entwicklerhandbuch\V4.4.01\Abnahme\createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>161112A04900100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<PostCardID>60000001212501001</PostCardID>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Dialogpost-Sendungen</Desc>
+				<Qty>185600</Qty>
+				<IndividualWeight value="20" unit="g"/>
+				<Format>S</Format>
+				<Length value="200" unit="mm"/>
+				<Width value="125" unit="mm"/>
+				<Thickness value="3" unit="mm"/>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="5">
+					<Dst zip="13089" qty="1600" precT="2"/>
+					<Dst zip="14789" qty="1600" precT="2"/>
+					<Dst zip="15324" qty="1600" precT="2"/>
+					<Dst zip="16244" qty="1600" precT="2"/>
+					<Dst zip="16552" qty="1600" precT="2"/>
+					<Dst zip="16835" qty="1600" precT="2"/>
+					<Dst zip="12685" qty="1600" precT="2"/>
+					<Dst zip="12687" qty="1600" precT="2"/>
+					<Dst zip="16909" qty="1600" precT="2"/>
+					<Dst zip="17087" qty="1600" precT="2"/>
+					<Dst zip="17098" qty="1600" precT="2"/>
+					<Dst zip="17219" qty="1600" precT="2"/>
+					<Dst zip="18181" qty="1600" precT="2"/>
+					<Dst zip="18317" qty="1600" precT="2"/>
+					<Dst zip="19086" qty="1600" precT="2"/>
+					<Dst zip="19205" qty="1600" precT="2"/>
+					<Dst zip="20359" qty="1600" precT="2"/>
+					<Dst zip="20539" qty="1600" precT="2"/>
+					<Dst zip="24992" qty="1600" precT="2"/>
+					<Dst zip="25364" qty="1600" precT="2"/>
+					<Dst zip="26215" qty="1600" precT="2"/>
+					<Dst zip="27313" qty="1600" precT="2"/>
+					<Dst zip="28870" qty="1600" precT="2"/>
+					<Dst zip="29378" qty="1600" precT="2"/>
+					<Dst zip="30163" qty="1600" precT="2"/>
+					<Dst zip="31079" qty="1600" precT="2"/>
+					<Dst zip="31224" qty="1600" precT="2"/>
+					<Dst zip="31737" qty="1600" precT="2"/>
+					<Dst zip="33178" qty="1600" precT="2"/>
+					<Dst zip="34369" qty="1600" precT="2"/>
+					<Dst zip="35119" qty="1600" precT="2"/>
+					<Dst zip="35716" qty="1600" precT="2"/>
+					<Dst zip="36323" qty="1600" precT="2"/>
+					<Dst zip="37215" qty="1600" precT="2"/>
+					<Dst zip="38159" qty="1600" precT="2"/>
+					<Dst zip="38470" qty="1600" precT="2"/>
+					<Dst zip="39221" qty="1600" precT="2"/>
+					<Dst zip="40227" qty="1600" precT="2"/>
+					<Dst zip="41065" qty="1600" precT="2"/>
+					<Dst zip="42399" qty="1600" precT="2"/>
+					<Dst zip="44388" qty="1600" precT="2"/>
+					<Dst zip="45309" qty="1600" precT="2"/>
+					<Dst zip="46535" qty="1600" precT="2"/>
+					<Dst zip="47495" qty="1600" precT="2"/>
+					<Dst zip="48455" qty="1600" precT="2"/>
+					<Dst zip="49170" qty="1600" precT="2"/>
+					<Dst zip="50354" qty="1600" precT="2"/>
+					<Dst zip="52393" qty="1600" precT="2"/>
+					<Dst zip="53225" qty="1600" precT="2"/>
+					<Dst zip="53347" qty="1600" precT="2"/>
+					<Dst zip="54424" qty="1600" precT="2"/>
+					<Dst zip="55116" qty="1600" precT="2"/>
+					<Dst zip="55432" qty="1600" precT="2"/>
+					<Dst zip="56330" qty="1600" precT="2"/>
+					<Dst zip="57271" qty="1600" precT="2"/>
+					<Dst zip="58339" qty="1600" precT="2"/>
+					<Dst zip="59427" qty="1600" precT="2"/>
+					<Dst zip="60327" qty="1600" precT="2"/>
+					<Dst zip="61276" qty="1600" precT="2"/>
+					<Dst zip="63457" qty="1600" precT="2"/>
+					<Dst zip="64401" qty="1600" precT="2"/>
+					<Dst zip="65205" qty="1600" precT="2"/>
+					<Dst zip="65934" qty="1600" precT="2"/>
+					<Dst zip="67071" qty="1600" precT="2"/>
+					<Dst zip="68161" qty="1600" precT="2"/>
+					<Dst zip="69239" qty="1600" precT="2"/>
+					<Dst zip="70374" qty="1600" precT="2"/>
+					<Dst zip="70565" qty="1600" precT="2"/>
+					<Dst zip="71636" qty="1600" precT="2"/>
+					<Dst zip="72175" qty="1600" precT="2"/>
+					<Dst zip="73092" qty="1600" precT="2"/>
+					<Dst zip="74321" qty="1600" precT="2"/>
+					<Dst zip="74865" qty="1600" precT="2"/>
+					<Dst zip="75382" qty="1600" precT="2"/>
+					<Dst zip="76297" qty="1600" precT="2"/>
+					<Dst zip="76596" qty="1600" precT="2"/>
+					<Dst zip="77761" qty="1600" precT="2"/>
+					<Dst zip="78078" qty="1600" precT="2"/>
+					<Dst zip="79112" qty="1600" precT="2"/>
+					<Dst zip="79295" qty="1600" precT="2"/>
+					<Dst zip="80331" qty="1600" precT="2"/>
+					<Dst zip="82319" qty="1600" precT="2"/>
+					<Dst zip="83088" qty="1600" precT="2"/>
+					<Dst zip="84061" qty="1600" precT="2"/>
+					<Dst zip="85055" qty="1600" precT="2"/>
+					<Dst zip="86150" qty="1600" precT="2"/>
+					<Dst zip="86685" qty="1600" precT="2"/>
+					<Dst zip="87466" qty="1600" precT="2"/>
+					<Dst zip="88094" qty="1600" precT="2"/>
+					<Dst zip="89155" qty="1600" precT="2"/>
+					<Dst zip="90482" qty="1600" precT="2"/>
+					<Dst zip="91180" qty="1600" precT="2"/>
+					<Dst zip="91315" qty="1600" precT="2"/>
+					<Dst zip="92278" qty="1600" precT="2"/>
+					<Dst zip="93083" qty="1600" precT="2"/>
+					<Dst zip="93182" qty="1600" precT="2"/>
+					<Dst zip="93458" qty="1600" precT="2"/>
+					<Dst zip="94142" qty="1600" precT="2"/>
+					<Dst zip="95168" qty="1600" precT="2"/>
+					<Dst zip="95485" qty="1600" precT="2"/>
+					<Dst zip="96123" qty="1600" precT="2"/>
+					<Dst zip="97228" qty="1600" precT="2"/>
+					<Dst zip="98587" qty="1600" precT="2"/>
+					<Dst zip="99427" qty="1600" precT="2"/>
+					<Dst zip="99998" qty="1600" precT="2"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!--Dialogpost Standard sortiert-->
+					<ProductNumber>250200001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!--EE Vorsortierung Bd./Beh. auf LR -->
+					<ProductNumber>1000517</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<Type>PAL</Type>
+			<Qty>6</Qty>
+			<Package packageID="1" productGroup="DiP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="DE">
+				<GWM value="622" unit="kg"/>
+				<NWM value="600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>30000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="2" productGroup="DiP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="DE">
+				<GWM value="622" unit="kg"/>
+				<NWM value="600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>30000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="3" productGroup="DiP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="DE">
+				<GWM value="622" unit="kg"/>
+				<NWM value="600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>30000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="4" productGroup="DiP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="DE">
+				<GWM value="622" unit="kg"/>
+				<NWM value="600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>30000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="5" productGroup="DiP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="DE">
+				<GWM value="622" unit="kg"/>
+				<NWM value="600" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>30000</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+			<Package packageID="6" productGroup="DiP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="DE">
+				<GWM value="734" unit="kg"/>
+				<NWM value="712" unit="kg"/>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>35600</Qty>
+					</RefShipment>
+				</Ref>
+			</Package>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

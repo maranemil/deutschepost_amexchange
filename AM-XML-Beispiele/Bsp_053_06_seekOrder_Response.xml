@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/seekOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <seekOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0"
+    maxResultsExceeded="false">
+    <Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110428094540</ODOCID>
+      <CreationDateTime>2011-04-28T09:45:41</CreationDateTime>
+      <Receiver>6000000121</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <SearchResult>
+      <OrderHeader includesDestinations="true" includesPackaging="false" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-04-14T11:32:24</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>true</IsActive>
+        <OrderLabel>AM-XML Beispiel 001</OrderLabel>
+        <CreationDate>2011-04-14</CreationDate>
+        <OrderCategory>DV_BRIEF</OrderCategory>
+        <OrderID>00000004096691</OrderID>
+        <CustOrderID>
+          <CustID>6002000131</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110512A00100100</SystemID>
+        </CustOrderID>
+        <TotalQty>24500</TotalQty>
+        <TotalAmount value="21557.25" currency="EUR" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-19T00:00:00</EarliestDateTime>
+      </Induction>
+    </SearchResult>
+    <OrderTree>
+      <OrderHeader includesDestinations="true" includesPackaging="false" >
+        <ProductionState>PLA</ProductionState>
+        <ChangedAt>2011-04-14T11:32:24</ChangedAt>
+        <OrderType>EA</OrderType>
+        <State>AU</State>
+        <Released>true</Released>
+        <AchievedDataQuality>AU</AchievedDataQuality>
+        <IsActive>true</IsActive>
+        <OrderLabel>AM-XML Beispiel 001</OrderLabel>
+        <CreationDate>2011-04-14</CreationDate>
+        <OrderCategory>DV_BRIEF</OrderCategory>
+        <OrderID>00000004096691</OrderID>
+        <CustOrderID>
+          <CustID>6002000131</CustID>
+          <SystemName>B2B</SystemName>
+          <SystemID>110512A00100100</SystemID>
+        </CustOrderID>
+        <TotalQty>24500</TotalQty>
+        <TotalAmount value="21557.25" currency="EUR" />
+      </OrderHeader>
+      <Parties>
+        <Originator>
+          <CustID>6000000121</CustID>
+        </Originator>
+        <Submitter>
+          <CustID>6002000131</CustID>
+        </Submitter>
+        <Payer>
+          <CustID>6000000121</CustID>
+        </Payer>
+      </Parties>
+      <Induction>
+        <EarliestDateTime>2015-05-19T00:00:00</EarliestDateTime>
+      </Induction>
+    </OrderTree>
+  </seekOrderResponse>
+</n:Response>

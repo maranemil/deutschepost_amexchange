@@ -1,0 +1,2571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+  targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4"
+  xmlns="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:isdx="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4"
+  xmlns:jms="http://schemas.xmlsoap.org/wsdl/jms/"
+  xmlns:pri="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/types"
+  xmlns:sdx="http://types.sopware.org/service/ServiceDescription/2.0"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:svn0="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/cancelOrderRequest"
+  xmlns:svn1="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/cancelOrderResponse"
+  xmlns:svn10="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/processOrderManagementOperationsResponse"
+  xmlns:svn11="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderMessageRequest"
+  xmlns:svn12="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderMessageResponse"
+  xmlns:svn13="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderRequest"
+  xmlns:svn14="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderResponse"
+  xmlns:svn15="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:svn16="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createStatisticalOrderRequest"
+  xmlns:svn2="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderRequest"
+  xmlns:svn3="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderResponse"
+  xmlns:svn4="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+  xmlns:svn5="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderRequest"
+  xmlns:svn6="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderResponse"
+  xmlns:svn7="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/getOrderRequest"
+  xmlns:svn8="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/getOrderResponse"
+  xmlns:svn9="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/processOrderManagementOperationsRequest"
+  xmlns:tns="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <types>
+    <xsd:schema targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4"/>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/cancelOrderRequest"
+      xmlns:cancelOrderRequest="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/cancelOrderRequest" xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="cancelOrderRequest" type="common:CancelOrderRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/cancelOrderResponse"
+      xmlns:cancelOrderResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/cancelOrderResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Exception" type="err:ExceptionFrame"/>
+            <xsd:element name="cancelOrderResponse" type="common:CancelOrderResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderRequest"
+      xmlns:changeOrderRequest="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderRequest" xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="changeOrderRequest" type="common:ChangeOrderRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderResponse"
+      xmlns:changeOrderResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/changeOrderResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Exception" type="err:ExceptionFrame"/>
+            <xsd:element name="changeOrderResponse" type="common:CreateChangeOrderResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling">
+      <xsd:simpleType name="ActionType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="D"/>
+          <xsd:enumeration value="I"/>
+          <xsd:enumeration value="U"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="AddressType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="StreetName" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="StreetNumber" type="common:string20_Type"/>
+          <xsd:element minOccurs="0" name="District" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="Zip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="CityName" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="CC" type="common:string2Fix_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CancelOrderRequestBulkType">
+        <xsd:sequence>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestCancelType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CancelOrderRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestCancelType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CancelOrderRequestType_DOKU"/>
+      <xsd:complexType name="CancelOrderResponseType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderResponseCancelType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ChangeCustDetailsType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ChangeItemType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ItemID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:TotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ref" type="common:RefType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="LineItem" type="common:LineItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ChangeOrderRequestBulkType">
+        <xsd:sequence>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestChangeType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesChangeType"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionChangeType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="ShipmentItem" type="common:ShipmentItemRequestChangeType"/>
+          <xsd:element minOccurs="0" name="Packaging" type="common:PackagingUpdateMethodChangeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ChangeOrderRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestChangeType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesChangeType"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionChangeType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="ShipmentItem" type="common:ShipmentItemRequestChangeType"/>
+          <xsd:element minOccurs="0" name="Packaging" type="common:PackagingUpdateMethodChangeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ChangeOrderRequestType_DOKU"/>
+      <xsd:complexType name="ChangeOtherPartyType">
+        <xsd:sequence>
+          <xsd:element name="Role" type="xsd:string"/>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ChangePackagingUpdateMethodType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SlotQty" type="common:string5_Type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:string2Fix_Type"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:string5_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Package" type="common:PackageType"/>
+        </xsd:sequence>
+        <xsd:attribute name="updateMethod" type="common:string10_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ChangePayerType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contract" type="common:ContractType"/>
+          <xsd:element minOccurs="0" name="PaymentMeans" type="common:PaymentMeansType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CODAmountValueType">
+        <xsd:attribute name="value" type="common:Number12.2_Type" use="required"/>
+        <xsd:attribute name="currency" type="common:string3_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ContactType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="FirstName" type="common:string35_Type"/>
+          <xsd:element minOccurs="0" name="LastName" type="common:string35_Type"/>
+          <xsd:element minOccurs="0" name="Role" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="Position" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="Department" type="common:string40_Type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="Email" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="Phone" type="common:string25_Type"/>
+          <xsd:element minOccurs="0" name="Fax" type="common:string25_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ContractSeekType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ContractID" type="common:string18_Type"/>
+          <xsd:element minOccurs="0" name="ContractTypeCode" type="common:string10_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ContractType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ContractID" type="common:string18_Type"/>
+          <xsd:element minOccurs="0" name="ContractTypeCode" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="IssueDate" type="xsd:date"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CreateChangeCancelOrderResponseBulkType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderResponseCreateChangeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CreateChangeCancelOrderResponseType_DOKU"/>
+      <xsd:complexType name="CreateChangeOrderResponseType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderResponseCreateChangeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CreateOrderRequestBulkType">
+        <xsd:sequence>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestCreateType"/>
+          <xsd:element name="Parties" type="common:PartiesType"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionType"/>
+          <xsd:element maxOccurs="unbounded" name="ShipmentItem" type="common:ShipmentItemRequestCreateType"/>
+          <xsd:element minOccurs="0" name="Packaging" type="common:PackagingType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CreateOrderRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestCreateType"/>
+          <xsd:element name="Parties" type="common:PartiesType"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionType"/>
+          <xsd:element maxOccurs="unbounded" name="ShipmentItem" type="common:ShipmentItemRequestCreateType"/>
+          <xsd:element minOccurs="0" name="Packaging" type="common:PackagingType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="CreateOrderRequestType_DOKU"/>
+      <xsd:complexType name="CustDetailsChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsChangeTypeWithCustomsNumber">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="CustomsNumber" type="common:string1-50_Type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsSeekTypeGeneral">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsSeekTypePayerOnlyWithContract">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contract" type="common:ContractSeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsSeekTypePayerWithCustIDAndContract">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contract" type="common:ContractSeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsSeekTypePayerWithCustIDOptionalAndContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contract" type="common:ContractSeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsSeekTypePayerWithoutContract">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsType">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustDetailsTypeWithCustomsNumber">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="CustomsNumber" type="common:string1-50_Type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="CustOrderIDType">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="SystemName" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="SystemID" type="common:string15_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DestinationType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Dst" type="common:DstType"/>
+        </xsd:sequence>
+        <xsd:attribute name="prec" type="common:string1Fix_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="DstType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Consignee" type="common:ConsigneeType"/>
+          <xsd:element minOccurs="0" name="ProductName" type="common:string100_Type"/>
+          <xsd:element minOccurs="0" name="DeliveryChoice" type="common:string1-20_Type"/>
+          <xsd:element minOccurs="0" name="Content" type="common:ContentType"/>
+        </xsd:sequence>
+        <xsd:attribute name="from" type="common:string1-9_Type" use="optional"/>
+        <xsd:attribute name="to" type="common:string1-9_Type" use="optional"/>
+        <xsd:attribute name="cc" type="common:string2Fix_Type" use="optional"/>
+        <xsd:attribute name="zip" type="common:string10_Type" use="optional"/>
+        <xsd:attribute name="qty" type="common:QuantityType" use="optional"/>
+        <xsd:attribute name="id" type="common:string1-20_Type" use="optional"/>
+        <xsd:attribute name="addId" type="common:string1-50_Type" use="optional"/>
+        <xsd:attribute name="addIdType" type="common:string1-10_Type" use="optional"/>
+        <xsd:attribute name="precP" type="common:string1Fix_Type" use="optional"/>
+        <xsd:attribute name="precT" type="common:string1Fix_Type" use="optional"/>
+        <xsd:attribute name="bq" type="common:string4_Type" use="optional"/>
+        <xsd:attribute name="tz" type="common:string1Fix_Type" use="optional"/>
+        <xsd:attribute name="frankingIdPrefix"
+          type="common:FrankingIdPrefixType" use="optional"/>
+        <xsd:attribute name="frankingIdEncoding"
+          type="common:string15_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ConsigneeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="CustomsNumber" type="common:string1-50_Type"/>
+          <xsd:element minOccurs="0" name="TaxID" type="common:string1-50_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ContentType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SenderReference" type="common:string100_Type"/>
+          <xsd:element minOccurs="0" name="NatureOfGoods" type="common:NatureOfGoodsType"/>
+          <xsd:element minOccurs="0" name="Explication" type="common:string1-200_Type"/>
+          <xsd:element minOccurs="0" name="Comment" type="common:string1-200_Type"/>
+          <xsd:element minOccurs="0" name="GWM" type="common:IndividualWeightType"/>
+          <xsd:element minOccurs="0" name="TotalValue" type="common:ItemTotalAmountType"/>
+          <xsd:element minOccurs="0" name="PostageAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Document" type="common:DocumentType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="ContentPiece" type="common:ContentPieceType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NatureOfGoodsType">
+        <xsd:attribute name="gift" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="doc" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="sample" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="returnedGood" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="other" type="xsd:boolean" use="required"/>
+      </xsd:complexType>
+      <xsd:complexType name="DocumentType">
+        <xsd:attribute name="type" type="common:string1-40_Type" use="required"/>
+        <xsd:attribute name="ref" type="common:string1-200_Type" use="required"/>
+      </xsd:complexType>
+      <xsd:complexType name="ContentPieceType">
+        <xsd:attribute name="num" type="common:Number4.0_Type" use="optional"/>
+        <xsd:attribute name="qty" type="common:Number2.0_Type" use="optional"/>
+        <xsd:attribute name="desc" type="common:string1-35_Type" use="required"/>
+        <xsd:attribute name="value" type="common:Number10.2_Type" use="required"/>
+        <xsd:attribute name="currency" type="common:string3_Type" use="optional"/>
+        <xsd:attribute name="weight" type="common:Number7.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+        <xsd:attribute name="origin" type="common:string2Fix_Type" use="optional"/>
+        <xsd:attribute name="hstariff" type="common:string1-12_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ErrorMessageType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ErrDateTime" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="ErrCat" type="common:string1-10_Type"/>
+          <xsd:element name="ErrCode" type="common:string1-10_Type"/>
+          <xsd:element minOccurs="0" name="ErrDesc" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="FinancialAccountType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="AccountHolder" type="common:string40_Type"/>
+          <xsd:element minOccurs="0" name="AccountID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="IBAN" type="common:IBANType"/>
+          <xsd:element minOccurs="0" name="FinancialInstitution" type="common:string35_Type"/>
+          <xsd:element minOccurs="0" name="CC" type="common:string2Fix_Type"/>
+          <xsd:element minOccurs="0" name="BankCode" type="common:string8_Type"/>
+          <xsd:element minOccurs="0" name="BIC" type="common:string11_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="FrankingIdPrefixType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="20"/>
+          <xsd:pattern value="([0-9]|[A-Z])*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="GetOrderRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderRequestGetType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includeDst" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includePackaging" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includeNVE" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="GetOrderResponseType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderResponseGetType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesType"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="ShipmentItem" type="common:ShipmentItemResponseGetType"/>
+          <xsd:element minOccurs="0" name="Packaging" type="common:PackagingType"/>
+          <xsd:element minOccurs="0" name="OrderTree" type="common:OrderTreeGetType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="GWMType">
+        <xsd:attribute name="value" type="common:Number7.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="IBANType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="34"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="IndividualWeightType">
+        <xsd:attribute name="value" type="common:Number9.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="InductionChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="TransitDirectionCode" type="common:string1Fix_Type"/>
+          <xsd:element minOccurs="0" name="ProductionPlantID" type="common:string20_Type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="EarliestDateTime" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="LatestDateTime" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InductionSeekResponseType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="EarliestDateTime" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InductionSeekType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="EarliestDateTime" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="LatestDateTime" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InductionType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="TransitDirectionCode" type="common:string1Fix_Type"/>
+          <xsd:element minOccurs="0" name="ProductionPlantID" type="common:string20_Type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element name="EarliestDateTime" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="LatestDateTime" type="xsd:dateTime"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="InsuredValueType">
+        <xsd:attribute name="value" type="common:Number12.2_Type" use="required"/>
+        <xsd:attribute name="currency" type="common:string3_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ItemResponseGetType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ItemID" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ref" type="common:RefResponseGetType"/>
+          <xsd:element maxOccurs="unbounded" name="LineItem" type="common:LineItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ItemTotalAmountType">
+        <xsd:attribute name="value" type="common:Number10.2_Type" use="required"/>
+        <xsd:attribute name="currency" type="common:string3_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ItemType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ItemID" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ref" type="common:RefType"/>
+          <xsd:element maxOccurs="unbounded" name="LineItem" type="common:LineItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LengthType">
+        <xsd:attribute name="value" type="common:Number9.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="LineItemType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductNumber" type="common:string1-9_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Variant" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="EarliestDateTime" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="LatestDateTime" type="xsd:dateTime"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="MessageIdType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="21"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="MsgHeaderRequestType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MsgSource" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="MsgFormat" type="common:string32_Type"/>
+          <xsd:element minOccurs="0" name="User" type="common:UserType"/>
+          <xsd:element minOccurs="0" name="Password" type="common:PasswordType"/>
+          <xsd:element name="MsgID" type="common:MessageIdType"/>
+          <xsd:element minOccurs="0" name="ODOCID" type="common:ODOCIDType"/>
+          <xsd:element name="CreationDateTime" type="xsd:dateTime"/>
+          <xsd:element name="Receiver" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="CommunicationPartner" type="common:string32_Type"/>
+          <xsd:element name="SubmitterSMS" type="common:SubmitterSMSType"/>
+          <xsd:element name="Origin" type="common:OriginType"/>
+          <xsd:element minOccurs="0" name="FreeText" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MsgHeaderResponseType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MsgFormat" type="common:string32_Type"/>
+          <xsd:element name="MsgID" type="common:MessageIdType"/>
+          <xsd:element minOccurs="0" name="ODOCID" type="common:ODOCIDType"/>
+          <xsd:element name="CreationDateTime" type="xsd:dateTime"/>
+          <xsd:element name="Receiver" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="CommunicationPartner" type="common:string32_Type"/>
+          <xsd:element minOccurs="0" name="Origin" type="common:OriginType"/>
+          <xsd:element minOccurs="0" name="FreeText" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="Number10.0_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="10"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number10.2_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="10"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number10Type">
+        <xsd:restriction base="xsd:unsignedLong">
+          <xsd:totalDigits value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number10_Type">
+        <xsd:restriction base="xsd:long">
+          <xsd:minInclusive value="0"/>
+          <xsd:totalDigits value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number12.2_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="12"/>
+          <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number13Type">
+        <xsd:restriction base="xsd:unsignedLong">
+          <xsd:totalDigits value="13"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number2.0_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="2"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number3Type">
+        <xsd:restriction base="xsd:integer">
+          <xsd:totalDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number4.0_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="4"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number4Type">
+        <xsd:restriction base="xsd:integer">
+          <xsd:totalDigits value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number5.0_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="5"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number5Type">
+        <xsd:restriction base="xsd:integer">
+          <xsd:totalDigits value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number6.0_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="6"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number7.3_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="10"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number8Type">
+        <xsd:restriction base="xsd:integer">
+          <xsd:totalDigits value="8"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number9.0_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="9"/>
+          <xsd:fractionDigits value="0"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Number9.3_Type">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits value="9"/>
+          <xsd:fractionDigits value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="NWMType">
+        <xsd:attribute name="value" type="common:Number7.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="ODOCIDType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="32"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="OmMessageContentType">
+        <xsd:sequence>
+          <xsd:element name="OmMessageState" type="common:string4_Type"/>
+          <xsd:element name="OmMessageID" type="common:string25_Type"/>
+          <xsd:element name="CreationDateTime" type="xsd:dateTime"/>
+          <xsd:element name="Rubric" type="common:RubricType"/>
+          <xsd:element name="TemplateID" type="common:string5_Type"/>
+          <xsd:element name="Text" type="xsd:string"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OmMessageParametersType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MsgDateTimeFrom" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="MsgDateTimeTo" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="ReceiverCustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Rubric" type="common:RubricType"/>
+          <xsd:element minOccurs="0" name="AlreadyRead" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="SortOrder" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="MessageType" type="common:string10_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OmMessageType">
+        <xsd:sequence>
+          <xsd:element name="Content" type="common:OmMessageContentType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderResponseSeekOrderMessageType"/>
+          <xsd:element minOccurs="0" name="Parameters" type="common:ParametersType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderRequestCancelType">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+            <xsd:element minOccurs="0" name="CustOrderID" type="common:CustOrderIDType"/>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderRequestChangeType">
+        <xsd:sequence>
+          <xsd:element name="OrderType" type="common:OrderType_Type"/>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="OrderDesc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="OrderLabel" type="common:string80_Type"/>
+          <xsd:element minOccurs="0" name="SubmissionType" type="common:string1_Type"/>
+          <xsd:element minOccurs="0" name="SubmissionID" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefOrder" type="common:RefOrderType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderRequestCreateType">
+        <xsd:sequence>
+          <xsd:element name="OrderType" type="common:OrderType_Type"/>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="OrderDesc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="OrderLabel" type="common:string80_Type"/>
+          <xsd:element minOccurs="0" name="SubmissionType" type="common:string1_Type"/>
+          <xsd:element minOccurs="0" name="SubmissionID" type="common:Number4.0_Type"/>
+          <xsd:element maxOccurs="unbounded" name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefOrder" type="common:RefOrderType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderRequestGetType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:choice>
+            <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+            <xsd:element minOccurs="0" name="CustOrderID" type="common:CustOrderIDType"/>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderRequestSeekOrderMessageType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element minOccurs="0" name="CustOrderID" type="common:CustOrderIDType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderRequestSeekType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OrderType" type="common:OrderType_Type"/>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="AchievedDataQuality" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="IsActive" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="OrderDesc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="OrderLabel" type="common:string80_Type"/>
+          <xsd:element minOccurs="0" name="ChangedSince" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderResponseCancelType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductionState" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="ChangedAt" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefOrder" type="common:RefOrderMultipleType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderResponseCreateChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductionState" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="ChangedAt" type="xsd:dateTime"/>
+          <xsd:element name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="AchievedDataQuality" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefOrder" type="common:RefOrderMultipleType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderResponseGetType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductionState" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="ChangedAt" type="xsd:dateTime"/>
+          <xsd:element name="OrderType" type="common:OrderType_Type"/>
+          <xsd:element name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="AchievedDataQuality" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="IsActive" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="OrderDesc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="OrderLabel" type="common:string80_Type"/>
+          <xsd:element minOccurs="0" name="CreationDate" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="SubmissionType" type="common:string1_Type"/>
+          <xsd:element minOccurs="0" name="SubmissionID" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefOrder" type="common:RefOrderMultipleType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="includesDestinations" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includesPackaging" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderResponseSeekOrderMessageType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderResponseSeekType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductionState" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="ChangedAt" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="OrderType" type="common:OrderType_Type"/>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="AchievedDataQuality" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="IsActive" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="OrderDesc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="OrderLabel" type="common:string80_Type"/>
+          <xsd:element minOccurs="0" name="CreationDate" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element name="TotalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="includesDestinations" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includesPackaging" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderTreeGetType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductionState" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="ChangedAt" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="OrderType" type="common:string2_Type"/>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="AchievedDataQuality" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="IsActive" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="CreationDate" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+        </xsd:sequence>
+        <xsd:attribute name="includesDestinations" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includesPackaging" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="OrderHeaderTreeSeekType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ProductionState" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="ChangedAt" type="xsd:dateTime"/>
+          <xsd:element minOccurs="0" name="OrderType" type="common:string2_Type"/>
+          <xsd:element minOccurs="0" name="State" type="common:StateType"/>
+          <xsd:element minOccurs="0" name="Released" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="AchievedDataQuality" type="common:string3_Type"/>
+          <xsd:element minOccurs="0" name="IsActive" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="OrderDesc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="OrderLabel" type="common:string80_Type"/>
+          <xsd:element minOccurs="0" name="CreationDate" type="xsd:date"/>
+          <xsd:element minOccurs="0" name="OrderCategory" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderCategoryGroup" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+          <xsd:element name="TotalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalAmount" type="common:ItemTotalAmountType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="includesDestinations" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="includesPackaging" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="OrderIdType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="14"/>
+          <xsd:pattern value="[0-9]*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="OrderTreeGetType">
+        <xsd:sequence>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderTreeGetType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderTree" type="common:OrderTreeGetType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OrderTreeSeekType">
+        <xsd:sequence>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderTreeSeekType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesSeekTypeWithContract"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionSeekResponseType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderTree" type="common:OrderTreeSeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="OrderType_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="2"/>
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="OriginType">
+        <xsd:sequence>
+          <xsd:element name="SystemName" type="common:string15_Type"/>
+          <xsd:element minOccurs="0" name="SystemVersion" type="common:string20_Type"/>
+          <xsd:element minOccurs="0" name="CertificationDate" type="xsd:date"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OtherAttributeType">
+        <xsd:attribute name="type" type="common:string50_Type" use="required"/>
+        <xsd:attribute name="value" type="common:string50_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="OtherPartyChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Role" type="common:string25_Type"/>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OtherPartySeekType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Role" type="common:string25_Type"/>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OtherPartyType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Role" type="common:string25_Type"/>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PackageResponseGetType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="GWM" type="common:GWMType"/>
+          <xsd:element minOccurs="0" name="NWM" type="common:NWMType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ref" type="common:RefResponseGetType"/>
+        </xsd:sequence>
+        <xsd:attribute name="packageID" type="common:string20_Type"/>
+        <xsd:attribute name="productGroup" type="common:string1-15_Type"/>
+        <xsd:attribute name="format" type="common:string1-15_Type"/>
+        <xsd:attribute name="sortMethod" type="common:string1-15_Type"/>
+        <xsd:attribute name="type" type="common:PackageTypeType"/>
+        <xsd:attribute name="refPackage" type="common:string20_Type"/>
+        <xsd:attribute name="stackable" type="xsd:boolean"/>
+        <xsd:attribute name="frameQty" type="common:string2_Type"/>
+        <xsd:attribute name="zipDst" type="common:string5_Type"/>
+        <xsd:attribute name="zipFrom" type="common:string10_Type"/>
+        <xsd:attribute name="zipTo" type="common:string10_Type"/>
+      </xsd:complexType>
+      <xsd:complexType name="PackageType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="GWM" type="common:GWMType"/>
+          <xsd:element minOccurs="0" name="NWM" type="common:NWMType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Ref" type="common:RefPackageType"/>
+        </xsd:sequence>
+        <xsd:attribute name="packageID" type="common:string20_Type" use="optional"/>
+        <xsd:attribute name="productGroup" type="common:string1-15_Type" use="optional"/>
+        <xsd:attribute name="format" type="common:string1-15_Type" use="optional"/>
+        <xsd:attribute name="sortMethod" type="common:string1-15_Type" use="optional"/>
+        <xsd:attribute name="refPackage" type="common:string20_Type" use="optional"/>
+        <xsd:attribute name="type" type="common:PackageTypeType" use="optional"/>
+        <xsd:attribute name="stackable" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="frameQty" type="common:Number2.0_Type" use="optional"/>
+        <xsd:attribute name="zipDst" type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="deliveryBase" type="common:string20_Type" use="optional"/>
+        <xsd:attribute name="zipFrom" type="common:string10_Type" use="optional"/>
+        <xsd:attribute name="zipTo" type="common:string10_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="PackageTypeType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="3"/>
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="PackagingType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SlotQty" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:PackageTypeType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number5.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Package" type="common:PackageType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PackagingUpdateMethodChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SlotQty" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:PackageTypeType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number5.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Package" type="common:PackageType"/>
+        </xsd:sequence>
+        <xsd:attribute name="updateMethod" type="common:string10_Type"/>
+      </xsd:complexType>
+      <xsd:complexType name="PackagingUpdateMethodType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SlotQty" type="common:Number4.0_Type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:PackageTypeType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number5.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Package" type="common:PackageType"/>
+        </xsd:sequence>
+        <xsd:attribute name="updateMethod" type="common:string10_Type"/>
+      </xsd:complexType>
+      <xsd:complexType name="ParametersType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="TextParameter">
+            <xsd:complexType>
+              <xsd:attribute name="type" type="common:string17_Type"/>
+              <xsd:attribute name="value" type="common:string50_Type"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="ParticipationType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="2"/>
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="PartiesChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Originator" type="common:CustDetailsChangeTypeWithCustomsNumber"/>
+          <xsd:element minOccurs="0" name="Producer" type="common:CustDetailsChangeType"/>
+          <xsd:element minOccurs="0" name="Submitter" type="common:CustDetailsChangeType"/>
+          <xsd:element minOccurs="0" name="Payer" type="common:PayerChangeType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherParty" type="common:OtherPartyChangeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartiesSeekTypeOnlyWithContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Payer" type="common:CustDetailsSeekTypePayerOnlyWithContract"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartiesSeekTypeWithContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Originator" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Producer" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Submitter" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Payer" type="common:CustDetailsSeekTypePayerWithCustIDAndContract"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherParty" type="common:OtherPartySeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartiesSeekTypeWithoutContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Originator" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Producer" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Submitter" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Payer" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherParty" type="common:OtherPartySeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartiesSeekTypeWithPayerCustIDOptionalAndWithContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Originator" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Producer" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Submitter" type="common:CustDetailsSeekTypeGeneral"/>
+          <xsd:element minOccurs="0" name="Payer" type="common:CustDetailsSeekTypePayerWithCustIDOptionalAndContract"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherParty" type="common:OtherPartySeekType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PartiesType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Originator" type="common:CustDetailsTypeWithCustomsNumber"/>
+          <xsd:element minOccurs="0" name="Producer" type="common:CustDetailsType"/>
+          <xsd:element minOccurs="0" name="Submitter" type="common:CustDetailsType"/>
+          <xsd:element minOccurs="0" name="Payer" type="common:PayerType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherParty" type="common:OtherPartyType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="PasswordType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="6"/>
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="PayerChangeType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contract" type="common:ContractType"/>
+          <xsd:element minOccurs="0" name="PaymentMeans" type="common:PaymentMeansType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PayerSeekTypeOnlyWithContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Payer" type="common:CustDetailsSeekTypePayerOnlyWithContract"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PayerSeekTypeWithCustIDAndContract">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Payer" type="common:CustDetailsSeekTypePayerWithCustIDAndContract"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PayerType">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Contact" type="common:ContactType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contract" type="common:ContractType"/>
+          <xsd:element minOccurs="0" name="PaymentMeans" type="common:PaymentMeansType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PaymentMeansType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Procedure" type="common:ProcedureType"/>
+          <xsd:element minOccurs="0" name="Participation" type="common:ParticipationType"/>
+          <xsd:element minOccurs="0" name="PostCardID" type="common:PostCardIDType"/>
+          <xsd:element minOccurs="0" name="FinancialAccount" type="common:FinancialAccountType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="POBAddressType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Zip" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="CityName" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="Postbox" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="CC" type="common:string2Fix_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PostageAmountValueType">
+        <xsd:attribute name="value" type="common:Number10.2_Type" use="required"/>
+        <xsd:attribute name="currency" type="common:string3_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="PostageType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="Type" type="common:string25_Type"/>
+          <xsd:element minOccurs="0" name="Amount" type="common:PostageAmountValueType"/>
+          <xsd:element minOccurs="0" name="AmountShipment" type="common:PostageAmountValueType"/>
+          <xsd:element minOccurs="0" name="Code" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="PaymentClearingNumber" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="AdditionalCharge" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="FrankingIdPrefix" type="common:FrankingIdPrefixType"/>
+          <xsd:element minOccurs="0" name="FrankingIdEncoding" type="common:string15_Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="PostCardIDType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="16"/>
+          <xsd:maxLength value="17"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ProcedureType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="2"/>
+          <xsd:maxLength value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ProcessOrderManagementOperationsRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element name="OperationList">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Operation">
+                  <xsd:complexType>
+                    <xsd:choice>
+                      <xsd:element minOccurs="0"
+                        name="createOrderRequest" type="common:CreateOrderRequestBulkType"/>
+                      <xsd:element minOccurs="0"
+                        name="changeOrderRequest" type="common:ChangeOrderRequestBulkType"/>
+                      <xsd:element minOccurs="0"
+                        name="cancelOrderRequest" type="common:CancelOrderRequestBulkType"/>
+                    </xsd:choice>
+                    <xsd:attribute name="consecutiveNumber"
+                      type="common:Number6.0_Type" use="required"/>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProcessOrderManagementOperationsRequestType_DOKU">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element name="OperationList">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Operation">
+                  <xsd:complexType>
+                    <xsd:choice>
+                      <xsd:element minOccurs="0"
+                        name="createOrderRequest" type="common:CreateOrderRequestType_DOKU"/>
+                      <xsd:element minOccurs="0"
+                        name="changeOrderRequest" type="common:ChangeOrderRequestType_DOKU"/>
+                      <xsd:element minOccurs="0"
+                        name="cancelOrderRequest" type="common:CancelOrderRequestType_DOKU"/>
+                    </xsd:choice>
+                    <xsd:attribute name="consecutiveNumber"
+                      type="common:Number6.0_Type" use="required"/>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProcessOrderManagementOperationsResponseType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element minOccurs="0" name="OperationList">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Operation">
+                  <xsd:complexType>
+                    <xsd:choice>
+                      <xsd:element minOccurs="0"
+                        name="createOrderResponse" type="common:CreateChangeCancelOrderResponseBulkType"/>
+                      <xsd:element minOccurs="0"
+                        name="changeOrderResponse" type="common:CreateChangeCancelOrderResponseBulkType"/>
+                      <xsd:element minOccurs="0"
+                        name="cancelOrderResponse" type="common:CreateChangeCancelOrderResponseBulkType"/>
+                    </xsd:choice>
+                    <xsd:attribute name="consecutiveNumber"
+                      type="common:Number6.0_Type" use="required"/>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ProcessOrderManagementOperationsResponseType_DOKU">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element minOccurs="0" name="OperationList">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" name="Operation">
+                  <xsd:complexType>
+                    <xsd:choice>
+                      <xsd:element minOccurs="0"
+                        name="createOrderResponse" type="common:CreateChangeCancelOrderResponseType_DOKU"/>
+                      <xsd:element minOccurs="0"
+                        name="changeOrderResponse" type="common:CreateChangeCancelOrderResponseType_DOKU"/>
+                      <xsd:element minOccurs="0"
+                        name="cancelOrderResponse" type="common:CreateChangeCancelOrderResponseType_DOKU"/>
+                    </xsd:choice>
+                    <xsd:attribute name="consecutiveNumber"
+                      type="common:Number6.0_Type" use="required"/>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="QuantityType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="9"/>
+          <xsd:pattern value="[0-9]*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="RangeType">
+        <xsd:attribute name="from" type="common:string1-9_Type" use="required"/>
+        <xsd:attribute name="to" type="common:string1-9_Type" use="required"/>
+      </xsd:complexType>
+      <xsd:complexType name="RefDestinationType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Range" type="common:RefDstType"/>
+        </xsd:sequence>
+        <xsd:attribute name="prec" type="common:string1Fix_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="RefDstType">
+        <xsd:attribute name="from" type="common:string1-9_Type" use="optional"/>
+        <xsd:attribute name="to" type="common:string1-9_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="RefOrderMultipleType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CustOrderID" type="common:CustOrderIDType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RefOrderType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OrderID" type="common:OrderIdType"/>
+          <xsd:element minOccurs="0" name="CustOrderID" type="common:CustOrderIDType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RefPackageType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="RefOrder" type="common:RefOrderType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefShipment" type="common:RefShipmentTypeWithoutRefSupplement"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RefResponseGetType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="RefOrder" type="common:RefOrderMultipleType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefShipment" type="common:RefShipmentType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RefShipmentType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="RefShipmentID" type="common:Number5.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefSupplementID" type="common:Number5.0_Type"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number9.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Range" type="common:RangeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RefShipmentTypeWithoutRefSupplement">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="RefShipmentID" type="common:Number5.0_Type"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number9.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Range" type="common:RangeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RefType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="RefOrder" type="common:RefOrderType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="RefShipment" type="common:RefShipmentType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ReturnType">
+        <xsd:sequence>
+          <xsd:element name="ReturnCode" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="ErrMsg" type="common:ErrorMessageType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="RubricType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="SearchResultType">
+        <xsd:sequence>
+          <xsd:element name="OrderHeader" type="common:OrderHeaderResponseSeekType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesSeekTypeWithContract"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionSeekResponseType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SeekMessageResultType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OmMessage" type="common:OmMessageType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SeekOrderMessageRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderRequestSeekOrderMessageType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesSeekTypeOnlyWithContract"/>
+          <xsd:element minOccurs="0" name="OmMessageParameters" type="common:OmMessageParametersType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="maxResult" type="common:Number5.0_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="SeekOrderMessageResponseType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element minOccurs="0" name="SeekMessageResult" type="common:SeekMessageResultType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="maxResultsExceeded" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="SeekOrderRequestType">
+        <xsd:sequence>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderRequestType"/>
+          <xsd:element minOccurs="0" name="OrderHeader" type="common:OrderHeaderRequestSeekType"/>
+          <xsd:element minOccurs="0" name="Parties" type="common:PartiesSeekTypeWithPayerCustIDOptionalAndWithContract"/>
+          <xsd:element minOccurs="0" name="Induction" type="common:InductionSeekType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="maxResult" type="common:string2_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="SeekOrderResponseType">
+        <xsd:sequence>
+          <xsd:element name="Return" type="common:ReturnType"/>
+          <xsd:element name="MsgHeader" type="common:MsgHeaderResponseType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="SearchResult" type="common:SearchResultType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OrderTree" type="common:OrderTreeSeekType"/>
+        </xsd:sequence>
+        <xsd:attribute name="codeTableVersion"
+          type="common:string5_Type" use="optional"/>
+        <xsd:attribute name="version" type="common:string5_Type" use="required"/>
+        <xsd:attribute name="testcase" type="xsd:boolean" use="optional"/>
+        <xsd:attribute name="maxResultsExceeded" type="xsd:boolean" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentChangeRequestType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ShipmentID" type="common:Number5.0_Type"/>
+          <xsd:element minOccurs="0" name="Desc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:string25_Type"/>
+          <xsd:element minOccurs="0" name="GWM" type="common:GWMType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="AdditionalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="MachineProcessable" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="MachineReadable" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="Addressed" type="common:string1Fix_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CodeApplied" type="common:Value50Type_Type"/>
+          <xsd:element minOccurs="0" name="IndividualWeight" type="common:IndividualWeightType"/>
+          <xsd:element minOccurs="0" name="Format" type="common:string1Fix_Type"/>
+          <xsd:element minOccurs="0" name="Length" type="common:LengthType"/>
+          <xsd:element minOccurs="0" name="Width" type="common:WidthType"/>
+          <xsd:element minOccurs="0" name="Thickness" type="common:ThicknessType"/>
+          <xsd:element minOccurs="0" name="InsuredValue" type="common:InsuredValueType"/>
+          <xsd:element minOccurs="0" name="CODAmount" type="common:CODAmountValueType"/>
+          <xsd:element minOccurs="0" name="NonDeliveryDisposition" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Supplement" type="common:SupplementType"/>
+          <xsd:element minOccurs="0" name="Postage" type="common:PostageType"/>
+          <xsd:element minOccurs="0" name="Destination" type="common:DestinationType"/>
+          <xsd:element minOccurs="0" name="RefDst" type="common:RefDestinationType"/>
+        </xsd:sequence>
+        <xsd:attribute name="updateMethod" type="common:string10_Type"/>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentCreateRequestType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ShipmentID" type="common:Number5.0_Type"/>
+          <xsd:element minOccurs="0" name="Desc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:string25_Type"/>
+          <xsd:element minOccurs="0" name="GWM" type="common:GWMType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="AdditionalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="MachineProcessable" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="MachineReadable" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="Addressed" type="common:string1Fix_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CodeApplied" type="common:Value50Type_Type"/>
+          <xsd:element minOccurs="0" name="IndividualWeight" type="common:IndividualWeightType"/>
+          <xsd:element minOccurs="0" name="Format" type="common:string1Fix_Type"/>
+          <xsd:element minOccurs="0" name="Length" type="common:LengthType"/>
+          <xsd:element minOccurs="0" name="Width" type="common:WidthType"/>
+          <xsd:element minOccurs="0" name="Thickness" type="common:ThicknessType"/>
+          <xsd:element minOccurs="0" name="InsuredValue" type="common:InsuredValueType"/>
+          <xsd:element minOccurs="0" name="CODAmount" type="common:CODAmountValueType"/>
+          <xsd:element minOccurs="0" name="NonDeliveryDisposition" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Supplement" type="common:SupplementType"/>
+          <xsd:element minOccurs="0" name="Postage" type="common:PostageType"/>
+          <xsd:element minOccurs="0" name="Destination" type="common:DestinationType"/>
+          <xsd:element minOccurs="0" name="RefDst" type="common:RefDestinationType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentItemRequestChangeType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Shipment" type="common:ShipmentChangeRequestType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="Item" type="common:ItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentItemRequestCreateType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Shipment" type="common:ShipmentCreateRequestType"/>
+          <xsd:element maxOccurs="unbounded" name="Item" type="common:ItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentItemRequestType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Shipment" type="common:ShipmentChangeRequestType"/>
+          <xsd:element maxOccurs="unbounded" name="Item" type="common:ItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentItemResponseGetType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Shipment" type="common:ShipmentResponseType"/>
+          <xsd:element maxOccurs="unbounded" name="Item" type="common:ItemResponseGetType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentItemResponseType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Shipment" type="common:ShipmentResponseType"/>
+          <xsd:element maxOccurs="unbounded" name="Item" type="common:ItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ShipmentResponseType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ShipmentID" type="common:Number5.0_Type"/>
+          <xsd:element minOccurs="0" name="Desc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:string25_Type"/>
+          <xsd:element minOccurs="0" name="GWM" type="common:GWMType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="AdditionalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="TotalQty" type="common:Number9.0_Type"/>
+          <xsd:element minOccurs="0" name="MachineProcessable" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="MachineReadable" type="xsd:boolean"/>
+          <xsd:element minOccurs="0" name="Addressed" type="common:string1Fix_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="CodeApplied" type="common:Value50Type_Type"/>
+          <xsd:element minOccurs="0" name="IndividualWeight" type="common:IndividualWeightType"/>
+          <xsd:element minOccurs="0" name="Format" type="common:string1Fix_Type"/>
+          <xsd:element minOccurs="0" name="Length" type="common:LengthType"/>
+          <xsd:element minOccurs="0" name="Width" type="common:WidthType"/>
+          <xsd:element minOccurs="0" name="Thickness" type="common:ThicknessType"/>
+          <xsd:element minOccurs="0" name="InsuredValue" type="common:InsuredValueType"/>
+          <xsd:element minOccurs="0" name="CODAmount" type="common:CODAmountValueType"/>
+          <xsd:element minOccurs="0" name="NonDeliveryDisposition" type="common:string50_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Supplement" type="common:SupplementType"/>
+          <xsd:element minOccurs="0" name="Postage" type="common:PostageType"/>
+          <xsd:element minOccurs="0" name="Destination" type="common:DestinationType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StateType">
+        <xsd:simpleContent>
+          <xsd:extension base="common:string3_Type">
+            <xsd:attribute name="final" type="xsd:boolean" use="optional"/>
+          </xsd:extension>
+        </xsd:simpleContent>
+      </xsd:complexType>
+      <xsd:complexType name="StatisticalOrderItemType">
+        <xsd:sequence>
+          <xsd:element name="RemittanceNumber" type="common:Number10Type"/>
+          <xsd:element name="UsageNumber" type="common:Number10Type"/>
+          <xsd:element minOccurs="0" name="EkpIDCustomer" type="common:String10Type"/>
+          <xsd:element name="CurrentDate" type="xsd:gYearMonth"/>
+          <xsd:element name="ProductIDUBMail" type="common:Number5Type"/>
+          <xsd:element name="NumberOfProducts" type="common:Number10Type"/>
+          <xsd:element name="Amount" type="common:Number10Type"/>
+          <xsd:element minOccurs="0" name="Currency" type="common:String3Type"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StatisticalOrderListType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="StatisticalOrder" type="common:StatisticalOrderType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="StatisticalOrderType">
+        <xsd:sequence>
+          <xsd:element name="RemittanceNumber" type="common:Number10Type"/>
+          <xsd:element name="ReceiptNumber" type="common:Number10Type"/>
+          <xsd:element name="Client" type="common:String3Type"/>
+          <xsd:element name="FrankingType" type="common:Number3Type"/>
+          <xsd:element name="FrankingVersion" type="common:Number3Type"/>
+          <xsd:element name="VersionPPL" type="common:Number3Type"/>
+          <xsd:element name="CommunicationID" type="common:Number3Type"/>
+          <xsd:element name="DateTimeOfCharge" type="xsd:dateTime"/>
+          <xsd:element name="TotalChargeAmount" type="common:Number13Type"/>
+          <xsd:element name="RemainingChargeAmount" type="common:Number8Type"/>
+          <xsd:element name="CurrentUse" type="common:Number10Type"/>
+          <xsd:element name="ItemNumber" type="common:Number10Type"/>
+          <xsd:element name="ChargeAmount" type="common:Number10Type"/>
+          <xsd:element name="EkpIDMailInitiator" type="common:String10Type"/>
+          <xsd:element minOccurs="0" name="ProcessParticipation" type="common:String4Type"/>
+          <xsd:element name="MaschineNumber" type="common:String10Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="StatisticalOrderItem" type="common:StatisticalOrderItemType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="string1-10_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-12_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="12"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-15_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="15"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-9_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="9"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-20_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-35_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="35"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-40_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="40"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-50_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="50"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1-200_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="200"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string100_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="100"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="String10Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:length value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string10_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="10"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string11_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="11"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string120_type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="120"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string13_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="13"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string14_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="14"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string15_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="15"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string17_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="17"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string18_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="18"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1Fix_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="1"/>
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string1_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="1"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string20_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string25_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="25"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string2Fix_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="2"/>
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string2_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="2"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string32_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="32"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string35_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="35"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string3Fix_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="3"/>
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="String3Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:length value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string3_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string40_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="40"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="String4Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:length value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string4_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="4"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string50_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="50"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string5_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="5"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="String64Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:length value="64"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string80_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="80"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="string8_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="8"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="SubmitterSMSType">
+        <xsd:sequence>
+          <xsd:element name="CustID" type="common:string10_Type"/>
+          <xsd:element minOccurs="0" name="Name" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Address" type="common:AddressType"/>
+          <xsd:element minOccurs="0" name="POBAddress" type="common:POBAddressType"/>
+          <xsd:element minOccurs="0" name="LargeCustZip" type="common:string10_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Contact" type="common:ContactType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SupplementType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="SupplementID" type="common:Number5.0_Type"/>
+          <xsd:element minOccurs="0" name="Desc" type="common:string120_type"/>
+          <xsd:element minOccurs="0" name="Type" type="common:string50_Type"/>
+          <xsd:element minOccurs="0" name="IndividualWeight" type="common:IndividualWeightType"/>
+          <xsd:element minOccurs="0" name="Thickness" type="common:ThicknessType"/>
+          <xsd:element minOccurs="0" name="Qty" type="common:Number4.0_Type"/>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="OtherAttribute" type="common:OtherAttributeType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ThicknessSupplementType">
+        <xsd:attribute name="value" type="common:Number10.0_Type" use="optional"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="ThicknessType">
+        <xsd:attribute name="value" type="common:Number9.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="TotalAmountType">
+        <xsd:attribute name="value" type="common:string13_Type" use="optional"/>
+        <xsd:attribute name="currency" type="common:string3_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="UnitType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="3"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="UserType">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="4"/>
+          <xsd:maxLength value="20"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="Value50Type_Type">
+        <xsd:attribute name="value" type="common:string50_Type" use="required"/>
+        <xsd:attribute name="type" type="common:string10_Type" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="Value5Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="5"/>
+          <xsd:pattern value="[0-9]*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ValueUnitType">
+        <xsd:attribute name="value" type="xsd:string" use="optional"/>
+        <xsd:attribute name="unit" type="xsd:string" use="optional"/>
+      </xsd:complexType>
+      <xsd:complexType name="WidthType">
+        <xsd:attribute name="value" type="common:Number9.3_Type" use="required"/>
+        <xsd:attribute name="unit" type="common:UnitType" use="optional"/>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderRequest"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:createOrderRequest="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderRequest">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="createOrderRequest" type="common:CreateOrderRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+      xmlns:createOrderResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createOrderResponse" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Exception" type="err:ExceptionFrame"/>
+            <xsd:element name="createOrderResponse" type="common:CreateChangeOrderResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/getOrderRequest"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:getOrderRequest="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/getOrderRequest">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="getOrderRequest" type="common:GetOrderRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/getOrderResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+      xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:getOrderResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/getOrderResponse">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Exception" type="err:ExceptionFrame"/>
+            <xsd:element name="getOrderResponse" type="common:GetOrderResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/processOrderManagementOperationsRequest"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:pomo="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/processOrderManagementOperationsRequest">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0"
+              name="processOrderManagementOperationsRequest" type="common:ProcessOrderManagementOperationsRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/processOrderManagementOperationsResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+      xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:pomo="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/processOrderManagementOperationsResponse">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element minOccurs="0" name="Exception" type="err:ExceptionFrame"/>
+            <xsd:element minOccurs="0"
+              name="processOrderManagementOperationsResponse" type="common:ProcessOrderManagementOperationsResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderMessageRequest"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:seekOrderMessageRequest="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderMessageRequest">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="seekOrderMessageRequest" type="common:SeekOrderMessageRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderMessageResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+      xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:seekOrderMessageResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderMessageResponse">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Exception" type="err:ExceptionType"/>
+            <xsd:element name="seekOrderMessageResponse" type="common:SeekOrderMessageResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderRequest"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" xmlns:seekOrder="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderRequest">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="seekOrderRequest" type="common:SeekOrderRequestType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderResponse"
+      xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common"
+      xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:seekOrderResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderResponse">
+      <xsd:element name="Response">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="Exception" type="err:ExceptionFrame"/>
+            <xsd:element name="seekOrderResponse" type="common:SeekOrderResponseType"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling">
+      <xsd:annotation>
+        <xsd:documentation>
+          <service>General Types errorHandling</service>
+          <creationdate>2005-05-17</creationdate>
+          <ServiceDesigner>Technical Service Design</ServiceDesigner>
+          <revisionhistory>1.0 Initial Version </revisionhistory>
+          <description>Includes errorHandling data types</description>
+        </xsd:documentation>
+      </xsd:annotation>
+      <xsd:complexType name="ExceptionFrame">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="ExceptionDetail" type="ExceptionType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExceptionType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0"
+            name="Reference" type="xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="ServiceParticipant"
+          type="ServiceParticipantType" use="required"/>
+        <xsd:attribute name="DomainName" type="xsd:string" use="required"/>
+        <xsd:attribute name="ServiceName" type="xsd:string" use="required"/>
+        <xsd:attribute name="Version" type="xsd:string" use="required"/>
+        <xsd:attribute name="Operation" type="xsd:string" use="required"/>
+        <xsd:attribute name="ExceptionClass" type="ExceptionClassType" use="required"/>
+        <xsd:attribute name="ExceptionID" type="ExceptionIDType" use="required"/>
+        <xsd:attribute name="ExceptionText" type="ExceptionTextType" use="required"/>
+        <xsd:attribute name="CAT_Severity" type="CAT_ITOLogLevel" use="required"/>
+        <xsd:attribute name="hasBeenLogged" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="LogTargetList" type="xsd:string" use="optional"/>
+      </xsd:complexType>
+      <xsd:simpleType name="ExceptionClassType">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="[A-Z]{1}[a-zA-Z0-9_]*Exception"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ExceptionIDType">
+        <xsd:restriction base="xsd:decimal">
+          <xsd:totalDigits fixed="true" value="5"/>
+          <xsd:minInclusive value="10000"/>
+          <xsd:maxInclusive value="99999"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ExceptionTextType">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength fixed="false" value="256"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="ServiceParticipantType">
+        <xsd:restriction base="xsd:string">
+          <xsd:length value="9"/>
+          <xsd:pattern value="[0-9]*"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="CAT_ITOLogLevel">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="NORM"/>
+          <xsd:enumeration value="WARN"/>
+          <xsd:enumeration value="MINO"/>
+          <xsd:enumeration value="MAJO"/>
+          <xsd:enumeration value="CRIT"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema
+      targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createStatisticalOrderRequest"
+      xmlns="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createStatisticalOrderRequest" xmlns:om="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common">
+      <xsd:element name="Request">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="StatisticalOrderList" type="om:StatisticalOrderListType"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <wsdl:message name="cancelOrderRequest">
+    <wsdl:part element="svn0:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderResponse">
+    <wsdl:part element="svn1:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderAsyncRequest">
+    <wsdl:part element="svn0:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="changeOrderRequest">
+    <wsdl:part element="svn2:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="changeOrderResponse">
+    <wsdl:part element="svn3:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="changeOrderAsyncRequest">
+    <wsdl:part element="svn2:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="createOrderRequest">
+    <wsdl:part element="svn5:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="createOrderResponse">
+    <wsdl:part element="svn6:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="createOrderAsyncRequest">
+    <wsdl:part element="svn5:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getOrderRequest">
+    <wsdl:part element="svn7:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getOrderResponse">
+    <wsdl:part element="svn8:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="getOrderAsyncRequest">
+    <wsdl:part element="svn7:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="processOrderManagementOperationsRequest">
+    <wsdl:part element="svn9:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="processOrderManagementOperationsResponse">
+    <wsdl:part element="svn10:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="processOrderManagementOperationsAsyncRequest">
+    <wsdl:part element="svn9:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderMessageRequest">
+    <wsdl:part element="svn11:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderMessageResponse">
+    <wsdl:part element="svn12:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderMessageAsyncRequest">
+    <wsdl:part element="svn11:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderRequest">
+    <wsdl:part element="svn13:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderResponse">
+    <wsdl:part element="svn14:Response" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderAsyncRequest">
+    <wsdl:part element="svn13:Request" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderAsyncResponse">
+    <wsdl:part element="svn1:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="changeOrderAsyncResponse">
+    <wsdl:part element="svn3:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="cancelOrderAsyncFault">
+    <wsdl:part element="svn1:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="changeOrderAsyncFault">
+    <wsdl:part element="svn3:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="createOrderAsyncResponse">
+    <wsdl:part element="svn6:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="createOrderAsyncFault">
+    <wsdl:part element="svn6:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="getOrderAsyncResponse">
+    <wsdl:part element="svn8:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="getOrderAsyncFault">
+    <wsdl:part element="svn8:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="processOrderManagementOperationsAsyncResponse">
+    <wsdl:part element="svn10:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="processOrderManagementOperationsAsyncFault">
+    <wsdl:part element="svn10:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderMessageAsyncResponse">
+    <wsdl:part element="svn12:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderMessageAsyncFault">
+    <wsdl:part element="svn12:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderAsyncResponse">
+    <wsdl:part element="svn14:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="seekOrderAsyncFault">
+    <wsdl:part element="svn14:Response" name="body"/>
+  </wsdl:message>
+  <wsdl:message name="createStatisticalOrderRequest">
+    <wsdl:part element="svn16:Request" name="parameters"/>
+  </wsdl:message>
+  <portType name="OrderManagement" sdx:status="design" sdx:version="4.4">
+    <wsdl:operation name="cancelOrder">
+      <wsdl:input message="tns:cancelOrderRequest"/>
+      <wsdl:output message="tns:cancelOrderResponse"/>
+      <wsdl:fault message="tns:cancelOrderResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrderAsync">
+      <wsdl:input message="tns:cancelOrderAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrder">
+      <wsdl:input message="tns:changeOrderRequest"/>
+      <wsdl:output message="tns:changeOrderResponse"/>
+      <wsdl:fault message="tns:changeOrderResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrderAsync">
+      <wsdl:input message="tns:changeOrderAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrder">
+      <wsdl:input message="tns:createOrderRequest"/>
+      <wsdl:output message="tns:createOrderResponse"/>
+      <wsdl:fault message="tns:createOrderResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrderAsync">
+      <wsdl:input message="tns:createOrderAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrder">
+      <wsdl:input message="tns:getOrderRequest"/>
+      <wsdl:output message="tns:getOrderResponse"/>
+      <wsdl:fault message="tns:getOrderResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderAsync">
+      <wsdl:input message="tns:getOrderAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="processOrderManagementOperations">
+      <wsdl:input message="tns:processOrderManagementOperationsRequest"/>
+      <wsdl:output message="tns:processOrderManagementOperationsResponse"/>
+      <wsdl:fault message="tns:processOrderManagementOperationsResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="processOrderManagementOperationsAsync">
+      <wsdl:input message="tns:processOrderManagementOperationsAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderMessage">
+      <wsdl:input message="tns:seekOrderMessageRequest"/>
+      <wsdl:output message="tns:seekOrderMessageResponse"/>
+      <wsdl:fault message="tns:seekOrderMessageResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderMessageAsync">
+      <wsdl:input message="tns:seekOrderMessageAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrder">
+      <wsdl:input message="tns:seekOrderRequest"/>
+      <wsdl:output message="tns:seekOrderResponse"/>
+      <wsdl:fault message="tns:seekOrderResponse" name="fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderAsync">
+      <wsdl:input message="tns:seekOrderAsyncRequest"/>
+    </wsdl:operation>
+    <wsdl:operation name="createStatisticalOrder">
+      <wsdl:input message="tns:createStatisticalOrderRequest"/>
+    </wsdl:operation>
+  </portType>
+  <wsdl:portType name="OrderManagementConsumer"
+    sdx:partnerPortType="tns:OrderManagement" sdx:status="design">
+    <wsdl:operation name="cancelOrderAsyncResponse"
+      sdx:faultOperation="true" sdx:partnerOperation="cancelOrderAsync">
+      <wsdl:input message="tns:cancelOrderAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrderAsyncResponse" sdx:partnerOperation="changeOrderAsync">
+      <wsdl:input message="tns:changeOrderAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="cancelOrderAsyncFault" sdx:partnerOperation="cancelOrderAsync">
+      <wsdl:input message="tns:cancelOrderAsyncFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrderAsyncFault" sdx:partnerOperation="changeOrderAsync">
+      <wsdl:input message="tns:changeOrderAsyncFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrderAsyncResponse" sdx:partnerOperation="createOrderAsync">
+      <wsdl:input message="tns:createOrderAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="createOrderAsyncFault" sdx:partnerOperation="createOrderAsync">
+      <wsdl:input message="tns:createOrderAsyncFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderAsyncResponse" sdx:partnerOperation="getOrderAsync">
+      <wsdl:input message="tns:getOrderAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderAsyncFault" sdx:partnerOperation="getOrderAsync">
+      <wsdl:input message="tns:getOrderAsyncFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="processOrderManagementOperationsAsyncResponse" sdx:partnerOperation="processOrderManagementOperationsAsync">
+      <wsdl:input message="tns:processOrderManagementOperationsAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="processOrderManagementOperationsAsyncFault" sdx:partnerOperation="processOrderManagementOperationsAsync">
+      <wsdl:input message="tns:processOrderManagementOperationsAsyncFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderMessageAsyncResponse" sdx:partnerOperation="seekOrderMessageAsync">
+      <wsdl:input message="tns:seekOrderMessageAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderMessageAsyncFault" sdx:partnerOperation="seekOrderMessageAsync">
+      <wsdl:input message="tns:seekOrderMessageAsyncFault"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderAsyncResponse" sdx:partnerOperation="seekOrderAsync">
+      <wsdl:input message="tns:seekOrderAsyncResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderAsyncFault" sdx:partnerOperation="seekOrderAsync">
+      <wsdl:input message="tns:seekOrderAsyncFault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <plnk:partnerLinkType name="CallbackPartnerLink" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/">
+    <plnk:role name="service">
+      <plnk:portType name="tns:OrderManagement"/>
+    </plnk:role>
+    <plnk:role name="callback">
+      <plnk:portType name="tns:OrderManagementConsumer"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsdl:service name="OrderManagementProvider">
+    <wsdl:port binding="isdx:httpBinding" name="httpPort">
+      <soap:address location="https://sop-ws.deutschepost.de:10443/sbb/services/Invoke"/>
+    </wsdl:port>
+    <wsdl:port binding="isdx:jmsBinding" name="jmsPort">
+      <jms:address destinationStyle="queue"
+        initialContextFactory="org.sopware.naming.wsmqmom.WSMQPseudoInitialContextFactory"
+        isSharedDestination="false"
+        jndiConnectionFactoryName="TYPE(QCF)TRANSPORT(CLIENT)HOST(sopfra02.deutschepost.de)PORT(1414)QMGR(SOPFRA02)CHANNEL(P1.AM.SVRCONN)"
+        jndiDestinationName="TYPE(Queue)QU(P1.UB.AM.ORDERMANAGEMENT.4.4.REQUEST)" jndiProviderURL="wsmqmom://"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsdl:binding name="httpBinding" type="isdx:OrderManagement">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="cancelOrder">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#cancelOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrder">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#changeOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createOrder">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#createOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getOrder">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#getOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processOrderManagementOperations">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#processOrderManagementOperations"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderMessage">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#seekOrderMessage"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrder">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#seekOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="fault">
+        <soap:fault name="fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="jmsBinding" type="isdx:OrderManagement">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/jms"/>
+    <wsdl:operation name="cancelOrderAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#cancelOrderAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="changeOrderAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#changeOrderAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="createOrderAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#createOrderAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="getOrderAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#getOrderAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="processOrderManagementOperationsAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#processOrderManagementOperationsAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderMessageAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#seekOrderMessageAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="seekOrderAsync">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#seekOrderAsync"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="createStatisticalOrder">
+      <soap:operation soapAction="OrderManagement/OrderManagement/4.4#createStatisticalOrder"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+</definitions>

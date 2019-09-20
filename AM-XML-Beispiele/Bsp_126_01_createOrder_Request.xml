@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Mario Haas
+Version: 1.0
+Erstellung: 12.04.2010
+Beispiel: 126_01
+Beschreibung: Neuanlage eines Einlieferungsauftrages für Presse und Buch International zum Kilotarif mit BZL in verschiedene Zonen
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel 126</OrderLabel>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>151112A12600100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>50</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2015-11-14T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Type>KIL</Type>
+				<GWM value="92.6" unit="kg"/>
+				<Qty>879</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="1" to="325" cc="NL"/>
+					<Dst from="326" to="879" cc="BE"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Presse z.Kilotarif Land (Zone EU) -->
+					<ProductNumber>110200002</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<!-- davon sind 624 mit Nachname -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>1</RefShipmentID>
+						<Qty>624</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Zone EU -->
+					<ProductNumber>1098</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Type>KIL</Type>
+				<GWM value="27.2" unit="kg"/>
+				<Qty>453</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="880" to="1085" cc="CH"/>
+					<Dst from="1086" to="1332" cc="TR"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Presse z.Kilotarif Land (Zone Rest Europa) -->
+					<ProductNumber>110210002</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>5</ItemID>
+				<!-- davon sind 297 mit Nachname -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>297</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Nachname Zone Non-EU -->
+					<ProductNumber>1729</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>6</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Type>KIL</Type>
+				<GWM value="12.2" unit="kg"/>
+				<Qty>150</Qty>
+				<Postage>
+					<Type>DV</Type>
+					<PaymentClearingNumber>0001</PaymentClearingNumber>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="1333" to="1399" cc="US"/>
+					<Dst from="1400" to="1482" cc="CA"/>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>7</ItemID>
+				<LineItem>
+					<!-- Presse und Buch Int. Welt - Luft (Kilo) -->
+					<ProductNumber>110100001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>8</ItemID>
+				<!-- davon sind 120 Einschreiben -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>3</RefShipmentID>
+						<Qty>120</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Einschreiben -->
+					<ProductNumber>1095</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>9</ItemID>
+				<!-- davon sind 100 mit Rückschein -->
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>3</RefShipmentID>
+						<Qty>100</Qty>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- mit Rückschein -->
+					<ProductNumber>1097</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>10</ItemID>
+				<LineItem>
+					<!-- Entgeltermäßigung DV-Freimachung -->
+					<ProductNumber>239036248</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

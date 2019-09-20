@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/getOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <getOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110421090938</ODOCID>
+      <CreationDateTime>2017-11-15T09:01:00</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>5.0</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader includesDestinations="true" includesPackaging="false" >
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2017-11-15T09:01:00</ChangedAt>
+      <OrderType>EA</OrderType>
+      <State>EA</State>
+      <Released>true</Released>
+      <AchievedDataQuality>EA</AchievedDataQuality>
+      <OrderLabel>AM-XML Beispiel Warenpost</OrderLabel>
+      <CreationDate>2017-11-15</CreationDate>
+      <SubmissionType>G</SubmissionType>
+      <SubmissionID>1</SubmissionID>
+      <OrderCategory>WP_INTERNATIONAL</OrderCategory>
+      <OrderCategoryGroup>BRIEF</OrderCategoryGroup>
+      <OrderID>00000004111069</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>170801A14200100</SystemID>
+      </CustOrderID>
+      <TotalAmount value="31.50" currency="EUR" />
+    </OrderHeader>
+    <Parties>
+      <Originator>
+        <CustID>6000000121</CustID>
+        <Name>Max Muster 001</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+      </Originator>
+      <Submitter>
+        <CustID>6002000131</CustID>
+        <Name>Schnelltransport GmbH</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+      </Submitter>
+      <Payer>
+        <CustID>6000000121</CustID>
+        <Name>Max Muster 001</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+        <PaymentMeans>
+          <Procedure>51</Procedure>
+          <Participation>01</Participation>
+        </PaymentMeans>
+      </Payer>
+    </Parties>
+    <Induction>
+      <TransitDirectionCode>E</TransitDirectionCode>
+      <ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+      <EarliestDateTime>2017-12-01T10:00:00</EarliestDateTime>
+      <LatestDateTime>2017-12-01T10:00:00</LatestDateTime>
+    </Induction>
+    <ShipmentItem>
+      <Shipment>
+        <ShipmentID>1</ShipmentID>
+        <Desc>Warenpost EU L</Desc>
+        <Type>EIZ</Type>
+		<GWM value="1.3" unit="kg"/>
+        <Qty>2</Qty>
+        <AdditionalQty>0</AdditionalQty>
+        <MachineProcessable>true</MachineProcessable>
+        <MachineReadable>true</MachineReadable>
+        <Addressed>A</Addressed>
+        <Postage>
+          <Type>FV</Type>
+        </Postage>
+		<Destination prec="0">
+			<Dst from="1" cc="AT" id="LA999000017DE"/>
+			<Dst from="2" cc="BE" id="LA999000025DE"/>
+		</Destination>
+      </Shipment>
+      <Shipment>
+        <ShipmentID>2</ShipmentID>
+        <Desc>Warenpost EU U</Desc>
+        <Type>EIZ</Type>
+		<GWM value="0.8" unit="kg"/>
+        <Qty>1</Qty>
+        <AdditionalQty>0</AdditionalQty>
+        <MachineProcessable>true</MachineProcessable>
+        <MachineReadable>true</MachineReadable>
+        <Addressed>A</Addressed>
+        <Postage>
+          <Type>FV</Type>
+        </Postage>
+		<Destination prec="0">
+			<Dst from="3" cc="ES" id="UA998000015DE"/>
+		</Destination>
+      </Shipment>
+      <Shipment>
+        <ShipmentID>3</ShipmentID>
+        <Desc>Warenpost Non-EU L</Desc>
+        <Type>EIZ</Type>
+		<GWM value="1.5" unit="kg"/>
+        <Qty>1</Qty>
+        <AdditionalQty>0</AdditionalQty>
+        <MachineProcessable>true</MachineProcessable>
+        <MachineReadable>true</MachineReadable>
+        <Addressed>A</Addressed>
+        <Postage>
+          <Type>FV</Type>
+        </Postage>
+		<Destination prec="0">
+			<Dst from="4" cc="CH" id="LA999000034DE"/>
+		</Destination>
+      </Shipment>
+      <Shipment>
+        <ShipmentID>4</ShipmentID>
+        <Desc>Warenpost Non-EU U</Desc>
+        <Type>EIZ</Type>
+		<GWM value="0.5" unit="kg"/>
+        <Qty>1</Qty>
+        <AdditionalQty>0</AdditionalQty>
+        <MachineProcessable>true</MachineProcessable>
+        <MachineReadable>true</MachineReadable>
+        <Addressed>A</Addressed>
+        <Postage>
+          <Type>FV</Type>
+        </Postage>
+		<Destination prec="0">
+			<Dst from="5" cc="US" id="UA998000024DE"/>
+		</Destination>
+      </Shipment>
+      <Item>
+        <ItemID>1</ItemID>
+        <TotalAmount value="12.50" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>1</RefShipmentID>
+            <Qty>2</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>257400003</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>2</ItemID>
+        <TotalAmount value="5.00" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>2</RefShipmentID>
+            <Qty>1</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>257400001</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>3</ItemID>
+        <TotalAmount value="10.50" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>3</RefShipmentID>
+            <Qty>1</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>257400007</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>4</ItemID>
+        <TotalAmount value="3.50" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>4</RefShipmentID>
+            <Qty>1</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>257400005</ProductNumber>
+        </LineItem>
+      </Item>
+    </ShipmentItem>
+  </getOrderResponse>
+</n:Response>

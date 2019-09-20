@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/getOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <getOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>OK</ReturnCode>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20110421090944</ODOCID>
+      <CreationDateTime>2011-04-21T09:09:45</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader includesDestinations="true" includesPackaging="true" >
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2011-04-21T09:09:22</ChangedAt>
+      <OrderType>EA</OrderType>
+      <State>DM</State>
+      <Released>true</Released>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderLabel>AM-XML Beispiel</OrderLabel>
+      <CreationDate>2011-04-21</CreationDate>
+      <SubmissionType>G</SubmissionType>
+      <SubmissionID>1</SubmissionID>
+      <OrderCategory>IP_EINZEL</OrderCategory>
+      <OrderCategoryGroup>IP</OrderCategoryGroup>
+      <OrderID>00000004111069</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>110512A04000100</SystemID>
+      </CustOrderID>
+      <TotalAmount value="7211.25" currency="EUR" />
+    </OrderHeader>
+    <Parties>
+      <Originator>
+        <CustID>6000000121</CustID>
+        <Name>Max Muster 001</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+      </Originator>
+      <Submitter>
+        <CustID>6002000131</CustID>
+        <Name>Schnelltransport GmbH</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+      </Submitter>
+      <Payer>
+        <CustID>6000000121</CustID>
+        <Name>Max Muster 001</Name>
+        <Address>
+          <StreetName>Markenkamp</StreetName>
+          <StreetNumber>17</StreetNumber>
+          <Zip>21335</Zip>
+          <CityName>Buldern</CityName>
+          <CC>DE</CC>
+        </Address>
+        <POBAddress>
+          <Zip>66666</Zip>
+          <CityName>Musterdorf</CityName>
+          <Postbox>1</Postbox>
+          <CC>DE</CC>
+        </POBAddress>
+        <LargeCustZip>37601</LargeCustZip>
+        <PaymentMeans>
+          <Procedure>10</Procedure>
+          <Participation>01</Participation>
+        </PaymentMeans>
+      </Payer>
+    </Parties>
+    <Induction>
+      <TransitDirectionCode>E</TransitDirectionCode>
+      <ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+      <EarliestDateTime>2015-05-14T10:00:00</EarliestDateTime>
+      <LatestDateTime>2011-05-14T10:00:00</LatestDateTime>
+    </Induction>
+    <ShipmentItem>
+      <Shipment>
+        <ShipmentID>1</ShipmentID>
+        <Desc>Infopost Standard</Desc>
+        <Type>EIZ</Type>
+        <Qty>30000</Qty>
+        <AdditionalQty>0</AdditionalQty>
+        <MachineProcessable>true</MachineProcessable>
+        <MachineReadable>true</MachineReadable>
+        <Addressed>A</Addressed>
+        <IndividualWeight value="19" unit="g" />
+        <Format>S</Format>
+        <Length value="235" unit="mm" />
+        <Width value="125" unit="mm" />
+        <Thickness value="4" unit="mm" />
+        <Postage>
+          <Type>DV</Type>
+          <PaymentClearingNumber>1</PaymentClearingNumber>
+          <FrankingIdEncoding>DEC</FrankingIdEncoding>
+        </Postage>
+        <Destination prec="5">
+          <Dst
+            from="1501"
+            to="6000"
+            cc="DE"
+            zip="23437"
+            qty="4500"
+            precT="2" />
+          <Dst
+            from="19501"
+            to="22500"
+            cc="DE"
+            zip="75643"
+            qty="3000"
+            precT="2" />
+          <Dst
+            from="27001"
+            to="30000"
+            cc="DE"
+            zip="97626"
+            qty="3000"
+            precT="2" />
+          <Dst
+            from="9001"
+            to="12000"
+            cc="DE"
+            zip="42454"
+            qty="3000"
+            precT="2" />
+          <Dst
+            from="15001"
+            to="19500"
+            cc="DE"
+            zip="62435"
+            qty="4500"
+            precT="2" />
+          <Dst
+            from="1"
+            to="500"
+            cc="DE"
+            zip="14532"
+            qty="500" />
+          <Dst
+            from="6001"
+            to="9000"
+            cc="DE"
+            zip="38735"
+            qty="3000"
+            precT="2" />
+          <Dst
+            from="22501"
+            to="27000"
+            cc="DE"
+            zip="87654"
+            qty="4500"
+            precT="2" />
+          <Dst
+            from="12001"
+            to="15000"
+            cc="DE"
+            zip="56754"
+            qty="3000"
+            precT="2" />
+          <Dst
+            from="501"
+            to="1500"
+            cc="DE"
+            zip="16552"
+            qty="1000" />
+        </Destination>
+      </Shipment>
+      <Item>
+        <ItemID>3</ItemID>
+        <TotalAmount value="-213.75" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>1</RefShipmentID>
+            <Qty>28500</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>001140101</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>1</ItemID>
+        <TotalAmount value="7500" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>1</RefShipmentID>
+            <Qty>30000</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>140100001</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>2</ItemID>
+        <TotalAmount value="-75" currency="EUR" />
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>1</RefShipmentID>
+            <Qty>30000</Qty>
+          </RefShipment>
+        </Ref>
+        <LineItem>
+          <ProductNumber>239036248</ProductNumber>
+        </LineItem>
+      </Item>
+    </ShipmentItem>
+  </getOrderResponse>
+</n:Response>

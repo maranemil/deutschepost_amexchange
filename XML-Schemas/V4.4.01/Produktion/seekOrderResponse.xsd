@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Udo Reuter
+Version  : 4.4.01
+Datum    : 24.08.2015
+Copyright Deutsche Post AG
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:seekOrderResponse="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderResponse" xmlns:common="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/seekOrderResponse">
+	<xsd:import namespace="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" schemaLocation="errorHandling.xsd"/>
+	<xsd:import namespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" schemaLocation="common.xsd"/>
+	<xsd:element name="Response">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element name="Exception" type="err:ExceptionFrame"/>
+				<xsd:element name="seekOrderResponse" type="common:SeekOrderResponseType"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

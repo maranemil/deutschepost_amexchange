@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Roger Osterbart
+Erstellung: 21.09.2018
+Beispiel: 147_01
+Beschreibung: Neuanlage eines Einlieferungsauftrages für internationale Warenpost mit Daten zur elektronischen Zollinhaltserklärung bzw. zu INTERCONNECT. 
+Die Zollinhaltsdaten werden an die Zollbehörden des Ziellandes weitergegeben (analog zur Erklärung CN23).
+Das Beispiel berücksichtigt einerseits die Warenpost int mit Unterschrift und die Kombination Warenpost int untracked mit dem Ländernachweis. 
+Weiterhin wird hier der createOrder bereits mit S10-IDs erstellt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2017-11-15T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6002000131</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>5.0</SystemVersion>
+				<CertificationDate>2015-11-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<State>AU</State>
+			<OrderLabel>AM-XML Beispiel Warenpost</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6002000131</CustID>
+				<SystemID>190102A14200100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<!-- Für die Übermittlung der Absendersenderdaten an die Postgesellschaft im Zielland werden die Adress-Stammdaten zur Kundenummer verwendet, wenn angegeben. -->
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+			</Submitter>
+			<Payer>
+				<CustID>6000000121</CustID>
+				<PaymentMeans>
+					<Procedure>51</Procedure>
+					<Participation>01</Participation>
+				</PaymentMeans>
+			</Payer>
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>E</TransitDirectionCode>
+			<ProductionPlantID>GrASt-56-3-01</ProductionPlantID>
+			<EarliestDateTime>2019-01-02T10:00:00</EarliestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Desc>Warenpost EU L</Desc>
+				<Type>KIL</Type>
+				<GWM value="1.3" unit="kg"/>
+				<Qty>2</Qty>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<!--
+					Den Sendungen werden Sendungs-IDs für die Sendungsverfolgung bzw. für die Erkennbarkeit für den Zoll im Zielland zugeordnet. 
+					Die Sendungs-IDs sind über ein getOrder abzufragen.
+					-->
+					<Dst from="1" cc="AT" id="LA999000017DE">
+						<Consignee>
+							<Name>Vorname Name</Name>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<District>Region</District>
+									<Zip>XX1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>at@ma.il</Email>
+								<Phone>0123456</Phone>
+							</Contact>
+						</Consignee>
+					</Dst>
+					<!-- Die ID- Nummernkreise können mittels dem Service Number-Management abgerufen werden -->
+					<Dst from="2" cc="BE" id="LA999000025DE">
+						<Consignee>
+							<!-- Minimalangaben -->
+							<Name>Vorname Name</Name>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<Zip>YY1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>be@ma.il</Email>
+							</Contact>
+						</Consignee>
+					</Dst>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Warenpost Kilotarif EU tracked -->
+					<ProductNumber>257400003</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>2</ShipmentID>
+				<Desc>Warenpost EU U / LNV</Desc>
+				<Type>KIL</Type>
+				<GWM value="1.2" unit="kg"/>
+				<Qty>2</Qty>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="3" cc="ES" id="UA998000015DE">
+						<Consignee>
+							<!-- Minimalangaben -->
+							<Name>Vorname Name</Name>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<Zip>ZZ1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>es@ma.il</Email>
+							</Contact>
+						</Consignee>
+					</Dst>
+					<Dst from="4" cc="NL" id="AT998000015DE">
+						<Consignee>
+							<!-- Minimalangaben -->
+							<Name>Vorname Name</Name>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<Zip>ZZ1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>es@ma.il</Email>
+							</Contact>
+						</Consignee>
+					</Dst>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!-- Warenpost Kilotarif EU untracked -->
+					<ProductNumber>257400001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>3</ItemID>
+				<Ref>
+					<RefShipment>
+						<RefShipmentID>2</RefShipmentID>
+						<Qty>1</Qty>
+						<Range from="4" to="4"/>
+					</RefShipment>
+				</Ref>
+				<LineItem>
+					<!-- Ländernachweis -->
+					<ProductNumber>1975</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>3</ShipmentID>
+				<Desc>Warenpost Non-EU L</Desc>
+				<Type>KIL</Type>
+				<GWM value="1.5" unit="kg"/>
+				<Qty>1</Qty>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="5" cc="CH" id="LA999000034DE">
+						<Consignee>
+							<!-- Vollständige Befüllung -->
+							<Name>Vorname Name</Name>
+							<CustomsNumber>CB01</CustomsNumber>
+							<TaxID>X00000</TaxID>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<District>Region</District>
+									<Zip>XX1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>ch@ma.il</Email>
+								<Phone>0123456</Phone>
+							</Contact>
+						</Consignee>
+						<ProductName>Verkaufsprodukt</ProductName>
+						<Content>
+							<SenderReference>TZ7890</SenderReference>
+							<NatureOfGoods sample="false" gift="false" doc="false" other="true" returnedGood="false"/>
+							<Explication>Erklärung Sonstiges</Explication>
+							<Comment>Erläuterung</Comment>
+							<GWM value="1.5" unit="kg"/>
+							<TotalValue currency="EUR" value="699.00"/>
+							<PostageAmount currency="EUR" value="10.50"/>
+							<Document type="license" ref="1234"/>
+							<Document type="certificate" ref="1235"/>
+							<Document type="invoice" ref="1236"/>
+							<ContentPiece num="1" qty="1" desc="Schuhe" value="699.00" currency="EUR" weight="1.3" unit="kg" origin="IT" hstariff="999999"/>
+						</Content>
+					</Dst>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>4</ItemID>
+				<LineItem>
+					<!-- Warenpost Kilotarif Non-EU tracked -->
+					<ProductNumber>257400007</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>4</ShipmentID>
+				<Desc>Warenpost Non-EU U</Desc>
+				<Type>KIL</Type>
+				<GWM value="0.5" unit="kg"/>
+				<Qty>1</Qty>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="6" cc="US" id="UA998000024DE">
+						<Consignee>
+							<Name>Vorname Name</Name>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<Zip>XX1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>us@ma.il</Email>
+							</Contact>
+						</Consignee>
+						<Content>
+							<NatureOfGoods sample="true" gift="false" doc="false" other="false" returnedGood="false"/>
+							<GWM value="0.5" unit="kg"/>
+							<TotalValue currency="EUR" value="28.00"/>
+							<ContentPiece num="1" qty="1" desc="DVD Film 1" value="14.00" currency="EUR" weight="0.25" unit="kg" origin="DE"/>
+							<ContentPiece num="2" qty="1" desc="DVD Film 2" value="14.00" currency="EUR" weight="0.25" unit="kg" origin="FR"/>
+						</Content>
+					</Dst>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>5</ItemID>
+				<LineItem>
+					<!-- Warenpost Kilotarif Non-EU untracked -->
+					<ProductNumber>257400005</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>5</ShipmentID>
+				<Desc>Warenpost EU signed</Desc>
+				<Type>KIL</Type>
+				<GWM value="0.8" unit="kg"/>
+				<Qty>1</Qty>
+				<Postage>
+					<Type>FV</Type>
+				</Postage>
+				<Destination prec="0">
+					<Dst from="7" cc="ES" id="RY998200003DE">
+						<Consignee>
+							<!-- Minimalangaben -->
+							<Name>Vorname Name</Name>
+							<Contact>
+								<Address>
+									<StreetName>Straße</StreetName>
+									<StreetNumber>0</StreetNumber>
+									<Zip>ZZ1234</Zip>
+									<CityName>Stadt</CityName>
+								</Address>
+								<Email>es@ma.il</Email>
+							</Contact>
+						</Consignee>
+					</Dst>
+				</Destination>
+			</Shipment>
+			<Item>
+				<ItemID>6</ItemID>
+				<LineItem>
+					<!-- Warenpost Kilotarif EU mit Unterschrift -->
+					<ProductNumber>257400009</ProductNumber>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+	</createOrderRequest>
+</n:Request>

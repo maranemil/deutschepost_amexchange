@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 01.12.2016
+Beispiel: 083_01
+Beschreibung:
+Neuanlage eines Postwurfspezialauftrag im Format Standard mit einer Sendungsmenge zwischen 4000 und 19999 Sendungen. Aufgrund dieser Sendungsmenge ist der Zuschlag EASY notwendig. Die Rolle Producer wird mit der Kundennummer des Adresselieferanten belegt.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" 
+xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+    <MsgHeader>
+      <MsgID>161118145539D00000376</MsgID>
+      <CreationDateTime>2016-12-01T14:55:39</CreationDateTime>
+      <Receiver>DPAG</Receiver>
+      <SubmitterSMS>
+        <CustID>6002000131</CustID>
+      </SubmitterSMS>
+      <Origin>
+        <SystemName>AM-Test</SystemName>
+        <SystemVersion>4.4</SystemVersion>
+        <CertificationDate>2016-12-01</CertificationDate>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader>
+      <OrderType>EA</OrderType>
+      <State>AU</State>
+      <OrderLabel>AM-XML Beispiel</OrderLabel>
+      <SubmissionType>G</SubmissionType>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemID>161201A08300100</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+    <Parties>
+      <Originator>
+        <CustID>6000000121</CustID>
+      </Originator>
+      <!-- Hier wird die Kundnennummer des Adresslieferanten eingetragen -->
+      <Producer>
+        <CustID>7000033277</CustID>
+      </Producer>
+      <Submitter>
+        <CustID>6002000131</CustID>
+      </Submitter>
+      <Payer>
+        <CustID>6000000121</CustID>
+        <PaymentMeans>
+          <PostCardID>60000001212501001</PostCardID>
+        </PaymentMeans>
+      </Payer>
+    </Parties>
+    <Induction>
+      <TransitDirectionCode>E</TransitDirectionCode>
+      <ProductionPlantID>GrASt-64-3-01</ProductionPlantID>
+      <EarliestDateTime>2017-01-25T12:00:00</EarliestDateTime>
+    </Induction>
+    <ShipmentItem>
+      <Shipment>
+        <ShipmentID>1</ShipmentID>
+        <Desc>PWSp</Desc>
+        <Qty>6107</Qty>
+        <IndividualWeight value="20" unit="g"/>
+        <Format>S</Format>
+        <Postage>
+        <!-- Als Freimachungsart wird immer FV verwendet -->
+          <Type>FV</Type>
+        </Postage>
+        <Destination prec="5">
+          <Dst zip="50126" qty="313" precP="2" precT="5"/>
+          <Dst zip="50127" qty="240" precP="2" precT="5"/>
+          <Dst zip="50129" qty="383" precP="2" precT="5"/>
+          <Dst zip="50169" qty="344" precP="2" precT="5"/>
+          <Dst zip="50170" qty="355" precP="2" precT="5"/>
+          <Dst zip="50171" qty="250" precP="2" precT="5"/>
+          <Dst zip="50181" qty="501" precP="2" precT="5"/>
+          <Dst zip="50189" qty="465" precP="2" precT="5"/>
+          <Dst zip="50226" qty="164" precP="2" precT="5"/>
+          <Dst zip="50321" qty="173" precP="2" precT="5"/>
+          <Dst zip="50354" qty="454" precP="2" precT="5"/>
+          <Dst zip="50374" qty="299" precP="2" precT="5"/>
+          <Dst zip="50389" qty="344" precP="2" precT="5"/>
+          <Dst zip="50733" qty="17" precP="2" precT="2"/>
+          <Dst zip="50735" qty="64" precP="2" precT="2"/>
+          <Dst zip="50737" qty="81" precP="2" precT="2"/>
+          <Dst zip="50739" qty="114" precP="2" precT="5"/>
+          <Dst zip="50765" qty="184" precP="2" precT="5"/>
+          <Dst zip="50767" qty="80" precP="2" precT="2"/>
+          <Dst zip="50769" qty="153" precP="2" precT="5"/>
+          <Dst zip="50825" qty="37" precP="2" precT="2"/>
+          <Dst zip="50827" qty="96" precP="2" precT="2"/>
+          <Dst zip="50829" qty="105" precP="2" precT="5"/>
+          <Dst zip="50937" qty="8" precP="2" precT="2"/>
+          <Dst zip="50939" qty="9" precP="2" precT="2"/>
+          <Dst zip="50969" qty="11" precP="2" precT="2"/>
+          <Dst zip="51063" qty="45" precP="2" precT="2"/>
+          <Dst zip="51065" qty="15" precP="2" precT="2"/>
+          <Dst zip="51067" qty="81" precP="2" precT="2"/>
+          <Dst zip="51069" qty="75" precP="2" precT="2"/>
+          <Dst zip="51103" qty="19" precP="2" precT="2"/>
+          <Dst zip="51107" qty="2" precP="2" precT="2"/>
+          <Dst zip="51109" qty="117" precP="2" precT="5"/>
+          <Dst zip="51143" qty="100" precP="2" precT="5"/>
+          <Dst zip="51145" qty="112" precP="2" precT="5"/>
+          <Dst zip="51149" qty="32" precP="2" precT="2"/>
+          <Dst zip="51371" qty="259" precP="2" precT="5"/>
+          <Dst zip="51373" qty="6" precP="2" precT="2"/>
+        </Destination>
+      </Shipment>
+      <Item>
+        <ItemID>1</ItemID>
+        <!-- Produktnummer für Postwurfspezial Standard -->
+        <LineItem>
+          <ProductNumber>254400001</ProductNumber>
+        </LineItem>
+      </Item>
+      <Item>
+        <ItemID>2</ItemID>
+        <!-- Produktnummer für den EASY Zuschlag -->
+        <LineItem>
+          <ProductNumber>2145</ProductNumber>
+        </LineItem>
+      </Item>
+    </ShipmentItem>
+    <Packaging>
+      <SlotQty>2</SlotQty>
+      <Type>PAL</Type>
+      <Qty>2</Qty>
+      <Package packageID="1" productGroup="PWSP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="50" zipFrom="50126" zipTo="50969">
+        <GWM value="176.180" unit="kg"/>
+        <NWM value="104.880" unit="kg"/>
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>1</RefShipmentID>
+            <Qty>5244</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+      <Package packageID="2" productGroup="PWSP" format="S" sortMethod="BH" type="PAL" stackable="false" zipDst="51" zipFrom="51109" zipTo="51373">
+        <GWM value="49.410" unit="kg"/>
+        <NWM value="17.260" unit="kg"/>
+        <Ref>
+          <RefShipment>
+            <RefShipmentID>1</RefShipmentID>
+            <Qty>863</Qty>
+          </RefShipment>
+        </Ref>
+      </Package>
+    </Packaging>
+  </createOrderRequest>
+</n:Request>

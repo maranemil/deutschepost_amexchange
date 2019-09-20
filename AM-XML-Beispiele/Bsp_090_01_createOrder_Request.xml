@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: ITCSP
+Version: 1.0
+Erstellung: 22.08.2016
+Beispiel: 090_01
+Neuanlage eines Dialogpost KOOP-Auftrags mit mehr als 1000 Paletten. Daher wird schon mehr als 4 Wochen vor Einlieferung eine Palettenmeldung geschickt. Diese wird mit einer Auftragsaktualisierung zu einem Auftrag der Datenqualität "AU" verfeinert. Im KOOP-Prozess muss die Datenqualität "AU" mindestens drei Tage vor Einlieferung vorliegen.
+Bei dieser Datei handelt es sich um die Palttenmeldung, die mindestens 4 Wochen vor Einlieferung an die Deutsche Post zu übermitteln ist.
+(C) Deutsche Post AG
+-->
+<n:Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xsi:schemaLocation="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderRequest
+	O:/AM.exchange/XML-Schemas/OM-4.4/zert/createOrderRequest.xsd">
+	<createOrderRequest codeTableVersion="1.0" version="1.0" testcase="true">
+		<MsgHeader>
+			<MsgID>091014102356A00000001</MsgID>
+			<CreationDateTime>2010-11-12T08:00:00</CreationDateTime>
+			<Receiver>DPAG</Receiver>
+			<SubmitterSMS>
+				<CustID>6000000121</CustID>
+			</SubmitterSMS>
+			<Origin>
+				<SystemName>AM-Test</SystemName>
+				<SystemVersion>4.4</SystemVersion>
+				<CertificationDate>2015-01-01</CertificationDate>
+			</Origin>
+		</MsgHeader>
+		<OrderHeader>
+			<OrderType>EA</OrderType>
+			<!-- Hinweis: Die Angabe State ist optional. Das AM-System ermittelt die tatsächliche Datenqualität. -->
+			<State>PM</State>
+			<OrderLabel>AM-XML Beispiel</OrderLabel>
+			<SubmissionType>G</SubmissionType>
+			<CustOrderID>
+				<CustID>6000000121</CustID>
+				<SystemID>161112A09000100</SystemID>
+			</CustOrderID>
+		</OrderHeader>
+		<Parties>
+			<Originator>
+				<CustID>6000000121</CustID>
+			</Originator>
+			<Submitter>
+				<CustID>6002000131</CustID>
+				<!-- Hinweis: Obwohl hier der Einlieferer gesetzt wird, hat dieser zunächst noch keine Zugriffsberechtigung auf den Auftrag, -->
+				<!-- da OrderHeader.Released nicht explizit auf "true" gesetzt wurde. Dies passiert jedoch spätestens 7 Tage vor der Einlieferung automatisch. -->
+			</Submitter>
+			<!-- Hinweis: bei einer Palettenmeldung kann die Angabe des Zahlungspflichtigen mit den Zahlungsinformationen noch fehlen. -->
+		</Parties>
+		<Induction>
+			<TransitDirectionCode>A</TransitDirectionCode>
+			<Address>
+				<StreetName>Hauptstr.</StreetName>
+				<StreetNumber>26a</StreetNumber>
+				<District>Oldenburg</District>
+				<Zip>17495</Zip>
+				<CityName>Ranzin</CityName>
+				<CC>DE</CC>
+			</Address>
+			<!-- Eine Palettenmeldung ist nur gültig, wenn Sie mindestens 4 Wochen vor Einlieferung erfolgt. -->
+			<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+			<LatestDateTime>2016-06-02T10:00:00</LatestDateTime>
+		</Induction>
+		<ShipmentItem>
+			<Shipment>
+				<ShipmentID>1</ShipmentID>
+				<Format>G</Format>
+			</Shipment>
+			<Item>
+				<ItemID>1</ItemID>
+				<LineItem>
+					<!-- Dialogpost Gross -->
+					<ProductNumber>250300001</ProductNumber>
+				</LineItem>
+			</Item>
+			<Item>
+				<ItemID>2</ItemID>
+				<LineItem>
+					<!--Abholung Dialogpost Gross-->
+					<ProductNumber>250100001</ProductNumber>
+					<EarliestDateTime>2016-06-01T10:00:00</EarliestDateTime>
+					<LatestDateTime>2016-06-02T10:00:00</LatestDateTime>
+				</LineItem>
+			</Item>
+		</ShipmentItem>
+		<Packaging>
+			<!-- Hinweis: Bei Palettenanmeldungen genügt es, nur die Anzahl der Paletten ohne deren explizite Auflistung zu übermitteln.  -->
+			<Type>PAL</Type>
+			<!-- Hinweis: Palettenmeldungen sind erst ab 1000 Paletten erforderlich. -->
+			<Qty>1200</Qty>
+		</Packaging>
+	</createOrderRequest>
+</n:Request>

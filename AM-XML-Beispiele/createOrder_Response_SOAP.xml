@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Body>
+		<n:Response xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling" xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderResponse" xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+			<createOrderResponse codeTableVersion="1.0" testcase="false" version="1.0">
+				<Return>
+					<ReturnCode>OK</ReturnCode>
+				</Return>
+				<MsgHeader>
+					<MsgID>061112102356A00000001</MsgID>
+					<CreationDateTime>2007-06-19T15:55:03</CreationDateTime>
+					<Receiver>6002000131</Receiver>
+					<Origin>
+						<SystemName>AM</SystemName>
+						<SystemVersion>2.0</SystemVersion>
+					</Origin>
+				</MsgHeader>
+				<OrderHeader>
+					<ChangedAt>2007-06-19T15:55:01</ChangedAt>
+					<OrderID>00000000775239</OrderID>
+					<CustOrderID>
+						<CustID>6002000131</CustID>
+						<SystemName>B2B</SystemName>
+						<SystemID>070619A00100100</SystemID>
+					</CustOrderID>
+				</OrderHeader>
+			</createOrderResponse>
+		</n:Response>
+	</soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+Autor: Henning Ebel
+Version: 1.0
+Erstellung: 23.10.2018
+Beispiel: 146_01
+Beschreibung: Rückgabe eines Nummernkreises nach Abruf/Reservierung von S10-IDs zur späteren Verwendung für "Warenpost International"-Sendungen
+(C) Deutsche Post AG
+-->
+<getIdRangeResponse xmlns="urn:www-deutschepost-de:Mail/OM/WebserviceProvider/NumberManagement">
+                <start>UA998000007DE</start>
+				<!--
+				Die erste S10-ID des Nummernkreises, die der Kunde nutzen kann.
+				Die S10-IDs haben die Struktur "TBNNNNNNNNPDE", wobei:
+					T = Typ Nummernkreis (R, L, U, A)
+					B = Buchstabe
+					N = Die laufende Nummer besteht aus 8 Ziffern
+					P = Prüfziffer 
+					DE=Konstante für Quellland der Sendung
+				Folgende Nummernkreise werden über diesen Webservice bereitgestellt:
+					S10-IDs beginnend mit UA für Requests vom Typ S10ID_UNTRACKED
+					S10-IDs beginnend mit LA für Requests vom Typ S10ID_TRACKED
+					S10-IDs beginnend mit RY für Requests vom Typ S10ID_SIGNED
+				
+				Die Prüfziffer berechnet sich dabei wie folgt:
+				P=Prüfziffer : X = 11 – ( (N1*8+N2*6+N3*4+N4*2+N5*3+N6*5+N7*9+N8*7) mod 11)
+				Beispiel für laufende Nummer 99800000 der S10-ID ergibt sich X = 11 - ( (9*8 + 9*6 + 8*4) mod 11)) = 7
+				- wenn X=10 -> dann Prüfziffer P = 0
+				- wenn X=11 -> dann Prüfziffer P = 5
+				- ansonsten -> dann Prüfziffer P = X
+				-->
+                <end>UA998000090DE</end>
+				<!--
+					Die letzte S10-ID des Nummernkreises, die der Kunde nutzen kann.
+					Aus erster und letzter S10-ID sowie der Logik der Prüfziffern-Berechnung können die weiteren fortlaufenden Nummern, die dazwischen liegen, ermittelt werden.
+				-->	
+                <quantity>10</quantity>
+				<!-- Anzahl der mit diesem Aufruf reservierten S10-IDs-->
+</getIdRangeResponse>
+ 

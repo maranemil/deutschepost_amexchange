@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Autor: Udo Reuter
+Version  : 4.4.01
+Datum    : 24.08.2015
+Copyright Deutsche Post AG
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createStatisticalOrderRequest" xmlns:om="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" targetNamespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/createStatisticalOrderRequest">
+	<xsd:import namespace="urn:www-deutschepost-de:OrderManagement/OrderManagement/4.4/common" schemaLocation="./common.xsd"/>
+	<xsd:element name="Request">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="StatisticalOrderList" type="om:StatisticalOrderListType"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

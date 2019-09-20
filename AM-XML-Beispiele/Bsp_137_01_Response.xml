@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n:Response
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:n="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/createOrderResponse"
+  xmlns:err="urn:www-deutschepost-de:GeneralTypes/1.0/errorHandling"
+  xmlns:om="urn:www-deutschepost-de:OrderManagement/CertificationOrderManagement/4.4/common">
+  <createOrderResponse
+    testcase="false"
+    codeTableVersion="1.0"
+    version="1.0">
+    <Return>
+      <ReturnCode>WARNING</ReturnCode>
+      <ErrMsg>
+        <ErrDateTime>2012-02-07T09:06:50</ErrDateTime>
+        <ErrCat>WARNING</ErrCat>
+        <ErrCode>514253</ErrCode>
+        <ErrDesc>Für den EA mit der AM-Nr. 00000005122924 entspricht/entsprechen die Heftfolgenummer(n) (10/2012 / &lt;keine Angabe&gt;/&lt;keine Angabe&gt;) nicht der letzten vergebenen Heftfolgenummer (11/2012) oder ihrem Nachfolger (12/2012).</ErrDesc>
+      </ErrMsg>
+    </Return>
+    <MsgHeader>
+      <MsgID>091014102356A00000001</MsgID>
+      <ODOCID>20120207090648</ODOCID>
+      <CreationDateTime>2012-02-07T09:06:50</CreationDateTime>
+      <Receiver>6002000131</Receiver>
+      <Origin>
+        <SystemName>AM</SystemName>
+        <SystemVersion>4.2</SystemVersion>
+      </Origin>
+    </MsgHeader>
+    <OrderHeader>
+      <ProductionState>PLA</ProductionState>
+      <ChangedAt>2012-02-07T09:06:49</ChangedAt>
+      <State>AU</State>
+      <AchievedDataQuality>AU</AchievedDataQuality>
+      <OrderID>00000005122924</OrderID>
+      <CustOrderID>
+        <CustID>6002000131</CustID>
+        <SystemName>B2B</SystemName>
+        <SystemID>151112A13700202</SystemID>
+      </CustOrderID>
+    </OrderHeader>
+  </createOrderResponse>
+</n:Response>
